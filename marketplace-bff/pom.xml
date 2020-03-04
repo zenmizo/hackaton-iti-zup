@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>itau.iti</groupId>
+		<artifactId>iti-starter-parent</artifactId>
+		<version>0.0.18.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>itau.iti.marketplace</groupId>
+	<artifactId>bff</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>marketplace-bff</name>
+	<description>hackaton's marketplace bff aplication</description>
+
+	<properties>
+		<java.version>11</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<kotlin.version>1.3.61</kotlin.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>itau.iti</groupId>
+			<artifactId>iti-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-config</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.zup.beagle</groupId>
+			<artifactId>framework</artifactId>
+			<version>0.1.5.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>zup-starters-hackathon-nexus</id>
+			<name>Hackathon Nexus Repository</name>
+			<url>https://repo-hackathon.zup.com.br/repository/starters-jars-all/</url>
+		</repository>
+		<repository>
+			<id>zup-beagle-hackathon-nexus</id>
+			<name>Hackathon Nexus Repository</name>
+			<url>https://repo-hackathon.zup.com.br/repository/beagle-jars-all/</url>
+		</repository>
+	</repositories>
+
+</project>
