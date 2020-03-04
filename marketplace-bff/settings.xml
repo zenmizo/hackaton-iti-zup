@@ -1,0 +1,34 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<servers>
+<server>
+    <id>zup-starters-hackathon-nexus</id>
+    <username>zup-hackathon</username>
+    <password>hNn842^Jk##b</password>
+</server>
+<server>
+    <id>zup-beagle-hackathon-nexus</id>
+    <username>zup-hackathon</username>
+    <password>hNn842^Jk##b</password>
+</server>
+      <mirrors/>
+      <proxies/>
+      <profiles/>
+      <activeProfiles/>
+</servers>
+
+<repositories>
+    <repository>
+        <id>zup-starters-hackathon-nexus</id>
+        <name>Hackathon Nexus Repository</name>
+        <url>https://repo-hackathon.zup.com.br/repository/starters-jars-all/</url>
+    </repository>
+    <repository>
+        <id>zup-beagle-hackathon-nexus</id>
+        <name>Hackathon Nexus Repository</name>
+        <url>https://repo-hackathon.zup.com.br/repository/beagle-jars-all/</url>
+    </repository>
+</repositories>
+</settings>
