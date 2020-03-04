@@ -1,0 +1,6 @@
+framework module BeagleUI {
+  umbrella header "BeagleUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

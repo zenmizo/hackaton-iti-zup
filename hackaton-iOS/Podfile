@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'hackaton-iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for hackaton-iOS
+  pod 'BeagleUI', :git => 'https://github.com/ZupIT/darwin-beagle-ios.git'
+  pod 'YogaKit', :git => 'https://github.com/lucasaraujo/yoga.git'
+
+  target 'hackaton-iOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'hackaton-iOSUITests' do
+    # Pods for testing
+  end
+
+end

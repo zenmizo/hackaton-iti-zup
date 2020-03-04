@@ -1,0 +1,37 @@
+PODS:
+  - BeagleUI (0.1.0):
+    - YogaKit
+  - Yoga (1.14.0)
+  - YogaKit (1.18.1):
+    - Yoga (~> 1.14)
+
+DEPENDENCIES:
+  - BeagleUI (from `https://github.com/ZupIT/darwin-beagle-ios.git`)
+  - YogaKit (from `https://github.com/lucasaraujo/yoga.git`)
+
+SPEC REPOS:
+  trunk:
+    - Yoga
+
+EXTERNAL SOURCES:
+  BeagleUI:
+    :git: https://github.com/ZupIT/darwin-beagle-ios.git
+  YogaKit:
+    :git: https://github.com/lucasaraujo/yoga.git
+
+CHECKOUT OPTIONS:
+  BeagleUI:
+    :commit: 03479faaa38b76af8ce187a4a56ac5e19ad77169
+    :git: https://github.com/ZupIT/darwin-beagle-ios.git
+  YogaKit:
+    :commit: 18c001c17865e77e56b70ff7ac7048deb5cbe56a
+    :git: https://github.com/lucasaraujo/yoga.git
+
+SPEC CHECKSUMS:
+  BeagleUI: dd5285103c24bce564f90f64db77cdf6e9934935
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
+  YogaKit: 3a733275fd1639b96a304f6f5c11421478371e6b
+
+PODFILE CHECKSUM: 81091fe8a4d1ed74007b08acf4b82d4eefa1ba05
+
+COCOAPODS: 1.9.0

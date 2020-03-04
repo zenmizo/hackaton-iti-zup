@@ -1,0 +1,1986 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00AFB19DB1A9060625DC155957C6689E /* Yoga-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = D75F6C1062A9ABF3ADE02173187306D3 /* Yoga-internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		033950A3F7EF6A00EFE21D710192495D /* YGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03696706BBCE64BC7C4B0AB957A4DCF0 /* YGNode.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		068C92CF68F69AADDE79F6E0D6185326 /* ListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277464614534E0EBBACE72F4167AEC16 /* ListItemTableViewCell.swift */; };
+		0868E1500A9E07191553206EC409441D /* CollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F025F085BBC03F4721FD4DC55ED34F /* CollectionExtension.swift */; };
+		0B8165F9D2DAE31D4729AB6011FB07BC /* YGConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6690D89E7E3DD26A2481FA849D58F26 /* YGConfig.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		0E7033A0CB24479C6216924E50F479C1 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7927D36FDF3C4AAA8BF1FDE562B2FA7B /* DoublyLinkedList.swift */; };
+		11B35D58D9648C275BF9B2F87966A552 /* Spacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AEC5C0874C1A6D61790DA0FFFCF13B /* Spacer.swift */; };
+		123C0F7FE6E49C8E5203A1655BED87C6 /* YGLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 58382A637C9474339A8B0749BDE91051 /* YGLayout.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		12ED4FA3A53DE5CB2FB7F80DDD39A800 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D326116C9B288C9FB8EFB4812BF28A1A /* Validator.swift */; };
+		12F67484A272A1949E849CDEA7748B03 /* ButtonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A357BF805EB9C254F1E97FF6FB8AD /* ButtonEntity.swift */; };
+		13FF2E2A854684C50CDCD6C58B65A66C /* YGMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F7240D4E2608A24AA23624A1AAC46D5F /* YGMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16F85C6D9AFD09A85901B00AEEBD71B0 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870E8CC5EB6106444B1BB58E5967AEF6 /* ScrollView.swift */; };
+		18277D921D8F398DBA5C47D9198CCF40 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6F7F800539205363D3F25EA3A28C7B /* Text.swift */; };
+		1984704D132CCC2A8266BCB83D336B32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+		1ADBD515402ABAFD1C687723E648166C /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8317CDCF1F21A32B3CB0D71F2EFE4AF /* UIView+Loading.swift */; };
+		1B1536F8369FE7BF32700EAEF6282592 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D656B6D69F7101D3C337B2BDFF429 /* Result.swift */; };
+		1B72A0C3E2317FB4A4121C6EA2205902 /* OnStateUpdatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0FD77502D2726D0EE368C234B458A /* OnStateUpdatable.swift */; };
+		1F64F50E8AD61B24EF7C1DD607FC6547 /* YGFloatOptional.h in Headers */ = {isa = PBXBuildFile; fileRef = F041FABD384D392170E68C591BD100DC /* YGFloatOptional.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1F86C511B65BAFF91FFC0DC0934FD672 /* YGStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 46D9DD30E94DC9B6B10B9AF0CE1FDAA5 /* YGStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2283D11174E6E63D0FC5988495542ABB /* ShowNativeDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCF56A3B6052BFA1D6081DA0031B71 /* ShowNativeDialog.swift */; };
+		245DF1A73EA7A3F9E3A8DC0A6ED225A9 /* ListViewUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB64C67219B5E61488686D23AF26703 /* ListViewUIComponent.swift */; };
+		248C347F8F7CAD00B1EA86ADD58D1FAB /* CustomActionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746980EA0F3ECC9C542E92AE7ACA0DDF /* CustomActionEntity.swift */; };
+		26F4808BA6EED6FBA32D862AAE5A10AF /* YogaKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5669535D1CCAD71494941B4C9855CEE /* YogaKit-dummy.m */; };
+		2B755814F27C6FB5EE403A90DC81701E /* ComponentConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D810ABDAE8E38BA93C0D1B8C207278 /* ComponentConvertible.swift */; };
+		2BA7B935F79CADADEB470B52CDD8B2F9 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A451A65271771AEE14B3610B62242 /* KeyboardManager.swift */; };
+		2D1AF722E74BAC4829D18BE945EF2F4A /* BeagleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422F37E45494A03E49BEAFAC80B020A /* BeagleContext.swift */; };
+		3084933081B334D2BAD2AA39D77F184D /* BeagleDeepLinkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1211C200C1AA9C23AEB31239518A2C43 /* BeagleDeepLinkHandler.swift */; };
+		30E1DFC530BB30F49B39A0A22CDC50E7 /* ListViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677A3F507BCD1A2C96FBCFEB0F0C819F /* ListViewEntity.swift */; };
+		32B1D9FBE94E2A3B932220B7D73153EB /* UIView+Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5185E61592F68616F7DEFD54208885 /* UIView+Id.swift */; };
+		345B190BE964798CA1C142C975EB933F /* InputValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3EFE4944B724D2423BBCCD6935AABC /* InputValue.swift */; };
+		34EAC44226571D4F120332DC76AD8C78 /* Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = D3BF76EB19ED5B3FFDE7694E383A1124 /* Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		35D7A33940B09C2A2CCBB28FAF5EDCA6 /* CompactValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D38CA3405FDEC21ECFBE73E76487D2 /* CompactValue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		376BD90CB7051055884E74FB9C5F85D4 /* WidgetStateObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C847FD6243C1003A9588A3BEB689F2 /* WidgetStateObservable.swift */; };
+		3A02BD39CE3FE98D237CF241F0F8A244 /* ActionExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68C18B3382185E55B9D5B1746B642F8 /* ActionExecutor.swift */; };
+		3A3539D018F11E50562D0582635D1116 /* Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B88796EDA6C8408225CD8025C6C6B922 /* Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CBCC3A3974459F1AEFF07A0073C2B41 /* CustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95C5E555B63AEE488B0E5F053D038C /* CustomAction.swift */; };
+		3F33F05250CBC23264567933B17D71B5 /* YogaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D81D48056B16C08D4F8D14130A99E06 /* YogaKit.framework */; };
+		3FBCC45D7D5B09E1DA941F84B354C2FB /* TabViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C52C9E04E57321BB351C4D52DAF4F09 /* TabViewEntity.swift */; };
+		408DB4C86BD0A38597D3700708469292 /* UIView+Yoga.h in Headers */ = {isa = PBXBuildFile; fileRef = 60A3DEA10D138311ADCF17B435D6FDC4 /* UIView+Yoga.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4769E19F95E28E6144D2C5F31FD66CAA /* BeagleDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA49A1F6B6F100824FE4A976225F42E /* BeagleDependencies.swift */; };
+		49F5A77B8DE9AD7E337244C3CC354711 /* YGMarker.h in Headers */ = {isa = PBXBuildFile; fileRef = BB6F04414A5D1E6B2C73271E5F5C3114 /* YGMarker.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A2FD91B5452A49809732C783CBB5469 /* BeagleSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E503169BE015F9E8419CDF6C427A8A26 /* BeagleSetup.swift */; };
+		4C2C35073189EFDB0F1BB9D828FB7F27 /* ServerDrivenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB23ECEC427B30F3DDF58F75D7F29C1 /* ServerDrivenComponent.swift */; };
+		4F2BF8B7D32211F0D11BBE53D52BB398 /* YGStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3213F7B9256ACB6B64E9E1FDB20CDD95 /* YGStyle.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		5452B5EA75D11D7D7D2D873A633A99D3 /* ContainerIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18991F932653137CBE9D2B49FC12177D /* ContainerIndicatorView.swift */; };
+		556EDAD8E0A01144C000EEB4AFDED299 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C855CFE70AB91FAE091F7FB0494A9 /* Observable.swift */; };
+		56409AC703BBB8BEB9ABA07B82C66C16 /* BeagleNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDB9935ED5BB1A89DE657CF1B471764 /* BeagleNavigator.swift */; };
+		5684CBEEBBC7A310AD5EA01551E50DEB /* BeagleUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A06EA3230F65658E96B33B2ED6DE8C2 /* BeagleUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57E7C65A40A03444CD389D0C674B5755 /* PageViewUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B35000CD33BBB493C993D385652C59A /* PageViewUIComponent.swift */; };
+		582113D94D2BF2CF5C43644133705101 /* UIView+Yoga.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F9FD7335CEDB08F9C52F3043689352 /* UIView+Yoga.m */; };
+		5835486DB164EB9EC6C19AD6A6DD1B69 /* Pods-hackaton-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F29B0BB47A05704490BB63F424349F /* Pods-hackaton-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A628A678E9DE8FDFC6167EB01A01A44 /* ShowNativeDialogEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74597685E0CD318A346B5A65C2F4A7C /* ShowNativeDialogEntity.swift */; };
+		5B6B8867241E568F268ED846FAF09304 /* Pods-hackaton-iOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F146E90269A12ED8E4E51D1FB410C367 /* Pods-hackaton-iOSTests-dummy.m */; };
+		5BBE435612639E5BDBC8A493ABA229D6 /* NetworkImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EEBB3E70F8AF399D352070AE6B2F22 /* NetworkImageEntity.swift */; };
+		5F87A3D8F9F3AA16EAE13EB4E562DD2E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B2C8792224BE1D1C2377CCA6828748 /* Image.swift */; };
+		5FB1AC83CA2DBA585A5E6AAB1E7B7912 /* NSErrorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140DD96C571BE5253305DB15F2CCC19 /* NSErrorExtension.swift */; };
+		602850C14F841B306729C79C9CDB4B38 /* Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D90BED0D6CE43DBE5009854B1C1F34 /* Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m */; };
+		6159DA9DD6715C841527B8B20EFA2E94 /* Yoga-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9773C11B4B7717C011F508541006D013 /* Yoga-dummy.m */; };
+		61AC1027E073F6E4BF2C6C2F9A7BDA84 /* log.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8628F867E9EF283F9BA1EEC98649484F /* log.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		69755E43E965069FDBBEFA8FC707A732 /* Yoga.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D91E5DA363B25D0FCE5001008AE5674B /* Yoga.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		6A7D2912D048CFAE5EBD98F05477381C /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B415B928253BF3F99734E099A5EC07B3 /* Utils.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		6B113F015D463434263CF572362CC96B /* ActionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B33D57FA480900E053CC795C010A6 /* ActionConvertible.swift */; };
+		6C67FF9DA7F2E416045ED26C30114D39 /* BeagleScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B61F85200D9F89BE673805EDC410E8A /* BeagleScreenViewController.swift */; };
+		6C9BBEEF9FB9EAD61927C428F8A40652 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = EAC0211F4B37EDC20E2CEF1620966212 /* YGLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70698F97A86C036F84160BBC51770370 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56258877EAD57ABE667BD003FE0244E0 /* TabView.swift */; };
+		72DE10A0D38D08D8F5BA99EC771A429A /* NetworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4FC048AB1159B09187FD7996814C4 /* NetworkImage.swift */; };
+		72F4DF8574B24B15EA28D1EB2E605348 /* YGConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 346C1B0996E1F497BB10D8D77F736D56 /* YGConfig.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		738C36D5660B1BF9FFC8F101B4065AF6 /* ImageEntityContentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D511C49195AD6CCE0F38FEC4E3C0867 /* ImageEntityContentMode.swift */; };
+		741B16457770E8E3DDE8E7C61DCDF365 /* AccessibilityEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB295B6BD1E090A04A3F1CA92E74E46 /* AccessibilityEntity.swift */; };
+		75AA2046C693FCECB8D907E290AA2F02 /* ScreenComponentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B01FE658ABE77BD6AE1B1C7FD48F25C /* ScreenComponentEntity.swift */; };
+		761D31905C56C33655C19B25749767A5 /* YGMarker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 57E898EF5A6E98F078DFC84D39869518 /* YGMarker.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		779EFE054888976476B85DF56397CB8B /* TextEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EBA0E62B3D8CFC7C73DFBBA022D4E6 /* TextEntity.swift */; };
+		78716CCAA1C35A51E431F54658779F2C /* SubmitFormGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2459F74DE0E1AC86E044B83ED2CF85 /* SubmitFormGestureRecognizer.swift */; };
+		7D2609C0BB474FCB60C014A1A6745961 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = EE4B72E096ACC413ABEDF9DD698AAC00 /* Utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DC7BB6DC80D243C49B7BCDD35F924E6 /* instrumentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8ECAA4BF9652DD711D45A7127E2A47 /* instrumentation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7F0ACADEFC396AFF7F1035195F78F0ED /* ContainerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425F7AF0AF3B20D9580AB73B9F86369E /* ContainerEntity.swift */; };
+		819166F9E023E4226B848C1823147644 /* ComponentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF537C2ED08CE0118BF9D1C3602146A1 /* ComponentEntity.swift */; };
+		846BC3B43CFD352401885D79E8F5AC5F /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C324BF4A59E9F2C64896051C2AE1E11B /* Action.swift */; };
+		86C2568D869E16432C1BFB1CBD20D1E1 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25849EC77035D449902C7F1500CC23F /* LoadingView.swift */; };
+		86E26D9B604B3A0FFA6E05231C0C1EDF /* SpacerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D7678CE1036B1EB402DD7137A6F5A7 /* SpacerEntity.swift */; };
+		880DC9EE795ACE5D7404650EF6B28448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+		88493AB42F5F724AC77D3E45F46A02B1 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB40F284BF45354FC52ECC6D4E03E45 /* NSObjectExtension.swift */; };
+		884DB49415B941232B53E13A75C9A603 /* UrlRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214A0817324A01D29F12DE50C16E7838 /* UrlRequestBuilder.swift */; };
+		8A1BA89FD8AEACB163DC569701BCCB10 /* FlexViewConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB13D8F367656E747D125733F21430 /* FlexViewConfigurator.swift */; };
+		8AD8114CD952E7C9F6FFD7710E8BE177 /* Yoga-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E42913B8562F1474BC64587CFCD4E366 /* Yoga-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D0EB8B8751BECFFADCC9D938FED7F11 /* YGNodePrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC72BE599A6C4B49321C857FDC1659D6 /* YGNodePrint.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		8D7E60DCDB5349A337878A19B219D65A /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14ADE8894988653231F8DB5F72EB860 /* Screen.swift */; };
+		8D9CE6FB1D6E6B0B37CB77FFBCEB3719 /* PageViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF9D612BE64E493DB3AABCC341A87F /* PageViewEntity.swift */; };
+		92211C6D01CF5F54CF886364EEC03764 /* SafeAreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05021523FA55BF0B520597C21287F924 /* SafeAreaManager.swift */; };
+		9224B75ED3D05062EE9C6DDB9DD2047F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+		9497884C0EC1C24D6F18417823A5704C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C592110405BA6B99C1098465817A551 /* NetworkClient.swift */; };
+		94A623B5399748996ADBAC6A379FF4B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+		94BF0FF21E00A523DA6136A4CDE5DA0F /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7B16F3B73F8039B9AFF032388C1404 /* Form.swift */; };
+		960F7F3D86C2FDF147274024093D66D5 /* FormSubmitEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CF896182F7D98C09194DADC91C8691 /* FormSubmitEntity.swift */; };
+		970A39D7FCD7A42E1C46B955A40ACF36 /* TabViewUIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D64433E8F012FC8860490B7953FF42 /* TabViewUIComponent.swift */; };
+		9B4C967062988CBA382B2FE3CE205FA3 /* CustomActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AC61B62E86E76B32087FEFA75BE31B /* CustomActionHandler.swift */; };
+		9CC9D537381C9187945A887982F0AC25 /* LazyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C3B09ED0247CAB7CDF2EBDD18C0E0 /* LazyComponent.swift */; };
+		9F0A56E02649249EE3701DF4DD25068B /* TabBarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA641809B4A9F96F989137CC2B9056C9 /* TabBarCollectionViewCell.swift */; };
+		9F44B359167B97D5BEC8B0DF2EF97834 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FF981A6E0155D406133BB5485ED2C /* ListView.swift */; };
+		9F5596C2437EDA24029635411A52CB35 /* Navigate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EF00D9A00FA0EFA6CA8731EF8AFC0A /* Navigate.swift */; };
+		A12311153F72ED53999E09218BF3B8ED /* YGNodePrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5787CB8DBC4D33A8580277078FE53A /* YGNodePrint.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1768CD386FF1EAFA830425A822CEE80 /* Pods-hackaton-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3906908E29C132F20BEADD22F9482DC2 /* Pods-hackaton-iOS-dummy.m */; };
+		A2A956B400F271126C936501D826ACDD /* MemoryCacheService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBDC9BA0CD618F47515610705653F8A /* MemoryCacheService.swift */; };
+		A6790CD40BD185A51FD1A83AD0651A90 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5739C2120E3E816A2BA64C88DCDF414B /* Network.swift */; };
+		A7DD680C69BA47275E843FA7C79EB8C9 /* AppearanceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B00D8E12F809C2BCFA8FE16E8E94B5 /* AppearanceEntity.swift */; };
+		A8EC07B226757876A6874540C36CFCE7 /* FunctiontalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC4FC1687DB6180D4A16A26705590F2 /* FunctiontalUtils.swift */; };
+		A942C6F7D2FBDA3E607BB4D4D6C17D28 /* FlexEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991FB342426D76809DABC6271A5BD882 /* FlexEntity.swift */; };
+		AC0021715C6F34F99E93A3C86F333632 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF87E70CF7D97D9418CA65FE41AB2E9 /* Request.swift */; };
+		AD97B0509871B53D3A29F06A75AB2431 /* DefaultPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5FC8C237D4C2BD5BC6A3DBC1E0E0F2 /* DefaultPageIndicator.swift */; };
+		AE6DBCF316CCEE270C1DE28D86C6AFDA /* UnitValueExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65B3B87CFE9BA4AD5DFA5CB9ED64448 /* UnitValueExtension.swift */; };
+		B2495121147572DC6916795303964EFD /* YGLayoutExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F308A7D8F1C4DA6F4F9EBEA4346F3 /* YGLayoutExtensions.swift */; };
+		B53F59A0951072A095ED271222EAE9F5 /* HTTPRequestCanceling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5406DF56F4D5DA2B979ED67990EC3BE9 /* HTTPRequestCanceling.swift */; };
+		B70ABB731A4DCB1D1E37E41294A52066 /* FormInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39FE0AE8BBEE79C0236F274801157E86 /* FormInput.swift */; };
+		B977D6F2B9354965B96C4733B3ED8DBE /* YGEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = BB02BA7747103220B368BBA0DED1DF8E /* YGEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B98BB90EBF785D9A21ABD28FCAFFB75D /* Touchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26941650946E862B7F6336A4202CFE0 /* Touchable.swift */; };
+		B9CA8A61E3EA762771F04083C724588C /* yoga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DC824AAA306B91623F69C2062F5F02 /* yoga.framework */; };
+		BAF969A3CB3A2CE858DF53790C57B58A /* ValidatorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5234648CC9FB2270AEC80B752120EF8 /* ValidatorProvider.swift */; };
+		BB0A78C96C00B65884440A7B0E23881E /* YGLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 359F06FF83470E0C24523F5169F59E9E /* YGLayout.m */; };
+		BC0B065AA5418AECBF01D4BC83AA742D /* TouchableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6148134F4146843B97F6830C605D1A26 /* TouchableEntity.swift */; };
+		BCE6C9E3EA29B1D431371E019A9FD0C2 /* ScreenComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBB6574F04976A328204A0835A8290A /* ScreenComponent.swift */; };
+		BFAE087DA1A30774B676F6C86A093631 /* NetworkClientDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE337ABA326EFA04DAA0767C826C55C9 /* NetworkClientDefault.swift */; };
+		BFEE69A9013EC40D25B86A491D6B1BCB /* ActionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391D07EA9B0A57B75CEA922C1BE91E83 /* ActionEntity.swift */; };
+		C05F71A98B502C6BAC28D3771D85FAD8 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94BA5246419F22EA0C7F8D70BF518FB /* UIView+Subviews.swift */; };
+		C085302A67145C7D2204107E4B793E0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+		C150A9D02FE0AEFE8D6DC3D5E1913F1D /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D25F258CF83E81D149696A8D7BA21 /* Container.swift */; };
+		C32FA29C5B5321EAB53EF442C89F50E6 /* UnitValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884A7825EABA6695718465F8674C1661 /* UnitValue.swift */; };
+		C33F2F868F569B3529DBD545743A4BFB /* AnyDecodableContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF9C823E5EA49C33B76028EB5BC1ED8 /* AnyDecodableContainer.swift */; };
+		C502D7D94B0F117AE17AB4C8B2D752DB /* ScrollViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99C8AC697F4C6C56FC6BB62FB5DBC84 /* ScrollViewEntity.swift */; };
+		C66A691739270E36C2C7343B6B17FF63 /* log.h in Headers */ = {isa = PBXBuildFile; fileRef = 26AFB29F90326917BC851AB1F5856E5E /* log.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6A17ECC63EDC4CF2B210F215344E847 /* FatalErrorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4146C876373DC47770664C066DB291A /* FatalErrorUtil.swift */; };
+		C824D83BFC0CFA36EA3D6F0753762F3F /* YGValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5039B3B97637F71DB7CAD316CA6BA670 /* YGValue.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		C8D34FC9CF9EB47CA35093757E0CAFED /* UIView+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7341D5234EB014A6508ACD9C5930E2A /* UIView+Appearance.swift */; };
+		CA02C2EA7569539D9C26D4C5D5C7D499 /* BeaglePrefetchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C887A53B4F2CC7E6F8882301C8CAF6BA /* BeaglePrefetchHelper.swift */; };
+		CC7990A0949CC8CD703835EC7DB49224 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B5BC5086C8067574462721D3DE59C8 /* UIKit.framework */; };
+		CDD084DE0601AB1C406F4CE39C1C9D29 /* ActionGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B15CF818DD9B5FE764F37681CC31DF /* ActionGestureRecognizer.swift */; };
+		D045D39992E575CAC80C8BA3D39C6ECF /* UIModelConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B7A395BA1A088BCA11FB522133F69 /* UIModelConvertible.swift */; };
+		D072728604ACC9B39A12AE0BDC54CC00 /* LazyComponentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E297EAFBF9A423FCAD6D2B89149B6 /* LazyComponentEntity.swift */; };
+		D19BD7FE68AFC044A4C5F13FCFBA2A36 /* FormInputEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AEEC0D3A02FD201E0B8AB83DEE2815 /* FormInputEntity.swift */; };
+		D317EBA5BD627C5CBA1038AD6E20A47E /* ComponentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157236C2E8117D9FB6CC8D77D58B5F00 /* ComponentDecoder.swift */; };
+		D39C4D4F8485AC20AA76B8F86D28C0C9 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3463A65283AE588C7B00A8DB20A31A6F /* UIView+AutoLayout.swift */; };
+		D3FD94D7474D7F506D3663EEDC00DE8A /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4225FE1F8502CA5D8F7190631B6A2D1 /* Theme.swift */; };
+		D709360C3998A394AC41F1EAE328CC2F /* Pods-hackaton-iOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F267B787042754C7E4CAFA06BFF32DED /* Pods-hackaton-iOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D90ECDC8C11ED229666D960A3F3CFB03 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4341BC340EAF7483ABEFDDFEF84FDB4B /* PageView.swift */; };
+		DAEB87A483A7B7D043F9CDBDF6109982 /* UnitValueEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919DBDF4737FFC4AA3C93E8B6619479D /* UnitValueEntity.swift */; };
+		DAF7E6F4D7042820BA65110370BD1977 /* YGNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 85051B190FF74A3A1415977B317BDAAF /* YGNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DC2C17782C9C47AEFD92E4CBCDF0C974 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CE8569A1BD04A132C31146F6309CF3 /* CacheManager.swift */; };
+		DCCEDF5174E919C5B00EC502EAC4E77E /* BeagleUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF2B01A3E72DEE8719CD3BDD4D7E08 /* BeagleUI-dummy.m */; };
+		DE1707243FFD3B6177BE45E3FAC059FB /* ImageContentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D461329C6FDBAE95CE6869983DA5A052 /* ImageContentMode.swift */; };
+		E0787387889BAAE8B5822F6162E8D8EE /* YogaTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F6F473BDEC0C0707AE4715A05CA738 /* YogaTranslator.swift */; };
+		E0F5DCBDE1DE24FEB99A46F69253A09F /* YGEnums.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F10BB412AC0CDE0074E2FFA1367D1 /* YGEnums.cpp */; settings = {COMPILER_FLAGS = "-fno-omit-frame-pointer -fexceptions -Wall -Werror -std=c++1y -fPIC -fno-objc-arc"; }; };
+		E29E3E2151DE6975C53564B7D19F5618 /* Flex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAF12DFC215B05BA68818D6B7BA127E /* Flex.swift */; };
+		E6CCE6ADE27A6920621FA47D1B4EC844 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4AFD7CDF1DDCE434A0375F4DCC1F /* Widget.swift */; };
+		E87A36DB816D81E905563D066B154007 /* YogaKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48A5AF039755CD3550960E658007C668 /* YogaKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED1E03420AEAF0FC77B453B0FA6C2D3E /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7746F2C26A4C6FBFADC825CD8AEE6CF3 /* Accessibility.swift */; };
+		EDA9FB779BC288ECEC36544FB4E18D88 /* YGLayout+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D37F58E27C6B04C8889D5B423AA16E /* YGLayout+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EDB5814815F2A85CDE0B253D475F9392 /* FormValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C465B8172791E377D9F892F7FB77E7A0 /* FormValidation.swift */; };
+		EE2A90C73C72F7F698341E266AAB57D0 /* YGLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0982D453C06A5814C46C9B1B337F37F3 /* YGLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EE7E22CDC0E29E752EDA960ADA8836B4 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A8E310AB695F903E7C91F394C8DD7B /* Button.swift */; };
+		EFD6458A6C0676121D43BD2A02F51153 /* FormSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B5E423C26734D412C8344CA167974D /* FormSubmit.swift */; };
+		F0D895418397885294C460DEC7C48D79 /* BeagleScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1AC211E0FEB29880C99272C303185 /* BeagleScreenViewModel.swift */; };
+		F14A855034AF8C0B136315B8255F799A /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BA7985BBBB95C3A282EF26D0F657FE /* Appearance.swift */; };
+		F1FBB45DE3BE7372B8D806B4CA969E3E /* CacheLRU.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA244AED017E0AF6739ED40FE26BE5B6 /* CacheLRU.swift */; };
+		F349B4AC3994052AA2DB894D16CC41F4 /* NavigateEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A2312D33494BFCE5918682EC6C1FA7 /* NavigateEntity.swift */; };
+		F49F67175C63D9D6DDAD7095466CAB01 /* YGValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1122C422B8C2F4FEDF9498202C4C5A /* YGValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F84E14F22975B633D086C8AA13244D71 /* PageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63ED81866885E74126F922F4B9CBF11 /* PageIndicator.swift */; };
+		F973A43A3C724BD2602B51C5B40BBE2A /* FormValidationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FAEC55757314D25F1CDB35E0686980 /* FormValidationEntity.swift */; };
+		FCC726463331616D43A32BDF7FE01208 /* FormEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166952F55F3D10FC3C3296008A7C7EBB /* FormEntity.swift */; };
+		FD27F0F5AE1CBAF437A851FAFB8C294D /* ImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501AC656C9AAC89F2DF209560CBF9C2 /* ImageEntity.swift */; };
+		FEC1C030D168B05ED4914D6CD65BDD5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D5C7AFE33E9615A5FAD841E93D691D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B25F90D819B9ADF2AF2D8733A890333;
+			remoteInfo = Yoga;
+		};
+		81CB998C35B4648ABD14A86A55020F04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D4F0EE362B88D60EC7363B90B96F3A;
+			remoteInfo = BeagleUI;
+		};
+		996839C689A229303656BDD719F76B71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CA4CBD6B28983076BD93DA221AD027;
+			remoteInfo = YogaKit;
+		};
+		A1EC342097183C94D13613B52472AFBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2D4F0EE362B88D60EC7363B90B96F3A;
+			remoteInfo = BeagleUI;
+		};
+		A2F22EB49DEEE82DCC893242C5D0542B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CA4CBD6B28983076BD93DA221AD027;
+			remoteInfo = YogaKit;
+		};
+		A50C3AD31374C2815EB51F6D54DB4ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F5F93B65BE325E1F03F9767B7439465;
+			remoteInfo = "Pods-hackaton-iOS";
+		};
+		BB7893A620CD26E7BF975E6F5DDE5E92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32CA4CBD6B28983076BD93DA221AD027;
+			remoteInfo = YogaKit;
+		};
+		D568835625BD897421CAAAA4D4063D38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B25F90D819B9ADF2AF2D8733A890333;
+			remoteInfo = Yoga;
+		};
+		E392705A1688426F82B0A62C9089E28D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B25F90D819B9ADF2AF2D8733A890333;
+			remoteInfo = Yoga;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03696706BBCE64BC7C4B0AB957A4DCF0 /* YGNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNode.cpp; path = yoga/YGNode.cpp; sourceTree = "<group>"; };
+		048FF981A6E0155D406133BB5485ED2C /* ListView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListView.swift; path = Sources/BeagleUI/Sources/Components/ListView/ListView.swift; sourceTree = "<group>"; };
+		04B136ADAAC7CD1231B40014B857A30C /* Pods_hackaton_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hackaton_iOSTests.framework; path = "Pods-hackaton-iOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05021523FA55BF0B520597C21287F924 /* SafeAreaManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SafeAreaManager.swift; path = Sources/BeagleUI/Sources/Renderer/SafeAreaManager.swift; sourceTree = "<group>"; };
+		05D37F58E27C6B04C8889D5B423AA16E /* YGLayout+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "YGLayout+Private.h"; path = "YogaKit/Source/YGLayout+Private.h"; sourceTree = "<group>"; };
+		07E5C742757974E76032572266A24E55 /* Pods-hackaton-iOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0982D453C06A5814C46C9B1B337F37F3 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = yoga/YGLayout.h; sourceTree = "<group>"; };
+		0AB23ECEC427B30F3DDF58F75D7F29C1 /* ServerDrivenComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerDrivenComponent.swift; path = Sources/BeagleUI/Sources/Components/ServerDrivenComponent.swift; sourceTree = "<group>"; };
+		0B61F85200D9F89BE673805EDC410E8A /* BeagleScreenViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleScreenViewController.swift; path = Sources/BeagleUI/Sources/Renderer/BeagleScreenViewController.swift; sourceTree = "<group>"; };
+		0C592110405BA6B99C1098465817A551 /* NetworkClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkClient.swift; path = Sources/BeagleUI/Sources/Networking/NetworkClient.swift; sourceTree = "<group>"; };
+		1211C200C1AA9C23AEB31239518A2C43 /* BeagleDeepLinkHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleDeepLinkHandler.swift; path = Sources/BeagleUI/Sources/Navigation/BeagleDeepLinkHandler.swift; sourceTree = "<group>"; };
+		12B0FD77502D2726D0EE368C234B458A /* OnStateUpdatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnStateUpdatable.swift; path = Sources/BeagleUI/Sources/Components/Lazy/OnStateUpdatable.swift; sourceTree = "<group>"; };
+		135D6084D8DD29D725C082C049F56FB0 /* Pods-hackaton-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		13B5BC5086C8067574462721D3DE59C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		157236C2E8117D9FB6CC8D77D58B5F00 /* ComponentDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentDecoder.swift; path = Sources/BeagleUI/Sources/Decoding/ComponentDecoder.swift; sourceTree = "<group>"; };
+		166952F55F3D10FC3C3296008A7C7EBB /* FormEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormEntity.swift; path = Sources/BeagleUI/Sources/Components/Form/FormEntity.swift; sourceTree = "<group>"; };
+		16BA7985BBBB95C3A282EF26D0F657FE /* Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Appearance.swift; path = Sources/BeagleUI/Sources/Components/Appearance/Appearance.swift; sourceTree = "<group>"; };
+		18991F932653137CBE9D2B49FC12177D /* ContainerIndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerIndicatorView.swift; path = Sources/BeagleUI/Sources/Components/TabBar/ContainerIndicatorView.swift; sourceTree = "<group>"; };
+		1BFF4AFD7CDF1DDCE434A0375F4DCC1F /* Widget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Widget.swift; path = Sources/BeagleUI/Sources/Components/Widget.swift; sourceTree = "<group>"; };
+		1C52C9E04E57321BB351C4D52DAF4F09 /* TabViewEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabViewEntity.swift; path = Sources/BeagleUI/Sources/Components/TabBar/TabViewEntity.swift; sourceTree = "<group>"; };
+		1C8ECAA4BF9652DD711D45A7127E2A47 /* instrumentation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = instrumentation.h; path = yoga/instrumentation.h; sourceTree = "<group>"; };
+		1C95C5E555B63AEE488B0E5F053D038C /* CustomAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomAction.swift; path = Sources/BeagleUI/Sources/Action/CustomAction.swift; sourceTree = "<group>"; };
+		1D4C855CFE70AB91FAE091F7FB0494A9 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Sources/BeagleUI/Sources/Common/Observable/Observable.swift; sourceTree = "<group>"; };
+		1D81D48056B16C08D4F8D14130A99E06 /* YogaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YogaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE3978F9F852C6FBDCB0FE3ABBEAC42 /* Yoga.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Yoga.debug.xcconfig; sourceTree = "<group>"; };
+		1E5787CB8DBC4D33A8580277078FE53A /* YGNodePrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodePrint.h; path = yoga/YGNodePrint.h; sourceTree = "<group>"; };
+		207C01C58D107E5CDDE8011AC9CE63A2 /* Pods-hackaton-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		214A0817324A01D29F12DE50C16E7838 /* UrlRequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UrlRequestBuilder.swift; path = Sources/BeagleUI/Sources/Networking/Default/UrlRequestBuilder.swift; sourceTree = "<group>"; };
+		22D90BED0D6CE43DBE5009854B1C1F34 /* Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m"; sourceTree = "<group>"; };
+		24CF896182F7D98C09194DADC91C8691 /* FormSubmitEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormSubmitEntity.swift; path = Sources/BeagleUI/Sources/Components/Form/Submit/FormSubmitEntity.swift; sourceTree = "<group>"; };
+		26AFB29F90326917BC851AB1F5856E5E /* log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = log.h; path = yoga/log.h; sourceTree = "<group>"; };
+		26EF00D9A00FA0EFA6CA8731EF8AFC0A /* Navigate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Navigate.swift; path = Sources/BeagleUI/Sources/Navigation/Navigate.swift; sourceTree = "<group>"; };
+		277464614534E0EBBACE72F4167AEC16 /* ListItemTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListItemTableViewCell.swift; path = Sources/BeagleUI/Sources/Components/ListView/ListItemTableViewCell.swift; sourceTree = "<group>"; };
+		2835316B61EA9A86069265D8DA23A7E8 /* Pods-hackaton-iOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hackaton-iOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2B6F10BB412AC0CDE0074E2FFA1367D1 /* YGEnums.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGEnums.cpp; path = yoga/YGEnums.cpp; sourceTree = "<group>"; };
+		2C6B7A395BA1A088BCA11FB522133F69 /* UIModelConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIModelConvertible.swift; path = Sources/BeagleUI/Sources/Decoding/UIModelConvertible.swift; sourceTree = "<group>"; };
+		2FA3EC5082A7F15EA21D38832930B305 /* YogaKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YogaKit-Info.plist"; sourceTree = "<group>"; };
+		3213F7B9256ACB6B64E9E1FDB20CDD95 /* YGStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGStyle.cpp; path = yoga/YGStyle.cpp; sourceTree = "<group>"; };
+		32D7678CE1036B1EB402DD7137A6F5A7 /* SpacerEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpacerEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Spacer/SpacerEntity.swift; sourceTree = "<group>"; };
+		331D25F258CF83E81D149696A8D7BA21 /* Container.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Container.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/Container.swift; sourceTree = "<group>"; };
+		3463A65283AE588C7B00A8DB20A31A6F /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+AutoLayout.swift"; path = "Sources/BeagleUI/Sources/Common/Extensions/UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		346C1B0996E1F497BB10D8D77F736D56 /* YGConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGConfig.h; path = yoga/YGConfig.h; sourceTree = "<group>"; };
+		359F06FF83470E0C24523F5169F59E9E /* YGLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YGLayout.m; path = YogaKit/Source/YGLayout.m; sourceTree = "<group>"; };
+		35AC85E9188175AC762A28DA40B88878 /* BeagleUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BeagleUI.framework; path = BeagleUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		368E297EAFBF9A423FCAD6D2B89149B6 /* LazyComponentEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyComponentEntity.swift; path = Sources/BeagleUI/Sources/Components/Lazy/LazyComponentEntity.swift; sourceTree = "<group>"; };
+		3906908E29C132F20BEADD22F9482DC2 /* Pods-hackaton-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hackaton-iOS-dummy.m"; sourceTree = "<group>"; };
+		391D07EA9B0A57B75CEA922C1BE91E83 /* ActionEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionEntity.swift; path = Sources/BeagleUI/Sources/Action/ActionEntity.swift; sourceTree = "<group>"; };
+		39FE0AE8BBEE79C0236F274801157E86 /* FormInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormInput.swift; path = Sources/BeagleUI/Sources/Components/Form/Input/FormInput.swift; sourceTree = "<group>"; };
+		3B01FE658ABE77BD6AE1B1C7FD48F25C /* ScreenComponentEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenComponentEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Screen/ScreenComponentEntity.swift; sourceTree = "<group>"; };
+		3DDB9935ED5BB1A89DE657CF1B471764 /* BeagleNavigator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleNavigator.swift; path = Sources/BeagleUI/Sources/Navigation/BeagleNavigator.swift; sourceTree = "<group>"; };
+		3EEF9D612BE64E493DB3AABCC341A87F /* PageViewEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewEntity.swift; path = Sources/BeagleUI/Sources/Components/Page/PageViewEntity.swift; sourceTree = "<group>"; };
+		425F7AF0AF3B20D9580AB73B9F86369E /* ContainerEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainerEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/ContainerEntity.swift; sourceTree = "<group>"; };
+		42B00D8E12F809C2BCFA8FE16E8E94B5 /* AppearanceEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppearanceEntity.swift; path = Sources/BeagleUI/Sources/Components/Appearance/AppearanceEntity.swift; sourceTree = "<group>"; };
+		4341BC340EAF7483ABEFDDFEF84FDB4B /* PageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageView.swift; path = Sources/BeagleUI/Sources/Components/Page/PageView.swift; sourceTree = "<group>"; };
+		45EBA0E62B3D8CFC7C73DFBBA022D4E6 /* TextEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextEntity.swift; path = Sources/BeagleUI/Sources/Components/Text/TextEntity.swift; sourceTree = "<group>"; };
+		462E57ECD1AD3678E73B83AC9202B003 /* Yoga-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-prefix.pch"; sourceTree = "<group>"; };
+		46D9DD30E94DC9B6B10B9AF0CE1FDAA5 /* YGStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGStyle.h; path = yoga/YGStyle.h; sourceTree = "<group>"; };
+		47A8E310AB695F903E7C91F394C8DD7B /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Sources/BeagleUI/Sources/Components/Button/Button.swift; sourceTree = "<group>"; };
+		47CE8569A1BD04A132C31146F6309CF3 /* CacheManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheManager.swift; path = Sources/BeagleUI/Sources/Caching/CacheManager/CacheManager.swift; sourceTree = "<group>"; };
+		48A5AF039755CD3550960E658007C668 /* YogaKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-umbrella.h"; sourceTree = "<group>"; };
+		499D656B6D69F7101D3C337B2BDFF429 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/BeagleUI/Sources/Common/Util/Result.swift; sourceTree = "<group>"; };
+		4A06EA3230F65658E96B33B2ED6DE8C2 /* BeagleUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BeagleUI-umbrella.h"; sourceTree = "<group>"; };
+		4B5185E61592F68616F7DEFD54208885 /* UIView+Id.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Id.swift"; path = "Sources/BeagleUI/Sources/Components/Id/UIView+Id.swift"; sourceTree = "<group>"; };
+		4D469A31EF508EFAE53D60E17139954A /* Pods-hackaton-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hackaton-iOS.modulemap"; sourceTree = "<group>"; };
+		5039B3B97637F71DB7CAD316CA6BA670 /* YGValue.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGValue.cpp; path = yoga/YGValue.cpp; sourceTree = "<group>"; };
+		52F025F085BBC03F4721FD4DC55ED34F /* CollectionExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtension.swift; path = Sources/BeagleUI/Sources/Common/Extensions/CollectionExtension.swift; sourceTree = "<group>"; };
+		5406DF56F4D5DA2B979ED67990EC3BE9 /* HTTPRequestCanceling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPRequestCanceling.swift; path = Sources/BeagleUI/Sources/Common/Protocols/HTTPRequestCanceling.swift; sourceTree = "<group>"; };
+		56258877EAD57ABE667BD003FE0244E0 /* TabView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabView.swift; path = Sources/BeagleUI/Sources/Components/TabBar/TabView.swift; sourceTree = "<group>"; };
+		5739C2120E3E816A2BA64C88DCDF414B /* Network.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Sources/BeagleUI/Sources/Networking/Network.swift; sourceTree = "<group>"; };
+		57E898EF5A6E98F078DFC84D39869518 /* YGMarker.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGMarker.cpp; path = yoga/YGMarker.cpp; sourceTree = "<group>"; };
+		57F21306D3695243D63A4DC43505D8C5 /* BeagleUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BeagleUI.release.xcconfig; sourceTree = "<group>"; };
+		58382A637C9474339A8B0749BDE91051 /* YGLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGLayout.cpp; path = yoga/YGLayout.cpp; sourceTree = "<group>"; };
+		5A538758A0E9E5AC8B6955B8ACEA9721 /* Pods-hackaton-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		5AFFEB9DA6EFC0FF8E933AD72EE41E20 /* YogaKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YogaKit.debug.xcconfig; sourceTree = "<group>"; };
+		5B3357A1CE67C0BF4AE31936A1BE6888 /* YogaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YogaKit.framework; path = YogaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CAF12DFC215B05BA68818D6B7BA127E /* Flex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Flex.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/Flex.swift; sourceTree = "<group>"; };
+		5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		60A3DEA10D138311ADCF17B435D6FDC4 /* UIView+Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Yoga.h"; path = "YogaKit/Source/UIView+Yoga.h"; sourceTree = "<group>"; };
+		6148134F4146843B97F6830C605D1A26 /* TouchableEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TouchableEntity.swift; path = Sources/BeagleUI/Sources/Action/TouchableEntity.swift; sourceTree = "<group>"; };
+		63EEBB3E70F8AF399D352070AE6B2F22 /* NetworkImageEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkImageEntity.swift; path = Sources/BeagleUI/Sources/Components/Image/Network/NetworkImageEntity.swift; sourceTree = "<group>"; };
+		65D0A19C165FA1126B1360680FE6DB12 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = yoga.framework; path = Yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		674F308A7D8F1C4DA6F4F9EBEA4346F3 /* YGLayoutExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YGLayoutExtensions.swift; path = YogaKit/Source/YGLayoutExtensions.swift; sourceTree = "<group>"; };
+		677A3F507BCD1A2C96FBCFEB0F0C819F /* ListViewEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListViewEntity.swift; path = Sources/BeagleUI/Sources/Components/ListView/ListViewEntity.swift; sourceTree = "<group>"; };
+		68AEEC0D3A02FD201E0B8AB83DEE2815 /* FormInputEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormInputEntity.swift; path = Sources/BeagleUI/Sources/Components/Form/Input/FormInputEntity.swift; sourceTree = "<group>"; };
+		68B15CF818DD9B5FE764F37681CC31DF /* ActionGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionGestureRecognizer.swift; path = Sources/BeagleUI/Sources/Action/ActionGestureRecognizer.swift; sourceTree = "<group>"; };
+		6AA4613C089B10ACA220929725A1430B /* Pods_hackaton_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hackaton_iOS.framework; path = "Pods-hackaton-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC4FC1687DB6180D4A16A26705590F2 /* FunctiontalUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FunctiontalUtils.swift; path = Sources/BeagleUI/Sources/Common/Util/FunctiontalUtils.swift; sourceTree = "<group>"; };
+		72D38CA3405FDEC21ECFBE73E76487D2 /* CompactValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CompactValue.h; path = yoga/CompactValue.h; sourceTree = "<group>"; };
+		72D64433E8F012FC8860490B7953FF42 /* TabViewUIComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabViewUIComponent.swift; path = Sources/BeagleUI/Sources/Components/TabBar/TabViewUIComponent.swift; sourceTree = "<group>"; };
+		746980EA0F3ECC9C542E92AE7ACA0DDF /* CustomActionEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomActionEntity.swift; path = Sources/BeagleUI/Sources/Action/CustomActionEntity.swift; sourceTree = "<group>"; };
+		748A357BF805EB9C254F1E97FF6FB8AD /* ButtonEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonEntity.swift; path = Sources/BeagleUI/Sources/Components/Button/ButtonEntity.swift; sourceTree = "<group>"; };
+		7501AC656C9AAC89F2DF209560CBF9C2 /* ImageEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageEntity.swift; path = Sources/BeagleUI/Sources/Components/Image/ImageEntity.swift; sourceTree = "<group>"; };
+		7746F2C26A4C6FBFADC825CD8AEE6CF3 /* Accessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Accessibility.swift; path = Sources/BeagleUI/Sources/Accessibility/Accessibility.swift; sourceTree = "<group>"; };
+		7927D36FDF3C4AAA8BF1FDE562B2FA7B /* DoublyLinkedList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DoublyLinkedList.swift; path = Sources/BeagleUI/Sources/Caching/LRU/DoublyLinkedList.swift; sourceTree = "<group>"; };
+		7A7B16F3B73F8039B9AFF032388C1404 /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Sources/BeagleUI/Sources/Components/Form/Form.swift; sourceTree = "<group>"; };
+		7D511C49195AD6CCE0F38FEC4E3C0867 /* ImageEntityContentMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageEntityContentMode.swift; path = Sources/BeagleUI/Sources/Components/Image/ImageEntityContentMode.swift; sourceTree = "<group>"; };
+		7F3EFE4944B724D2423BBCCD6935AABC /* InputValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InputValue.swift; path = Sources/BeagleUI/Sources/Components/Form/Input/InputValue.swift; sourceTree = "<group>"; };
+		83F458973248E2FC5FA60BEE5C475276 /* YogaKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YogaKit.release.xcconfig; sourceTree = "<group>"; };
+		84F9FD7335CEDB08F9C52F3043689352 /* UIView+Yoga.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Yoga.m"; path = "YogaKit/Source/UIView+Yoga.m"; sourceTree = "<group>"; };
+		85051B190FF74A3A1415977B317BDAAF /* YGNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNode.h; path = yoga/YGNode.h; sourceTree = "<group>"; };
+		859188814296BF96CEAF3678F7DEA0F0 /* YogaKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YogaKit-prefix.pch"; sourceTree = "<group>"; };
+		8628F867E9EF283F9BA1EEC98649484F /* log.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = log.cpp; path = yoga/log.cpp; sourceTree = "<group>"; };
+		86700604C89A32FF2897A2A4D138EE4E /* Yoga.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Yoga.modulemap; sourceTree = "<group>"; };
+		86C847FD6243C1003A9588A3BEB689F2 /* WidgetStateObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WidgetStateObservable.swift; path = Sources/BeagleUI/Sources/Common/Observable/WidgetStateObservable.swift; sourceTree = "<group>"; };
+		870E8CC5EB6106444B1BB58E5967AEF6 /* ScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollView.swift; path = Sources/BeagleUI/Sources/Components/Layout/Scroll/ScrollView.swift; sourceTree = "<group>"; };
+		884A7825EABA6695718465F8674C1661 /* UnitValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitValue.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/UnitValue.swift; sourceTree = "<group>"; };
+		88AEC5C0874C1A6D61790DA0FFFCF13B /* Spacer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spacer.swift; path = Sources/BeagleUI/Sources/Components/Layout/Spacer/Spacer.swift; sourceTree = "<group>"; };
+		8991A430AB8FFA8A7B425A56BB6CD4CF /* Pods-hackaton-iOS-hackaton-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOS-hackaton-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8AB9B88FDCE7FAC5241BF98454A4C91E /* Pods-hackaton-iOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOSTests-Info.plist"; sourceTree = "<group>"; };
+		8B35000CD33BBB493C993D385652C59A /* PageViewUIComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageViewUIComponent.swift; path = Sources/BeagleUI/Sources/Components/Page/PageViewUIComponent.swift; sourceTree = "<group>"; };
+		8BAAC7C396C79FD0395B0F815F6EF4AD /* Yoga.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Yoga.release.xcconfig; sourceTree = "<group>"; };
+		8BBF2B01A3E72DEE8719CD3BDD4D7E08 /* BeagleUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BeagleUI-dummy.m"; sourceTree = "<group>"; };
+		8DB40F284BF45354FC52ECC6D4E03E45 /* NSObjectExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSObjectExtension.swift; path = Sources/BeagleUI/Sources/Common/Extensions/NSObjectExtension.swift; sourceTree = "<group>"; };
+		8F1122C422B8C2F4FEDF9498202C4C5A /* YGValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGValue.h; path = yoga/YGValue.h; sourceTree = "<group>"; };
+		919DBDF4737FFC4AA3C93E8B6619479D /* UnitValueEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitValueEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/UnitValueEntity.swift; sourceTree = "<group>"; };
+		9411A1514BA3F82630E41CB1D99AFD14 /* BeagleUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BeagleUI.debug.xcconfig; sourceTree = "<group>"; };
+		9773C11B4B7717C011F508541006D013 /* Yoga-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Yoga-dummy.m"; sourceTree = "<group>"; };
+		991FB342426D76809DABC6271A5BD882 /* FlexEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/FlexEntity.swift; sourceTree = "<group>"; };
+		9AA9CAA78179B96C622BB1D28A0177A5 /* BeagleUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BeagleUI-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E4AD117E2A2D93950BF15C46C6B39FC /* Pods-hackaton-iOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hackaton-iOSTests.modulemap"; sourceTree = "<group>"; };
+		9EBB6574F04976A328204A0835A8290A /* ScreenComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScreenComponent.swift; path = Sources/BeagleUI/Sources/Components/Layout/Screen/ScreenComponent.swift; sourceTree = "<group>"; };
+		9F3A451A65271771AEE14B3610B62242 /* KeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardManager.swift; path = Sources/BeagleUI/Sources/Renderer/KeyboardManager.swift; sourceTree = "<group>"; };
+		9FD6E0F83EB5DA2085B688B5DA20CA5F /* Pods_hackaton_iOS_hackaton_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_hackaton_iOS_hackaton_iOSUITests.framework; path = "Pods-hackaton-iOS-hackaton-iOSUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A140488FF50BECDBE138DFC41678EFD9 /* Pods-hackaton-iOS-hackaton-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOS-hackaton-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1D6AAC95DD092C55885ED65A13D3827 /* Pods-hackaton-iOS-hackaton-iOSUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOS-hackaton-iOSUITests-Info.plist"; sourceTree = "<group>"; };
+		A49D4FBAFCED7E7035FFB130A3C82337 /* Pods-hackaton-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		A63ED81866885E74126F922F4B9CBF11 /* PageIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageIndicator.swift; path = Sources/BeagleUI/Sources/Components/Page/Indicator/PageIndicator.swift; sourceTree = "<group>"; };
+		A64FEAC346B00F417442126111CAB9E3 /* Pods-hackaton-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOS-Info.plist"; sourceTree = "<group>"; };
+		A65B3B87CFE9BA4AD5DFA5CB9ED64448 /* UnitValueExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitValueExtension.swift; path = Sources/BeagleUI/Sources/Common/Extensions/UnitValueExtension.swift; sourceTree = "<group>"; };
+		A9FAEC55757314D25F1CDB35E0686980 /* FormValidationEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormValidationEntity.swift; path = Sources/BeagleUI/Sources/Components/Form/FormValidationEntity.swift; sourceTree = "<group>"; };
+		ACE1AC211E0FEB29880C99272C303185 /* BeagleScreenViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleScreenViewModel.swift; path = Sources/BeagleUI/Sources/Renderer/BeagleScreenViewModel.swift; sourceTree = "<group>"; };
+		AD8745DE3840E7B01A81757B9BCA1162 /* Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		AF537C2ED08CE0118BF9D1C3602146A1 /* ComponentEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentEntity.swift; path = Sources/BeagleUI/Sources/Components/ComponentEntity.swift; sourceTree = "<group>"; };
+		AF74B84D6575BBC9970BA5FAD4DD582F /* Pods-hackaton-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hackaton-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B25849EC77035D449902C7F1500CC23F /* LoadingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingView.swift; path = Sources/BeagleUI/Sources/Common/Loading/LoadingView.swift; sourceTree = "<group>"; };
+		B415B928253BF3F99734E099A5EC07B3 /* Utils.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Utils.cpp; path = yoga/Utils.cpp; sourceTree = "<group>"; };
+		B4F6F473BDEC0C0707AE4715A05CA738 /* YogaTranslator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = YogaTranslator.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/YogaTranslator.swift; sourceTree = "<group>"; };
+		B6A05822DECAA8B9EB90A9B5B87D1D82 /* Pods-hackaton-iOS-hackaton-iOSUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-hackaton-iOS-hackaton-iOSUITests.modulemap"; sourceTree = "<group>"; };
+		B7341D5234EB014A6508ACD9C5930E2A /* UIView+Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Appearance.swift"; path = "Sources/BeagleUI/Sources/Components/Appearance/UIView+Appearance.swift"; sourceTree = "<group>"; };
+		B88796EDA6C8408225CD8025C6C6B922 /* Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h"; sourceTree = "<group>"; };
+		BB02BA7747103220B368BBA0DED1DF8E /* YGEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGEnums.h; path = yoga/YGEnums.h; sourceTree = "<group>"; };
+		BB6F04414A5D1E6B2C73271E5F5C3114 /* YGMarker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMarker.h; path = yoga/YGMarker.h; sourceTree = "<group>"; };
+		BDF4FC048AB1159B09187FD7996814C4 /* NetworkImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkImage.swift; path = Sources/BeagleUI/Sources/Components/Image/Network/NetworkImage.swift; sourceTree = "<group>"; };
+		BF6F7F800539205363D3F25EA3A28C7B /* Text.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Text.swift; path = Sources/BeagleUI/Sources/Components/Text/Text.swift; sourceTree = "<group>"; };
+		C0A2312D33494BFCE5918682EC6C1FA7 /* NavigateEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigateEntity.swift; path = Sources/BeagleUI/Sources/Navigation/NavigateEntity.swift; sourceTree = "<group>"; };
+		C14ADE8894988653231F8DB5F72EB860 /* Screen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Screen.swift; path = Sources/BeagleUI/Sources/Renderer/Screen.swift; sourceTree = "<group>"; };
+		C18E35151E88A973E16A4255DEAB8C93 /* BeagleUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BeagleUI-Info.plist"; sourceTree = "<group>"; };
+		C2AC61B62E86E76B32087FEFA75BE31B /* CustomActionHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomActionHandler.swift; path = Sources/BeagleUI/Sources/Action/CustomActionHandler.swift; sourceTree = "<group>"; };
+		C2D810ABDAE8E38BA93C0D1B8C207278 /* ComponentConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ComponentConvertible.swift; path = Sources/BeagleUI/Sources/Components/ComponentConvertible.swift; sourceTree = "<group>"; };
+		C324BF4A59E9F2C64896051C2AE1E11B /* Action.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Sources/BeagleUI/Sources/Action/Action.swift; sourceTree = "<group>"; };
+		C422F37E45494A03E49BEAFAC80B020A /* BeagleContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleContext.swift; path = Sources/BeagleUI/Sources/Context/BeagleContext.swift; sourceTree = "<group>"; };
+		C465B8172791E377D9F892F7FB77E7A0 /* FormValidation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormValidation.swift; path = Sources/BeagleUI/Sources/Components/Form/FormValidation.swift; sourceTree = "<group>"; };
+		C4BB13D8F367656E747D125733F21430 /* FlexViewConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FlexViewConfigurator.swift; path = Sources/BeagleUI/Sources/Components/Layout/Flex/FlexViewConfigurator.swift; sourceTree = "<group>"; };
+		C5669535D1CCAD71494941B4C9855CEE /* YogaKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YogaKit-dummy.m"; sourceTree = "<group>"; };
+		C5B2C8792224BE1D1C2377CCA6828748 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/BeagleUI/Sources/Components/Image/Image.swift; sourceTree = "<group>"; };
+		C74597685E0CD318A346B5A65C2F4A7C /* ShowNativeDialogEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowNativeDialogEntity.swift; path = Sources/BeagleUI/Sources/Action/ShowNativeDialogEntity.swift; sourceTree = "<group>"; };
+		C887A53B4F2CC7E6F8882301C8CAF6BA /* BeaglePrefetchHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeaglePrefetchHelper.swift; path = Sources/BeagleUI/Sources/Caching/Prefetch/BeaglePrefetchHelper.swift; sourceTree = "<group>"; };
+		CA244AED017E0AF6739ED40FE26BE5B6 /* CacheLRU.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheLRU.swift; path = Sources/BeagleUI/Sources/Caching/LRU/CacheLRU.swift; sourceTree = "<group>"; };
+		CD2459F74DE0E1AC86E044B83ED2CF85 /* SubmitFormGestureRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubmitFormGestureRecognizer.swift; path = Sources/BeagleUI/Sources/Components/Form/Submit/SubmitFormGestureRecognizer.swift; sourceTree = "<group>"; };
+		CFB64C67219B5E61488686D23AF26703 /* ListViewUIComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ListViewUIComponent.swift; path = Sources/BeagleUI/Sources/Components/ListView/ListViewUIComponent.swift; sourceTree = "<group>"; };
+		D0DC824AAA306B91623F69C2062F5F02 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D326116C9B288C9FB8EFB4812BF28A1A /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Sources/BeagleUI/Sources/Components/Form/Validator.swift; sourceTree = "<group>"; };
+		D3B52339A14B91C71C2A5100E7DEFDD7 /* Pods-hackaton-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hackaton-iOS-frameworks.sh"; sourceTree = "<group>"; };
+		D3BF76EB19ED5B3FFDE7694E383A1124 /* Yoga.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Yoga.h; path = yoga/Yoga.h; sourceTree = "<group>"; };
+		D461329C6FDBAE95CE6869983DA5A052 /* ImageContentMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageContentMode.swift; path = Sources/BeagleUI/Sources/Components/Image/ImageContentMode.swift; sourceTree = "<group>"; };
+		D5234648CC9FB2270AEC80B752120EF8 /* ValidatorProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidatorProvider.swift; path = Sources/BeagleUI/Sources/Components/Form/ValidatorProvider.swift; sourceTree = "<group>"; };
+		D6F29B0BB47A05704490BB63F424349F /* Pods-hackaton-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hackaton-iOS-umbrella.h"; sourceTree = "<group>"; };
+		D75F6C1062A9ABF3ADE02173187306D3 /* Yoga-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Yoga-internal.h"; path = "yoga/Yoga-internal.h"; sourceTree = "<group>"; };
+		D8317CDCF1F21A32B3CB0D71F2EFE4AF /* UIView+Loading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Loading.swift"; path = "Sources/BeagleUI/Sources/Common/Extensions/UIView+Loading.swift"; sourceTree = "<group>"; };
+		D91E5DA363B25D0FCE5001008AE5674B /* Yoga.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.cpp; path = yoga/Yoga.cpp; sourceTree = "<group>"; };
+		D979A15E0DC752AA6DE890640D780486 /* Pods-hackaton-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hackaton-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D99C8AC697F4C6C56FC6BB62FB5DBC84 /* ScrollViewEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollViewEntity.swift; path = Sources/BeagleUI/Sources/Components/Layout/Scroll/ScrollViewEntity.swift; sourceTree = "<group>"; };
+		DC72BE599A6C4B49321C857FDC1659D6 /* YGNodePrint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNodePrint.cpp; path = yoga/YGNodePrint.cpp; sourceTree = "<group>"; };
+		DCA49A1F6B6F100824FE4A976225F42E /* BeagleDependencies.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleDependencies.swift; path = Sources/BeagleUI/Sources/Setup/BeagleDependencies.swift; sourceTree = "<group>"; };
+		DE337ABA326EFA04DAA0767C826C55C9 /* NetworkClientDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkClientDefault.swift; path = Sources/BeagleUI/Sources/Networking/Default/NetworkClientDefault.swift; sourceTree = "<group>"; };
+		DF227A8D5C0FB06752F079B145905E1E /* Pods-hackaton-iOS-hackaton-iOSUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hackaton-iOS-hackaton-iOSUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E140DD96C571BE5253305DB15F2CCC19 /* NSErrorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSErrorExtension.swift; path = Sources/BeagleUI/Sources/Common/Extensions/NSErrorExtension.swift; sourceTree = "<group>"; };
+		E4225FE1F8502CA5D8F7190631B6A2D1 /* Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Sources/BeagleUI/Sources/Theme/Theme.swift; sourceTree = "<group>"; };
+		E42913B8562F1474BC64587CFCD4E366 /* Yoga-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-umbrella.h"; sourceTree = "<group>"; };
+		E4A3D21252BCA11D5EF108AC68CD5A56 /* YogaKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YogaKit.modulemap; sourceTree = "<group>"; };
+		E503169BE015F9E8419CDF6C427A8A26 /* BeagleSetup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeagleSetup.swift; path = Sources/BeagleUI/Sources/Setup/BeagleSetup.swift; sourceTree = "<group>"; };
+		E6690D89E7E3DD26A2481FA849D58F26 /* YGConfig.cpp */ = {isa = PBXFileReference; includeInIndex = 1; name = YGConfig.cpp; path = yoga/YGConfig.cpp; sourceTree = "<group>"; };
+		E68C18B3382185E55B9D5B1746B642F8 /* ActionExecutor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionExecutor.swift; path = Sources/BeagleUI/Sources/Action/ActionExecutor.swift; sourceTree = "<group>"; };
+		E69B33D57FA480900E053CC795C010A6 /* ActionConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionConvertible.swift; path = Sources/BeagleUI/Sources/Action/ActionConvertible.swift; sourceTree = "<group>"; };
+		E94BA5246419F22EA0C7F8D70BF518FB /* UIView+Subviews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Subviews.swift"; path = "Sources/BeagleUI/Sources/Common/Extensions/UIView+Subviews.swift"; sourceTree = "<group>"; };
+		EAC0211F4B37EDC20E2CEF1620966212 /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGLayout.h; path = YogaKit/Source/YGLayout.h; sourceTree = "<group>"; };
+		EBB295B6BD1E090A04A3F1CA92E74E46 /* AccessibilityEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccessibilityEntity.swift; path = Sources/BeagleUI/Sources/Accessibility/AccessibilityEntity.swift; sourceTree = "<group>"; };
+		EC515C8E61C109B17E3CBA0F85CF5036 /* Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EE4B72E096ACC413ABEDF9DD698AAC00 /* Utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = yoga/Utils.h; sourceTree = "<group>"; };
+		EE5FC8C237D4C2BD5BC6A3DBC1E0E0F2 /* DefaultPageIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultPageIndicator.swift; path = Sources/BeagleUI/Sources/Components/Page/Indicator/DefaultPageIndicator.swift; sourceTree = "<group>"; };
+		EEF87E70CF7D97D9418CA65FE41AB2E9 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Sources/BeagleUI/Sources/Networking/Request.swift; sourceTree = "<group>"; };
+		F041FABD384D392170E68C591BD100DC /* YGFloatOptional.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGFloatOptional.h; path = yoga/YGFloatOptional.h; sourceTree = "<group>"; };
+		F146E90269A12ED8E4E51D1FB410C367 /* Pods-hackaton-iOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hackaton-iOSTests-dummy.m"; sourceTree = "<group>"; };
+		F267B787042754C7E4CAFA06BFF32DED /* Pods-hackaton-iOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-hackaton-iOSTests-umbrella.h"; sourceTree = "<group>"; };
+		F26941650946E862B7F6336A4202CFE0 /* Touchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Touchable.swift; path = Sources/BeagleUI/Sources/Action/Touchable.swift; sourceTree = "<group>"; };
+		F4146C876373DC47770664C066DB291A /* FatalErrorUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FatalErrorUtil.swift; path = Sources/BeagleUI/Sources/Common/Util/FatalErrorUtil.swift; sourceTree = "<group>"; };
+		F41C3B09ED0247CAB7CDF2EBDD18C0E0 /* LazyComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LazyComponent.swift; path = Sources/BeagleUI/Sources/Components/Lazy/LazyComponent.swift; sourceTree = "<group>"; };
+		F7240D4E2608A24AA23624A1AAC46D5F /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = yoga/YGMacros.h; sourceTree = "<group>"; };
+		F7B5E423C26734D412C8344CA167974D /* FormSubmit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormSubmit.swift; path = Sources/BeagleUI/Sources/Components/Form/Submit/FormSubmit.swift; sourceTree = "<group>"; };
+		F8F335593A333F9EBAF570831348C897 /* BeagleUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BeagleUI.modulemap; sourceTree = "<group>"; };
+		FA641809B4A9F96F989137CC2B9056C9 /* TabBarCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabBarCollectionViewCell.swift; path = Sources/BeagleUI/Sources/Components/TabBar/TabBarCollectionViewCell.swift; sourceTree = "<group>"; };
+		FD6ED7B71A0310A00D6873E266FBE597 /* Yoga-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Yoga-Info.plist"; sourceTree = "<group>"; };
+		FEBDC9BA0CD618F47515610705653F8A /* MemoryCacheService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MemoryCacheService.swift; path = Sources/BeagleUI/Sources/Networking/Default/MemoryCacheService.swift; sourceTree = "<group>"; };
+		FEF9C823E5EA49C33B76028EB5BC1ED8 /* AnyDecodableContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyDecodableContainer.swift; path = Sources/BeagleUI/Sources/Decoding/AnyDecodableContainer.swift; sourceTree = "<group>"; };
+		FFFCF56A3B6052BFA1D6081DA0031B71 /* ShowNativeDialog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShowNativeDialog.swift; path = Sources/BeagleUI/Sources/Action/ShowNativeDialog.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		325D7CCE1FA8D5C9415ABCD33C5E2675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9224B75ED3D05062EE9C6DDB9DD2047F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68FE1C54E08F5CF808373A7B283D7C12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC1C030D168B05ED4914D6CD65BDD5B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73BE38DFC493CDC55DFE305BDE885505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880DC9EE795ACE5D7404650EF6B28448 /* Foundation.framework in Frameworks */,
+				CC7990A0949CC8CD703835EC7DB49224 /* UIKit.framework in Frameworks */,
+				B9CA8A61E3EA762771F04083C724588C /* yoga.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89C3A2242B2D6E57D36B76E818ADE1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A623B5399748996ADBAC6A379FF4B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C09234A11758D988497E5DDE206B1449 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C085302A67145C7D2204107E4B793E0C /* Foundation.framework in Frameworks */,
+				3F33F05250CBC23264567933B17D71B5 /* YogaKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9BCA15439AE3DE8E4D7E16986CA4045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1984704D132CCC2A8266BCB83D336B32 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12121DAA22F107DE69A058857EFDAB22 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				86700604C89A32FF2897A2A4D138EE4E /* Yoga.modulemap */,
+				9773C11B4B7717C011F508541006D013 /* Yoga-dummy.m */,
+				FD6ED7B71A0310A00D6873E266FBE597 /* Yoga-Info.plist */,
+				462E57ECD1AD3678E73B83AC9202B003 /* Yoga-prefix.pch */,
+				E42913B8562F1474BC64587CFCD4E366 /* Yoga-umbrella.h */,
+				1DE3978F9F852C6FBDCB0FE3ABBEAC42 /* Yoga.debug.xcconfig */,
+				8BAAC7C396C79FD0395B0F815F6EF4AD /* Yoga.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Yoga";
+			sourceTree = "<group>";
+		};
+		22EF834DE11C0488C461952AD0975F76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0DC824AAA306B91623F69C2062F5F02 /* yoga.framework */,
+				1D81D48056B16C08D4F8D14130A99E06 /* YogaKit.framework */,
+				2F74D2EB5AC6875378510924A36AA361 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F74D2EB5AC6875378510924A36AA361 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5DD518F7D0CD0508007BA370C6AD07EC /* Foundation.framework */,
+				13B5BC5086C8067574462721D3DE59C8 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		32C681ABAACE64F179B77C1348AE2180 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4ABF49BBF26F4610C01B3D34E5DE0BC8 /* BeagleUI */,
+				AB0A10A0446176FC72CA026FADF82808 /* Yoga */,
+				60611E20CC226E73F218C8FBB574A092 /* YogaKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		362632134D3E2A6BC2EFE40661D27A55 /* Pods-hackaton-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E4AD117E2A2D93950BF15C46C6B39FC /* Pods-hackaton-iOSTests.modulemap */,
+				2835316B61EA9A86069265D8DA23A7E8 /* Pods-hackaton-iOSTests-acknowledgements.markdown */,
+				07E5C742757974E76032572266A24E55 /* Pods-hackaton-iOSTests-acknowledgements.plist */,
+				F146E90269A12ED8E4E51D1FB410C367 /* Pods-hackaton-iOSTests-dummy.m */,
+				8AB9B88FDCE7FAC5241BF98454A4C91E /* Pods-hackaton-iOSTests-Info.plist */,
+				F267B787042754C7E4CAFA06BFF32DED /* Pods-hackaton-iOSTests-umbrella.h */,
+				135D6084D8DD29D725C082C049F56FB0 /* Pods-hackaton-iOSTests.debug.xcconfig */,
+				A49D4FBAFCED7E7035FFB130A3C82337 /* Pods-hackaton-iOSTests.release.xcconfig */,
+			);
+			name = "Pods-hackaton-iOSTests";
+			path = "Target Support Files/Pods-hackaton-iOSTests";
+			sourceTree = "<group>";
+		};
+		41FC789771C1C427D3B2CDFA1D160A65 /* Pods-hackaton-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D469A31EF508EFAE53D60E17139954A /* Pods-hackaton-iOS.modulemap */,
+				D979A15E0DC752AA6DE890640D780486 /* Pods-hackaton-iOS-acknowledgements.markdown */,
+				207C01C58D107E5CDDE8011AC9CE63A2 /* Pods-hackaton-iOS-acknowledgements.plist */,
+				3906908E29C132F20BEADD22F9482DC2 /* Pods-hackaton-iOS-dummy.m */,
+				D3B52339A14B91C71C2A5100E7DEFDD7 /* Pods-hackaton-iOS-frameworks.sh */,
+				A64FEAC346B00F417442126111CAB9E3 /* Pods-hackaton-iOS-Info.plist */,
+				D6F29B0BB47A05704490BB63F424349F /* Pods-hackaton-iOS-umbrella.h */,
+				AF74B84D6575BBC9970BA5FAD4DD582F /* Pods-hackaton-iOS.debug.xcconfig */,
+				5A538758A0E9E5AC8B6955B8ACEA9721 /* Pods-hackaton-iOS.release.xcconfig */,
+			);
+			name = "Pods-hackaton-iOS";
+			path = "Target Support Files/Pods-hackaton-iOS";
+			sourceTree = "<group>";
+		};
+		4ABF49BBF26F4610C01B3D34E5DE0BC8 /* BeagleUI */ = {
+			isa = PBXGroup;
+			children = (
+				7746F2C26A4C6FBFADC825CD8AEE6CF3 /* Accessibility.swift */,
+				EBB295B6BD1E090A04A3F1CA92E74E46 /* AccessibilityEntity.swift */,
+				C324BF4A59E9F2C64896051C2AE1E11B /* Action.swift */,
+				E69B33D57FA480900E053CC795C010A6 /* ActionConvertible.swift */,
+				391D07EA9B0A57B75CEA922C1BE91E83 /* ActionEntity.swift */,
+				E68C18B3382185E55B9D5B1746B642F8 /* ActionExecutor.swift */,
+				68B15CF818DD9B5FE764F37681CC31DF /* ActionGestureRecognizer.swift */,
+				FEF9C823E5EA49C33B76028EB5BC1ED8 /* AnyDecodableContainer.swift */,
+				16BA7985BBBB95C3A282EF26D0F657FE /* Appearance.swift */,
+				42B00D8E12F809C2BCFA8FE16E8E94B5 /* AppearanceEntity.swift */,
+				C422F37E45494A03E49BEAFAC80B020A /* BeagleContext.swift */,
+				1211C200C1AA9C23AEB31239518A2C43 /* BeagleDeepLinkHandler.swift */,
+				DCA49A1F6B6F100824FE4A976225F42E /* BeagleDependencies.swift */,
+				3DDB9935ED5BB1A89DE657CF1B471764 /* BeagleNavigator.swift */,
+				C887A53B4F2CC7E6F8882301C8CAF6BA /* BeaglePrefetchHelper.swift */,
+				0B61F85200D9F89BE673805EDC410E8A /* BeagleScreenViewController.swift */,
+				ACE1AC211E0FEB29880C99272C303185 /* BeagleScreenViewModel.swift */,
+				E503169BE015F9E8419CDF6C427A8A26 /* BeagleSetup.swift */,
+				47A8E310AB695F903E7C91F394C8DD7B /* Button.swift */,
+				748A357BF805EB9C254F1E97FF6FB8AD /* ButtonEntity.swift */,
+				CA244AED017E0AF6739ED40FE26BE5B6 /* CacheLRU.swift */,
+				47CE8569A1BD04A132C31146F6309CF3 /* CacheManager.swift */,
+				52F025F085BBC03F4721FD4DC55ED34F /* CollectionExtension.swift */,
+				C2D810ABDAE8E38BA93C0D1B8C207278 /* ComponentConvertible.swift */,
+				157236C2E8117D9FB6CC8D77D58B5F00 /* ComponentDecoder.swift */,
+				AF537C2ED08CE0118BF9D1C3602146A1 /* ComponentEntity.swift */,
+				331D25F258CF83E81D149696A8D7BA21 /* Container.swift */,
+				425F7AF0AF3B20D9580AB73B9F86369E /* ContainerEntity.swift */,
+				18991F932653137CBE9D2B49FC12177D /* ContainerIndicatorView.swift */,
+				1C95C5E555B63AEE488B0E5F053D038C /* CustomAction.swift */,
+				746980EA0F3ECC9C542E92AE7ACA0DDF /* CustomActionEntity.swift */,
+				C2AC61B62E86E76B32087FEFA75BE31B /* CustomActionHandler.swift */,
+				EE5FC8C237D4C2BD5BC6A3DBC1E0E0F2 /* DefaultPageIndicator.swift */,
+				7927D36FDF3C4AAA8BF1FDE562B2FA7B /* DoublyLinkedList.swift */,
+				F4146C876373DC47770664C066DB291A /* FatalErrorUtil.swift */,
+				5CAF12DFC215B05BA68818D6B7BA127E /* Flex.swift */,
+				991FB342426D76809DABC6271A5BD882 /* FlexEntity.swift */,
+				C4BB13D8F367656E747D125733F21430 /* FlexViewConfigurator.swift */,
+				7A7B16F3B73F8039B9AFF032388C1404 /* Form.swift */,
+				166952F55F3D10FC3C3296008A7C7EBB /* FormEntity.swift */,
+				39FE0AE8BBEE79C0236F274801157E86 /* FormInput.swift */,
+				68AEEC0D3A02FD201E0B8AB83DEE2815 /* FormInputEntity.swift */,
+				F7B5E423C26734D412C8344CA167974D /* FormSubmit.swift */,
+				24CF896182F7D98C09194DADC91C8691 /* FormSubmitEntity.swift */,
+				C465B8172791E377D9F892F7FB77E7A0 /* FormValidation.swift */,
+				A9FAEC55757314D25F1CDB35E0686980 /* FormValidationEntity.swift */,
+				6AC4FC1687DB6180D4A16A26705590F2 /* FunctiontalUtils.swift */,
+				5406DF56F4D5DA2B979ED67990EC3BE9 /* HTTPRequestCanceling.swift */,
+				C5B2C8792224BE1D1C2377CCA6828748 /* Image.swift */,
+				D461329C6FDBAE95CE6869983DA5A052 /* ImageContentMode.swift */,
+				7501AC656C9AAC89F2DF209560CBF9C2 /* ImageEntity.swift */,
+				7D511C49195AD6CCE0F38FEC4E3C0867 /* ImageEntityContentMode.swift */,
+				7F3EFE4944B724D2423BBCCD6935AABC /* InputValue.swift */,
+				9F3A451A65271771AEE14B3610B62242 /* KeyboardManager.swift */,
+				F41C3B09ED0247CAB7CDF2EBDD18C0E0 /* LazyComponent.swift */,
+				368E297EAFBF9A423FCAD6D2B89149B6 /* LazyComponentEntity.swift */,
+				277464614534E0EBBACE72F4167AEC16 /* ListItemTableViewCell.swift */,
+				048FF981A6E0155D406133BB5485ED2C /* ListView.swift */,
+				677A3F507BCD1A2C96FBCFEB0F0C819F /* ListViewEntity.swift */,
+				CFB64C67219B5E61488686D23AF26703 /* ListViewUIComponent.swift */,
+				B25849EC77035D449902C7F1500CC23F /* LoadingView.swift */,
+				FEBDC9BA0CD618F47515610705653F8A /* MemoryCacheService.swift */,
+				26EF00D9A00FA0EFA6CA8731EF8AFC0A /* Navigate.swift */,
+				C0A2312D33494BFCE5918682EC6C1FA7 /* NavigateEntity.swift */,
+				5739C2120E3E816A2BA64C88DCDF414B /* Network.swift */,
+				0C592110405BA6B99C1098465817A551 /* NetworkClient.swift */,
+				DE337ABA326EFA04DAA0767C826C55C9 /* NetworkClientDefault.swift */,
+				BDF4FC048AB1159B09187FD7996814C4 /* NetworkImage.swift */,
+				63EEBB3E70F8AF399D352070AE6B2F22 /* NetworkImageEntity.swift */,
+				E140DD96C571BE5253305DB15F2CCC19 /* NSErrorExtension.swift */,
+				8DB40F284BF45354FC52ECC6D4E03E45 /* NSObjectExtension.swift */,
+				1D4C855CFE70AB91FAE091F7FB0494A9 /* Observable.swift */,
+				12B0FD77502D2726D0EE368C234B458A /* OnStateUpdatable.swift */,
+				A63ED81866885E74126F922F4B9CBF11 /* PageIndicator.swift */,
+				4341BC340EAF7483ABEFDDFEF84FDB4B /* PageView.swift */,
+				3EEF9D612BE64E493DB3AABCC341A87F /* PageViewEntity.swift */,
+				8B35000CD33BBB493C993D385652C59A /* PageViewUIComponent.swift */,
+				EEF87E70CF7D97D9418CA65FE41AB2E9 /* Request.swift */,
+				499D656B6D69F7101D3C337B2BDFF429 /* Result.swift */,
+				05021523FA55BF0B520597C21287F924 /* SafeAreaManager.swift */,
+				C14ADE8894988653231F8DB5F72EB860 /* Screen.swift */,
+				9EBB6574F04976A328204A0835A8290A /* ScreenComponent.swift */,
+				3B01FE658ABE77BD6AE1B1C7FD48F25C /* ScreenComponentEntity.swift */,
+				870E8CC5EB6106444B1BB58E5967AEF6 /* ScrollView.swift */,
+				D99C8AC697F4C6C56FC6BB62FB5DBC84 /* ScrollViewEntity.swift */,
+				0AB23ECEC427B30F3DDF58F75D7F29C1 /* ServerDrivenComponent.swift */,
+				FFFCF56A3B6052BFA1D6081DA0031B71 /* ShowNativeDialog.swift */,
+				C74597685E0CD318A346B5A65C2F4A7C /* ShowNativeDialogEntity.swift */,
+				88AEC5C0874C1A6D61790DA0FFFCF13B /* Spacer.swift */,
+				32D7678CE1036B1EB402DD7137A6F5A7 /* SpacerEntity.swift */,
+				CD2459F74DE0E1AC86E044B83ED2CF85 /* SubmitFormGestureRecognizer.swift */,
+				FA641809B4A9F96F989137CC2B9056C9 /* TabBarCollectionViewCell.swift */,
+				56258877EAD57ABE667BD003FE0244E0 /* TabView.swift */,
+				1C52C9E04E57321BB351C4D52DAF4F09 /* TabViewEntity.swift */,
+				72D64433E8F012FC8860490B7953FF42 /* TabViewUIComponent.swift */,
+				BF6F7F800539205363D3F25EA3A28C7B /* Text.swift */,
+				45EBA0E62B3D8CFC7C73DFBBA022D4E6 /* TextEntity.swift */,
+				E4225FE1F8502CA5D8F7190631B6A2D1 /* Theme.swift */,
+				F26941650946E862B7F6336A4202CFE0 /* Touchable.swift */,
+				6148134F4146843B97F6830C605D1A26 /* TouchableEntity.swift */,
+				2C6B7A395BA1A088BCA11FB522133F69 /* UIModelConvertible.swift */,
+				B7341D5234EB014A6508ACD9C5930E2A /* UIView+Appearance.swift */,
+				3463A65283AE588C7B00A8DB20A31A6F /* UIView+AutoLayout.swift */,
+				4B5185E61592F68616F7DEFD54208885 /* UIView+Id.swift */,
+				D8317CDCF1F21A32B3CB0D71F2EFE4AF /* UIView+Loading.swift */,
+				E94BA5246419F22EA0C7F8D70BF518FB /* UIView+Subviews.swift */,
+				884A7825EABA6695718465F8674C1661 /* UnitValue.swift */,
+				919DBDF4737FFC4AA3C93E8B6619479D /* UnitValueEntity.swift */,
+				A65B3B87CFE9BA4AD5DFA5CB9ED64448 /* UnitValueExtension.swift */,
+				214A0817324A01D29F12DE50C16E7838 /* UrlRequestBuilder.swift */,
+				D326116C9B288C9FB8EFB4812BF28A1A /* Validator.swift */,
+				D5234648CC9FB2270AEC80B752120EF8 /* ValidatorProvider.swift */,
+				1BFF4AFD7CDF1DDCE434A0375F4DCC1F /* Widget.swift */,
+				86C847FD6243C1003A9588A3BEB689F2 /* WidgetStateObservable.swift */,
+				B4F6F473BDEC0C0707AE4715A05CA738 /* YogaTranslator.swift */,
+				9CC5975392391D33D8C4FD3E275713FE /* Support Files */,
+			);
+			name = BeagleUI;
+			path = BeagleUI;
+			sourceTree = "<group>";
+		};
+		4BE79C28BFC963EC9755DCE64E567430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				35AC85E9188175AC762A28DA40B88878 /* BeagleUI.framework */,
+				6AA4613C089B10ACA220929725A1430B /* Pods_hackaton_iOS.framework */,
+				9FD6E0F83EB5DA2085B688B5DA20CA5F /* Pods_hackaton_iOS_hackaton_iOSUITests.framework */,
+				04B136ADAAC7CD1231B40014B857A30C /* Pods_hackaton_iOSTests.framework */,
+				65D0A19C165FA1126B1360680FE6DB12 /* yoga.framework */,
+				5B3357A1CE67C0BF4AE31936A1BE6888 /* YogaKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AF777884EBFE51BFF76138231864EBF /* Pods-hackaton-iOS-hackaton-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B6A05822DECAA8B9EB90A9B5B87D1D82 /* Pods-hackaton-iOS-hackaton-iOSUITests.modulemap */,
+				EC515C8E61C109B17E3CBA0F85CF5036 /* Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.markdown */,
+				AD8745DE3840E7B01A81757B9BCA1162 /* Pods-hackaton-iOS-hackaton-iOSUITests-acknowledgements.plist */,
+				22D90BED0D6CE43DBE5009854B1C1F34 /* Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m */,
+				DF227A8D5C0FB06752F079B145905E1E /* Pods-hackaton-iOS-hackaton-iOSUITests-frameworks.sh */,
+				A1D6AAC95DD092C55885ED65A13D3827 /* Pods-hackaton-iOS-hackaton-iOSUITests-Info.plist */,
+				B88796EDA6C8408225CD8025C6C6B922 /* Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h */,
+				A140488FF50BECDBE138DFC41678EFD9 /* Pods-hackaton-iOS-hackaton-iOSUITests.debug.xcconfig */,
+				8991A430AB8FFA8A7B425A56BB6CD4CF /* Pods-hackaton-iOS-hackaton-iOSUITests.release.xcconfig */,
+			);
+			name = "Pods-hackaton-iOS-hackaton-iOSUITests";
+			path = "Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests";
+			sourceTree = "<group>";
+		};
+		60611E20CC226E73F218C8FBB574A092 /* YogaKit */ = {
+			isa = PBXGroup;
+			children = (
+				60A3DEA10D138311ADCF17B435D6FDC4 /* UIView+Yoga.h */,
+				84F9FD7335CEDB08F9C52F3043689352 /* UIView+Yoga.m */,
+				EAC0211F4B37EDC20E2CEF1620966212 /* YGLayout.h */,
+				359F06FF83470E0C24523F5169F59E9E /* YGLayout.m */,
+				05D37F58E27C6B04C8889D5B423AA16E /* YGLayout+Private.h */,
+				674F308A7D8F1C4DA6F4F9EBEA4346F3 /* YGLayoutExtensions.swift */,
+				A836B72039058D3E10BAD7E1EE5C42F2 /* Support Files */,
+			);
+			name = YogaKit;
+			path = YogaKit;
+			sourceTree = "<group>";
+		};
+		9CC5975392391D33D8C4FD3E275713FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8F335593A333F9EBAF570831348C897 /* BeagleUI.modulemap */,
+				8BBF2B01A3E72DEE8719CD3BDD4D7E08 /* BeagleUI-dummy.m */,
+				C18E35151E88A973E16A4255DEAB8C93 /* BeagleUI-Info.plist */,
+				9AA9CAA78179B96C622BB1D28A0177A5 /* BeagleUI-prefix.pch */,
+				4A06EA3230F65658E96B33B2ED6DE8C2 /* BeagleUI-umbrella.h */,
+				9411A1514BA3F82630E41CB1D99AFD14 /* BeagleUI.debug.xcconfig */,
+				57F21306D3695243D63A4DC43505D8C5 /* BeagleUI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BeagleUI";
+			sourceTree = "<group>";
+		};
+		A836B72039058D3E10BAD7E1EE5C42F2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4A3D21252BCA11D5EF108AC68CD5A56 /* YogaKit.modulemap */,
+				C5669535D1CCAD71494941B4C9855CEE /* YogaKit-dummy.m */,
+				2FA3EC5082A7F15EA21D38832930B305 /* YogaKit-Info.plist */,
+				859188814296BF96CEAF3678F7DEA0F0 /* YogaKit-prefix.pch */,
+				48A5AF039755CD3550960E658007C668 /* YogaKit-umbrella.h */,
+				5AFFEB9DA6EFC0FF8E933AD72EE41E20 /* YogaKit.debug.xcconfig */,
+				83F458973248E2FC5FA60BEE5C475276 /* YogaKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YogaKit";
+			sourceTree = "<group>";
+		};
+		AB0A10A0446176FC72CA026FADF82808 /* Yoga */ = {
+			isa = PBXGroup;
+			children = (
+				72D38CA3405FDEC21ECFBE73E76487D2 /* CompactValue.h */,
+				1C8ECAA4BF9652DD711D45A7127E2A47 /* instrumentation.h */,
+				8628F867E9EF283F9BA1EEC98649484F /* log.cpp */,
+				26AFB29F90326917BC851AB1F5856E5E /* log.h */,
+				B415B928253BF3F99734E099A5EC07B3 /* Utils.cpp */,
+				EE4B72E096ACC413ABEDF9DD698AAC00 /* Utils.h */,
+				E6690D89E7E3DD26A2481FA849D58F26 /* YGConfig.cpp */,
+				346C1B0996E1F497BB10D8D77F736D56 /* YGConfig.h */,
+				2B6F10BB412AC0CDE0074E2FFA1367D1 /* YGEnums.cpp */,
+				BB02BA7747103220B368BBA0DED1DF8E /* YGEnums.h */,
+				F041FABD384D392170E68C591BD100DC /* YGFloatOptional.h */,
+				58382A637C9474339A8B0749BDE91051 /* YGLayout.cpp */,
+				0982D453C06A5814C46C9B1B337F37F3 /* YGLayout.h */,
+				F7240D4E2608A24AA23624A1AAC46D5F /* YGMacros.h */,
+				57E898EF5A6E98F078DFC84D39869518 /* YGMarker.cpp */,
+				BB6F04414A5D1E6B2C73271E5F5C3114 /* YGMarker.h */,
+				03696706BBCE64BC7C4B0AB957A4DCF0 /* YGNode.cpp */,
+				85051B190FF74A3A1415977B317BDAAF /* YGNode.h */,
+				DC72BE599A6C4B49321C857FDC1659D6 /* YGNodePrint.cpp */,
+				1E5787CB8DBC4D33A8580277078FE53A /* YGNodePrint.h */,
+				3213F7B9256ACB6B64E9E1FDB20CDD95 /* YGStyle.cpp */,
+				46D9DD30E94DC9B6B10B9AF0CE1FDAA5 /* YGStyle.h */,
+				5039B3B97637F71DB7CAD316CA6BA670 /* YGValue.cpp */,
+				8F1122C422B8C2F4FEDF9498202C4C5A /* YGValue.h */,
+				D91E5DA363B25D0FCE5001008AE5674B /* Yoga.cpp */,
+				D3BF76EB19ED5B3FFDE7694E383A1124 /* Yoga.h */,
+				D75F6C1062A9ABF3ADE02173187306D3 /* Yoga-internal.h */,
+				12121DAA22F107DE69A058857EFDAB22 /* Support Files */,
+			);
+			name = Yoga;
+			path = Yoga;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				22EF834DE11C0488C461952AD0975F76 /* Frameworks */,
+				32C681ABAACE64F179B77C1348AE2180 /* Pods */,
+				4BE79C28BFC963EC9755DCE64E567430 /* Products */,
+				DF650FEE5DC7B6922059A647B703E9AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DF650FEE5DC7B6922059A647B703E9AC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41FC789771C1C427D3B2CDFA1D160A65 /* Pods-hackaton-iOS */,
+				5AF777884EBFE51BFF76138231864EBF /* Pods-hackaton-iOS-hackaton-iOSUITests */,
+				362632134D3E2A6BC2EFE40661D27A55 /* Pods-hackaton-iOSTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AFFA953D28DE90D6D83210516B133DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D709360C3998A394AC41F1EAE328CC2F /* Pods-hackaton-iOSTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23D31EC575290A2A2FDB1BB641BC6DBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3539D018F11E50562D0582635D1116 /* Pods-hackaton-iOS-hackaton-iOSUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374961C791D0DB82B39774D8FD0CCBD8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5835486DB164EB9EC6C19AD6A6DD1B69 /* Pods-hackaton-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F28D33ED8BB65E3807740914079F053 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				408DB4C86BD0A38597D3700708469292 /* UIView+Yoga.h in Headers */,
+				EDA9FB779BC288ECEC36544FB4E18D88 /* YGLayout+Private.h in Headers */,
+				6C9BBEEF9FB9EAD61927C428F8A40652 /* YGLayout.h in Headers */,
+				E87A36DB816D81E905563D066B154007 /* YogaKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC3235C11BDE676020956A915BB7E916 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5684CBEEBBC7A310AD5EA01551E50DEB /* BeagleUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4A65AE2C9A14E5EB8010759BAF0B9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D7A33940B09C2A2CCBB28FAF5EDCA6 /* CompactValue.h in Headers */,
+				7DC7BB6DC80D243C49B7BCDD35F924E6 /* instrumentation.h in Headers */,
+				C66A691739270E36C2C7343B6B17FF63 /* log.h in Headers */,
+				7D2609C0BB474FCB60C014A1A6745961 /* Utils.h in Headers */,
+				72F4DF8574B24B15EA28D1EB2E605348 /* YGConfig.h in Headers */,
+				B977D6F2B9354965B96C4733B3ED8DBE /* YGEnums.h in Headers */,
+				1F64F50E8AD61B24EF7C1DD607FC6547 /* YGFloatOptional.h in Headers */,
+				EE2A90C73C72F7F698341E266AAB57D0 /* YGLayout.h in Headers */,
+				13FF2E2A854684C50CDCD6C58B65A66C /* YGMacros.h in Headers */,
+				49F5A77B8DE9AD7E337244C3CC354711 /* YGMarker.h in Headers */,
+				DAF7E6F4D7042820BA65110370BD1977 /* YGNode.h in Headers */,
+				A12311153F72ED53999E09218BF3B8ED /* YGNodePrint.h in Headers */,
+				1F86C511B65BAFF91FFC0DC0934FD672 /* YGStyle.h in Headers */,
+				F49F67175C63D9D6DDAD7095466CAB01 /* YGValue.h in Headers */,
+				00AFB19DB1A9060625DC155957C6689E /* Yoga-internal.h in Headers */,
+				8AD8114CD952E7C9F6FFD7710E8BE177 /* Yoga-umbrella.h in Headers */,
+				34EAC44226571D4F120332DC76AD8C78 /* Yoga.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B25F90D819B9ADF2AF2D8733A890333 /* Yoga */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA72F7857992236933A79F5A26334AC /* Build configuration list for PBXNativeTarget "Yoga" */;
+			buildPhases = (
+				DC4A65AE2C9A14E5EB8010759BAF0B9F /* Headers */,
+				1AF555A950327813EEC434F7572025E5 /* Sources */,
+				D9BCA15439AE3DE8E4D7E16986CA4045 /* Frameworks */,
+				044EBFB82F5B7F859FE73DB9DDB26A5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yoga;
+			productName = Yoga;
+			productReference = 65D0A19C165FA1126B1360680FE6DB12 /* yoga.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		30A80E2F013E60A95782E0D6EC3FC0EC /* Pods-hackaton-iOS-hackaton-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9F9D3725A49DC8C664C8FE342F2B311 /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOS-hackaton-iOSUITests" */;
+			buildPhases = (
+				23D31EC575290A2A2FDB1BB641BC6DBA /* Headers */,
+				E0676EB6C51B79507ABF8D2AEADA1ABA /* Sources */,
+				325D7CCE1FA8D5C9415ABCD33C5E2675 /* Frameworks */,
+				2174C9B1C0820BF53356F2C8D281D6EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7D194944A8645FAF593601D06268652 /* PBXTargetDependency */,
+				FDE4E9C11C80D8D3B1D9613CC59F5267 /* PBXTargetDependency */,
+				4B5B201203DFD12AEC060743660EAEE1 /* PBXTargetDependency */,
+			);
+			name = "Pods-hackaton-iOS-hackaton-iOSUITests";
+			productName = "Pods-hackaton-iOS-hackaton-iOSUITests";
+			productReference = 9FD6E0F83EB5DA2085B688B5DA20CA5F /* Pods_hackaton_iOS_hackaton_iOSUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		32CA4CBD6B28983076BD93DA221AD027 /* YogaKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEAF6FDD5FC8ADDB14BE61F33C19806C /* Build configuration list for PBXNativeTarget "YogaKit" */;
+			buildPhases = (
+				9F28D33ED8BB65E3807740914079F053 /* Headers */,
+				C288C852D4E1AF5BBDDE456445AE61CB /* Sources */,
+				73BE38DFC493CDC55DFE305BDE885505 /* Frameworks */,
+				F5CEDA4ADAC3B28471BB7741EB5963AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				113CD6FFF5F606166DA9C88648F620F7 /* PBXTargetDependency */,
+			);
+			name = YogaKit;
+			productName = YogaKit;
+			productReference = 5B3357A1CE67C0BF4AE31936A1BE6888 /* YogaKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6F5F93B65BE325E1F03F9767B7439465 /* Pods-hackaton-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7800304F912B23D83345495BBCFFA1A /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOS" */;
+			buildPhases = (
+				374961C791D0DB82B39774D8FD0CCBD8 /* Headers */,
+				2E57D339D729462AC17BB743A75375E3 /* Sources */,
+				68FE1C54E08F5CF808373A7B283D7C12 /* Frameworks */,
+				4D08C40E659E0E18DA0B8577F544B28E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB5D2E3A5D69F347B4DD62D1B5CF46FE /* PBXTargetDependency */,
+				C9A4260A3AC5D9F6BD793737C632D784 /* PBXTargetDependency */,
+				FC1692A351B3B717B04795EDAEF7E628 /* PBXTargetDependency */,
+			);
+			name = "Pods-hackaton-iOS";
+			productName = "Pods-hackaton-iOS";
+			productReference = 6AA4613C089B10ACA220929725A1430B /* Pods_hackaton_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2D4F0EE362B88D60EC7363B90B96F3A /* BeagleUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B780744E06A3385A08C248DB54BB70A /* Build configuration list for PBXNativeTarget "BeagleUI" */;
+			buildPhases = (
+				CC3235C11BDE676020956A915BB7E916 /* Headers */,
+				B4F7D955B530800C4CA6E656C77EAA18 /* Sources */,
+				C09234A11758D988497E5DDE206B1449 /* Frameworks */,
+				092F75F59C2F0AD3D8FAFCDA9A4D2F9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2EA90CEDB94D8DDC0DD5EFF024B01244 /* PBXTargetDependency */,
+			);
+			name = BeagleUI;
+			productName = BeagleUI;
+			productReference = 35AC85E9188175AC762A28DA40B88878 /* BeagleUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D33F66D434E4BEDCD574A3287E8A93D9 /* Pods-hackaton-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B928BECC858181278B895D0824105F41 /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOSTests" */;
+			buildPhases = (
+				1AFFA953D28DE90D6D83210516B133DF /* Headers */,
+				67528DB5FE6CA2FA935CA7D14F3E0567 /* Sources */,
+				89C3A2242B2D6E57D36B76E818ADE1FB /* Frameworks */,
+				D5C98F253696C98C9AEE66E658E6B97E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				78F4755BFB0EB678F1A5615FB1072451 /* PBXTargetDependency */,
+			);
+			name = "Pods-hackaton-iOSTests";
+			productName = "Pods-hackaton-iOSTests";
+			productReference = 04B136ADAAC7CD1231B40014B857A30C /* Pods_hackaton_iOSTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4BE79C28BFC963EC9755DCE64E567430 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2D4F0EE362B88D60EC7363B90B96F3A /* BeagleUI */,
+				6F5F93B65BE325E1F03F9767B7439465 /* Pods-hackaton-iOS */,
+				30A80E2F013E60A95782E0D6EC3FC0EC /* Pods-hackaton-iOS-hackaton-iOSUITests */,
+				D33F66D434E4BEDCD574A3287E8A93D9 /* Pods-hackaton-iOSTests */,
+				2B25F90D819B9ADF2AF2D8733A890333 /* Yoga */,
+				32CA4CBD6B28983076BD93DA221AD027 /* YogaKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		044EBFB82F5B7F859FE73DB9DDB26A5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		092F75F59C2F0AD3D8FAFCDA9A4D2F9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2174C9B1C0820BF53356F2C8D281D6EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D08C40E659E0E18DA0B8577F544B28E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5C98F253696C98C9AEE66E658E6B97E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CEDA4ADAC3B28471BB7741EB5963AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AF555A950327813EEC434F7572025E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AC1027E073F6E4BF2C6C2F9A7BDA84 /* log.cpp in Sources */,
+				6A7D2912D048CFAE5EBD98F05477381C /* Utils.cpp in Sources */,
+				0B8165F9D2DAE31D4729AB6011FB07BC /* YGConfig.cpp in Sources */,
+				E0F5DCBDE1DE24FEB99A46F69253A09F /* YGEnums.cpp in Sources */,
+				123C0F7FE6E49C8E5203A1655BED87C6 /* YGLayout.cpp in Sources */,
+				761D31905C56C33655C19B25749767A5 /* YGMarker.cpp in Sources */,
+				033950A3F7EF6A00EFE21D710192495D /* YGNode.cpp in Sources */,
+				8D0EB8B8751BECFFADCC9D938FED7F11 /* YGNodePrint.cpp in Sources */,
+				4F2BF8B7D32211F0D11BBE53D52BB398 /* YGStyle.cpp in Sources */,
+				C824D83BFC0CFA36EA3D6F0753762F3F /* YGValue.cpp in Sources */,
+				6159DA9DD6715C841527B8B20EFA2E94 /* Yoga-dummy.m in Sources */,
+				69755E43E965069FDBBEFA8FC707A732 /* Yoga.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E57D339D729462AC17BB743A75375E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1768CD386FF1EAFA830425A822CEE80 /* Pods-hackaton-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67528DB5FE6CA2FA935CA7D14F3E0567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B6B8867241E568F268ED846FAF09304 /* Pods-hackaton-iOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4F7D955B530800C4CA6E656C77EAA18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED1E03420AEAF0FC77B453B0FA6C2D3E /* Accessibility.swift in Sources */,
+				741B16457770E8E3DDE8E7C61DCDF365 /* AccessibilityEntity.swift in Sources */,
+				846BC3B43CFD352401885D79E8F5AC5F /* Action.swift in Sources */,
+				6B113F015D463434263CF572362CC96B /* ActionConvertible.swift in Sources */,
+				BFEE69A9013EC40D25B86A491D6B1BCB /* ActionEntity.swift in Sources */,
+				3A02BD39CE3FE98D237CF241F0F8A244 /* ActionExecutor.swift in Sources */,
+				CDD084DE0601AB1C406F4CE39C1C9D29 /* ActionGestureRecognizer.swift in Sources */,
+				C33F2F868F569B3529DBD545743A4BFB /* AnyDecodableContainer.swift in Sources */,
+				F14A855034AF8C0B136315B8255F799A /* Appearance.swift in Sources */,
+				A7DD680C69BA47275E843FA7C79EB8C9 /* AppearanceEntity.swift in Sources */,
+				2D1AF722E74BAC4829D18BE945EF2F4A /* BeagleContext.swift in Sources */,
+				3084933081B334D2BAD2AA39D77F184D /* BeagleDeepLinkHandler.swift in Sources */,
+				4769E19F95E28E6144D2C5F31FD66CAA /* BeagleDependencies.swift in Sources */,
+				56409AC703BBB8BEB9ABA07B82C66C16 /* BeagleNavigator.swift in Sources */,
+				CA02C2EA7569539D9C26D4C5D5C7D499 /* BeaglePrefetchHelper.swift in Sources */,
+				6C67FF9DA7F2E416045ED26C30114D39 /* BeagleScreenViewController.swift in Sources */,
+				F0D895418397885294C460DEC7C48D79 /* BeagleScreenViewModel.swift in Sources */,
+				4A2FD91B5452A49809732C783CBB5469 /* BeagleSetup.swift in Sources */,
+				DCCEDF5174E919C5B00EC502EAC4E77E /* BeagleUI-dummy.m in Sources */,
+				EE7E22CDC0E29E752EDA960ADA8836B4 /* Button.swift in Sources */,
+				12F67484A272A1949E849CDEA7748B03 /* ButtonEntity.swift in Sources */,
+				F1FBB45DE3BE7372B8D806B4CA969E3E /* CacheLRU.swift in Sources */,
+				DC2C17782C9C47AEFD92E4CBCDF0C974 /* CacheManager.swift in Sources */,
+				0868E1500A9E07191553206EC409441D /* CollectionExtension.swift in Sources */,
+				2B755814F27C6FB5EE403A90DC81701E /* ComponentConvertible.swift in Sources */,
+				D317EBA5BD627C5CBA1038AD6E20A47E /* ComponentDecoder.swift in Sources */,
+				819166F9E023E4226B848C1823147644 /* ComponentEntity.swift in Sources */,
+				C150A9D02FE0AEFE8D6DC3D5E1913F1D /* Container.swift in Sources */,
+				7F0ACADEFC396AFF7F1035195F78F0ED /* ContainerEntity.swift in Sources */,
+				5452B5EA75D11D7D7D2D873A633A99D3 /* ContainerIndicatorView.swift in Sources */,
+				3CBCC3A3974459F1AEFF07A0073C2B41 /* CustomAction.swift in Sources */,
+				248C347F8F7CAD00B1EA86ADD58D1FAB /* CustomActionEntity.swift in Sources */,
+				9B4C967062988CBA382B2FE3CE205FA3 /* CustomActionHandler.swift in Sources */,
+				AD97B0509871B53D3A29F06A75AB2431 /* DefaultPageIndicator.swift in Sources */,
+				0E7033A0CB24479C6216924E50F479C1 /* DoublyLinkedList.swift in Sources */,
+				C6A17ECC63EDC4CF2B210F215344E847 /* FatalErrorUtil.swift in Sources */,
+				E29E3E2151DE6975C53564B7D19F5618 /* Flex.swift in Sources */,
+				A942C6F7D2FBDA3E607BB4D4D6C17D28 /* FlexEntity.swift in Sources */,
+				8A1BA89FD8AEACB163DC569701BCCB10 /* FlexViewConfigurator.swift in Sources */,
+				94BF0FF21E00A523DA6136A4CDE5DA0F /* Form.swift in Sources */,
+				FCC726463331616D43A32BDF7FE01208 /* FormEntity.swift in Sources */,
+				B70ABB731A4DCB1D1E37E41294A52066 /* FormInput.swift in Sources */,
+				D19BD7FE68AFC044A4C5F13FCFBA2A36 /* FormInputEntity.swift in Sources */,
+				EFD6458A6C0676121D43BD2A02F51153 /* FormSubmit.swift in Sources */,
+				960F7F3D86C2FDF147274024093D66D5 /* FormSubmitEntity.swift in Sources */,
+				EDB5814815F2A85CDE0B253D475F9392 /* FormValidation.swift in Sources */,
+				F973A43A3C724BD2602B51C5B40BBE2A /* FormValidationEntity.swift in Sources */,
+				A8EC07B226757876A6874540C36CFCE7 /* FunctiontalUtils.swift in Sources */,
+				B53F59A0951072A095ED271222EAE9F5 /* HTTPRequestCanceling.swift in Sources */,
+				5F87A3D8F9F3AA16EAE13EB4E562DD2E /* Image.swift in Sources */,
+				DE1707243FFD3B6177BE45E3FAC059FB /* ImageContentMode.swift in Sources */,
+				FD27F0F5AE1CBAF437A851FAFB8C294D /* ImageEntity.swift in Sources */,
+				738C36D5660B1BF9FFC8F101B4065AF6 /* ImageEntityContentMode.swift in Sources */,
+				345B190BE964798CA1C142C975EB933F /* InputValue.swift in Sources */,
+				2BA7B935F79CADADEB470B52CDD8B2F9 /* KeyboardManager.swift in Sources */,
+				9CC9D537381C9187945A887982F0AC25 /* LazyComponent.swift in Sources */,
+				D072728604ACC9B39A12AE0BDC54CC00 /* LazyComponentEntity.swift in Sources */,
+				068C92CF68F69AADDE79F6E0D6185326 /* ListItemTableViewCell.swift in Sources */,
+				9F44B359167B97D5BEC8B0DF2EF97834 /* ListView.swift in Sources */,
+				30E1DFC530BB30F49B39A0A22CDC50E7 /* ListViewEntity.swift in Sources */,
+				245DF1A73EA7A3F9E3A8DC0A6ED225A9 /* ListViewUIComponent.swift in Sources */,
+				86C2568D869E16432C1BFB1CBD20D1E1 /* LoadingView.swift in Sources */,
+				A2A956B400F271126C936501D826ACDD /* MemoryCacheService.swift in Sources */,
+				9F5596C2437EDA24029635411A52CB35 /* Navigate.swift in Sources */,
+				F349B4AC3994052AA2DB894D16CC41F4 /* NavigateEntity.swift in Sources */,
+				A6790CD40BD185A51FD1A83AD0651A90 /* Network.swift in Sources */,
+				9497884C0EC1C24D6F18417823A5704C /* NetworkClient.swift in Sources */,
+				BFAE087DA1A30774B676F6C86A093631 /* NetworkClientDefault.swift in Sources */,
+				72DE10A0D38D08D8F5BA99EC771A429A /* NetworkImage.swift in Sources */,
+				5BBE435612639E5BDBC8A493ABA229D6 /* NetworkImageEntity.swift in Sources */,
+				5FB1AC83CA2DBA585A5E6AAB1E7B7912 /* NSErrorExtension.swift in Sources */,
+				88493AB42F5F724AC77D3E45F46A02B1 /* NSObjectExtension.swift in Sources */,
+				556EDAD8E0A01144C000EEB4AFDED299 /* Observable.swift in Sources */,
+				1B72A0C3E2317FB4A4121C6EA2205902 /* OnStateUpdatable.swift in Sources */,
+				F84E14F22975B633D086C8AA13244D71 /* PageIndicator.swift in Sources */,
+				D90ECDC8C11ED229666D960A3F3CFB03 /* PageView.swift in Sources */,
+				8D9CE6FB1D6E6B0B37CB77FFBCEB3719 /* PageViewEntity.swift in Sources */,
+				57E7C65A40A03444CD389D0C674B5755 /* PageViewUIComponent.swift in Sources */,
+				AC0021715C6F34F99E93A3C86F333632 /* Request.swift in Sources */,
+				1B1536F8369FE7BF32700EAEF6282592 /* Result.swift in Sources */,
+				92211C6D01CF5F54CF886364EEC03764 /* SafeAreaManager.swift in Sources */,
+				8D7E60DCDB5349A337878A19B219D65A /* Screen.swift in Sources */,
+				BCE6C9E3EA29B1D431371E019A9FD0C2 /* ScreenComponent.swift in Sources */,
+				75AA2046C693FCECB8D907E290AA2F02 /* ScreenComponentEntity.swift in Sources */,
+				16F85C6D9AFD09A85901B00AEEBD71B0 /* ScrollView.swift in Sources */,
+				C502D7D94B0F117AE17AB4C8B2D752DB /* ScrollViewEntity.swift in Sources */,
+				4C2C35073189EFDB0F1BB9D828FB7F27 /* ServerDrivenComponent.swift in Sources */,
+				2283D11174E6E63D0FC5988495542ABB /* ShowNativeDialog.swift in Sources */,
+				5A628A678E9DE8FDFC6167EB01A01A44 /* ShowNativeDialogEntity.swift in Sources */,
+				11B35D58D9648C275BF9B2F87966A552 /* Spacer.swift in Sources */,
+				86E26D9B604B3A0FFA6E05231C0C1EDF /* SpacerEntity.swift in Sources */,
+				78716CCAA1C35A51E431F54658779F2C /* SubmitFormGestureRecognizer.swift in Sources */,
+				9F0A56E02649249EE3701DF4DD25068B /* TabBarCollectionViewCell.swift in Sources */,
+				70698F97A86C036F84160BBC51770370 /* TabView.swift in Sources */,
+				3FBCC45D7D5B09E1DA941F84B354C2FB /* TabViewEntity.swift in Sources */,
+				970A39D7FCD7A42E1C46B955A40ACF36 /* TabViewUIComponent.swift in Sources */,
+				18277D921D8F398DBA5C47D9198CCF40 /* Text.swift in Sources */,
+				779EFE054888976476B85DF56397CB8B /* TextEntity.swift in Sources */,
+				D3FD94D7474D7F506D3663EEDC00DE8A /* Theme.swift in Sources */,
+				B98BB90EBF785D9A21ABD28FCAFFB75D /* Touchable.swift in Sources */,
+				BC0B065AA5418AECBF01D4BC83AA742D /* TouchableEntity.swift in Sources */,
+				D045D39992E575CAC80C8BA3D39C6ECF /* UIModelConvertible.swift in Sources */,
+				C8D34FC9CF9EB47CA35093757E0CAFED /* UIView+Appearance.swift in Sources */,
+				D39C4D4F8485AC20AA76B8F86D28C0C9 /* UIView+AutoLayout.swift in Sources */,
+				32B1D9FBE94E2A3B932220B7D73153EB /* UIView+Id.swift in Sources */,
+				1ADBD515402ABAFD1C687723E648166C /* UIView+Loading.swift in Sources */,
+				C05F71A98B502C6BAC28D3771D85FAD8 /* UIView+Subviews.swift in Sources */,
+				C32FA29C5B5321EAB53EF442C89F50E6 /* UnitValue.swift in Sources */,
+				DAEB87A483A7B7D043F9CDBDF6109982 /* UnitValueEntity.swift in Sources */,
+				AE6DBCF316CCEE270C1DE28D86C6AFDA /* UnitValueExtension.swift in Sources */,
+				884DB49415B941232B53E13A75C9A603 /* UrlRequestBuilder.swift in Sources */,
+				12ED4FA3A53DE5CB2FB7F80DDD39A800 /* Validator.swift in Sources */,
+				BAF969A3CB3A2CE858DF53790C57B58A /* ValidatorProvider.swift in Sources */,
+				E6CCE6ADE27A6920621FA47D1B4EC844 /* Widget.swift in Sources */,
+				376BD90CB7051055884E74FB9C5F85D4 /* WidgetStateObservable.swift in Sources */,
+				E0787387889BAAE8B5822F6162E8D8EE /* YogaTranslator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C288C852D4E1AF5BBDDE456445AE61CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582113D94D2BF2CF5C43644133705101 /* UIView+Yoga.m in Sources */,
+				BB0A78C96C00B65884440A7B0E23881E /* YGLayout.m in Sources */,
+				B2495121147572DC6916795303964EFD /* YGLayoutExtensions.swift in Sources */,
+				26F4808BA6EED6FBA32D862AAE5A10AF /* YogaKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0676EB6C51B79507ABF8D2AEADA1ABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				602850C14F841B306729C79C9CDB4B38 /* Pods-hackaton-iOS-hackaton-iOSUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		113CD6FFF5F606166DA9C88648F620F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Yoga;
+			target = 2B25F90D819B9ADF2AF2D8733A890333 /* Yoga */;
+			targetProxy = E392705A1688426F82B0A62C9089E28D /* PBXContainerItemProxy */;
+		};
+		2EA90CEDB94D8DDC0DD5EFF024B01244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YogaKit;
+			target = 32CA4CBD6B28983076BD93DA221AD027 /* YogaKit */;
+			targetProxy = 996839C689A229303656BDD719F76B71 /* PBXContainerItemProxy */;
+		};
+		4B5B201203DFD12AEC060743660EAEE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YogaKit;
+			target = 32CA4CBD6B28983076BD93DA221AD027 /* YogaKit */;
+			targetProxy = A2F22EB49DEEE82DCC893242C5D0542B /* PBXContainerItemProxy */;
+		};
+		78F4755BFB0EB678F1A5615FB1072451 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-hackaton-iOS";
+			target = 6F5F93B65BE325E1F03F9767B7439465 /* Pods-hackaton-iOS */;
+			targetProxy = A50C3AD31374C2815EB51F6D54DB4ABF /* PBXContainerItemProxy */;
+		};
+		AB5D2E3A5D69F347B4DD62D1B5CF46FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BeagleUI;
+			target = A2D4F0EE362B88D60EC7363B90B96F3A /* BeagleUI */;
+			targetProxy = 81CB998C35B4648ABD14A86A55020F04 /* PBXContainerItemProxy */;
+		};
+		C9A4260A3AC5D9F6BD793737C632D784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Yoga;
+			target = 2B25F90D819B9ADF2AF2D8733A890333 /* Yoga */;
+			targetProxy = D568835625BD897421CAAAA4D4063D38 /* PBXContainerItemProxy */;
+		};
+		D7D194944A8645FAF593601D06268652 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BeagleUI;
+			target = A2D4F0EE362B88D60EC7363B90B96F3A /* BeagleUI */;
+			targetProxy = A1EC342097183C94D13613B52472AFBE /* PBXContainerItemProxy */;
+		};
+		FC1692A351B3B717B04795EDAEF7E628 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YogaKit;
+			target = 32CA4CBD6B28983076BD93DA221AD027 /* YogaKit */;
+			targetProxy = BB7893A620CD26E7BF975E6F5DDE5E92 /* PBXContainerItemProxy */;
+		};
+		FDE4E9C11C80D8D3B1D9613CC59F5267 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Yoga;
+			target = 2B25F90D819B9ADF2AF2D8733A890333 /* Yoga */;
+			targetProxy = 4D5C7AFE33E9615A5FAD841E93D691D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		06F130B5248D6CC93E52B4146A184884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A140488FF50BECDBE138DFC41678EFD9 /* Pods-hackaton-iOS-hackaton-iOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests/Pods-hackaton-iOS-hackaton-iOSUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests/Pods-hackaton-iOS-hackaton-iOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		171A83DDB2F6396DCE2575EC7BECD961 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9411A1514BA3F82630E41CB1D99AFD14 /* BeagleUI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BeagleUI/BeagleUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BeagleUI/BeagleUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BeagleUI/BeagleUI.modulemap";
+				PRODUCT_MODULE_NAME = BeagleUI;
+				PRODUCT_NAME = BeagleUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		543C93D7FA501F924A2D895DB3D82623 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFFEB9DA6EFC0FF8E933AD72EE41E20 /* YogaKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YogaKit/YogaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YogaKit/YogaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YogaKit/YogaKit.modulemap";
+				PRODUCT_MODULE_NAME = YogaKit;
+				PRODUCT_NAME = YogaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5C481B54FF876B6DDEB47AD3768DD1D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F21306D3695243D63A4DC43505D8C5 /* BeagleUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BeagleUI/BeagleUI-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BeagleUI/BeagleUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BeagleUI/BeagleUI.modulemap";
+				PRODUCT_MODULE_NAME = BeagleUI;
+				PRODUCT_NAME = BeagleUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5EDCC44AAB1AE7C935980D85B2B42261 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A49D4FBAFCED7E7035FFB130A3C82337 /* Pods-hackaton-iOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOSTests/Pods-hackaton-iOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOSTests/Pods-hackaton-iOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5FB04B777CE05EB37B1C4F47CD3998C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE3978F9F852C6FBDCB0FE3ABBEAC42 /* Yoga.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Yoga/Yoga-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Yoga/Yoga-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Yoga/Yoga.modulemap";
+				PRODUCT_MODULE_NAME = yoga;
+				PRODUCT_NAME = yoga;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		71E49E6278B3C1A306385295443CBAD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 135D6084D8DD29D725C082C049F56FB0 /* Pods-hackaton-iOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOSTests/Pods-hackaton-iOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOSTests/Pods-hackaton-iOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		76A9636D1AC36A786B7443A630BF18BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF74B84D6575BBC9970BA5FAD4DD582F /* Pods-hackaton-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOS/Pods-hackaton-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOS/Pods-hackaton-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D04C9F542B0BAC4B111E5891636009CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A538758A0E9E5AC8B6955B8ACEA9721 /* Pods-hackaton-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOS/Pods-hackaton-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOS/Pods-hackaton-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB5D9BEB636171744F6D8158F264F642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8991A430AB8FFA8A7B425A56BB6CD4CF /* Pods-hackaton-iOS-hackaton-iOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests/Pods-hackaton-iOS-hackaton-iOSUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests/Pods-hackaton-iOS-hackaton-iOSUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F3A308DDC42A0FE8EBF770D0DBC2A8A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83F458973248E2FC5FA60BEE5C475276 /* YogaKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YogaKit/YogaKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YogaKit/YogaKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YogaKit/YogaKit.modulemap";
+				PRODUCT_MODULE_NAME = YogaKit;
+				PRODUCT_NAME = YogaKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FCFDBEA3907CFC16FB897465D76885A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BAAC7C396C79FD0395B0F815F6EF4AD /* Yoga.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Yoga/Yoga-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Yoga/Yoga-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Yoga/Yoga.modulemap";
+				PRODUCT_MODULE_NAME = yoga;
+				PRODUCT_NAME = yoga;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				939F1A8F6BCEB7F9F64D9EEE50CAE014 /* Debug */,
+				ECB437504DF805BD96CAABF97400B526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B780744E06A3385A08C248DB54BB70A /* Build configuration list for PBXNativeTarget "BeagleUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				171A83DDB2F6396DCE2575EC7BECD961 /* Debug */,
+				5C481B54FF876B6DDEB47AD3768DD1D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7800304F912B23D83345495BBCFFA1A /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A9636D1AC36A786B7443A630BF18BB /* Debug */,
+				D04C9F542B0BAC4B111E5891636009CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B928BECC858181278B895D0824105F41 /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71E49E6278B3C1A306385295443CBAD0 /* Debug */,
+				5EDCC44AAB1AE7C935980D85B2B42261 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA72F7857992236933A79F5A26334AC /* Build configuration list for PBXNativeTarget "Yoga" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB04B777CE05EB37B1C4F47CD3998C8 /* Debug */,
+				FCFDBEA3907CFC16FB897465D76885A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEAF6FDD5FC8ADDB14BE61F33C19806C /* Build configuration list for PBXNativeTarget "YogaKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				543C93D7FA501F924A2D895DB3D82623 /* Debug */,
+				F3A308DDC42A0FE8EBF770D0DBC2A8A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9F9D3725A49DC8C664C8FE342F2B311 /* Build configuration list for PBXNativeTarget "Pods-hackaton-iOS-hackaton-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F130B5248D6CC93E52B4146A184884 /* Debug */,
+				DB5D9BEB636171744F6D8158F264F642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

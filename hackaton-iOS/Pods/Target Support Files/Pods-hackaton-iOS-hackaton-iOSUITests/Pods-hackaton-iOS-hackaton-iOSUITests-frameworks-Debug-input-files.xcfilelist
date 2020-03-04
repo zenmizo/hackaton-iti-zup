@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-hackaton-iOS-hackaton-iOSUITests/Pods-hackaton-iOS-hackaton-iOSUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BeagleUI/BeagleUI.framework
+${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework
+${BUILT_PRODUCTS_DIR}/YogaKit/YogaKit.framework
