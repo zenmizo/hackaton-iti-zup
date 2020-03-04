@@ -1,5 +1,7 @@
 package itau.iti.marketplace.integration.response
 
+import itau.iti.marketplace.service.response.Product
+
 data class ProductDTO (
     val sku: String,
     val name: String,
