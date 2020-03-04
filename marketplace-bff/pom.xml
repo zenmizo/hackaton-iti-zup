@@ -27,6 +27,16 @@
 			<artifactId>iti-starter-web</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>itau.iti</groupId>
+			<artifactId>iti-starter-feign</artifactId>
+			<version>0.0.18.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>itau.iti</groupId>
+			<artifactId>iti-starter-tracing</artifactId>
+			<version>0.0.18.RELEASE</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-consul-config</artifactId>
 		</dependency>

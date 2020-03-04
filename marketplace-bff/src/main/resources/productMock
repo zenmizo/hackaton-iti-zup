@@ -6,22 +6,20 @@
   ​"shortDescription"​: ​"Blue Ridge Blend"​,
   ​"longDescription"​: ​"Blue Ridge Blend"​,
   ​"imageUrl"​:
-  "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca6
-  92c1df411d8771?quality=95&fake=.png"​,
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png"​,
   ​"price"​: ​{
   "​ amount"​: ​435​,
   ​"scale"​: ​2​,
   ​"currencyCode"​: ​"USD"
   ​} },​
   {
-    "​ id"​: ​2​,
+    "​id"​: ​2​,
     ​"sku"​: ​"2"​,
     ​"name"​: ​"Choco Frappe"​,
     ​"shortDescription"​: ​"Locally Roasted"​,
     ​"longDescription"​: ​"Locally Roasted"​,
     ​"imageUrl"​:
-  "https://marvel-live.freetls.fastly.net/canvas/2020/2/21ff216dc11440b4b4
-    f6dd7893ba7988?quality=95&fake=.png"​,
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/21ff216dc11440b4b4f6dd7893ba7988?quality=95&fake=.png"​,
     ​"price"​: ​{
   "​ amount"​: ​1000​,
   ​"scale"​: ​2​,
