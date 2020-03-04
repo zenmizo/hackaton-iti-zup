@@ -39,6 +39,10 @@ class ProductClientImpl : ProductService {
 //        return productIntegration.getAllProducts();
     }
 
+    fun getProductsRest(){
+
+    }
+
 
 
 }

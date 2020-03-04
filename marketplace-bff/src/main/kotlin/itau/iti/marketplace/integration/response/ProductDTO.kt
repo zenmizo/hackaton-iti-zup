@@ -16,4 +16,8 @@ data class PriceDTO(
         val amount: Double,
         val scale: Int,
         val currencyCode: String
-)
+){
+    override fun toString(): String {
+        return currencyCode.plus(amount)
+    }
+}
