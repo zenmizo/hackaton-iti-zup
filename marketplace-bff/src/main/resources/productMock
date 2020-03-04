@@ -1,0 +1,56 @@
+[
+  ​{
+  "​ id"​: ​1​,
+  ​"sku"​: ​"1"​,
+  ​"name"​: ​"Espresso"​,
+  ​"shortDescription"​: ​"Blue Ridge Blend"​,
+  ​"longDescription"​: ​"Blue Ridge Blend"​,
+  ​"imageUrl"​:
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png"​,
+  ​"price"​: ​{
+  "​ amount"​: ​435​,
+  ​"scale"​: ​2​,
+  ​"currencyCode"​: ​"USD"
+  ​} },​
+  {
+    "​id"​: ​2​,
+    ​"sku"​: ​"2"​,
+    ​"name"​: ​"Choco Frappe"​,
+    ​"shortDescription"​: ​"Locally Roasted"​,
+    ​"longDescription"​: ​"Locally Roasted"​,
+    ​"imageUrl"​:
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/21ff216dc11440b4b4f6dd7893ba7988?quality=95&fake=.png"​,
+    ​"price"​: ​{
+  "​ amount"​: ​1000​,
+  ​"scale"​: ​2​,
+  ​"currencyCode"​: ​"USD"
+  ​} },​
+  {
+    "​ id"​: ​3​,
+    ​"sku"​: ​"3"​,
+    ​"name"​: ​"Caramel Frappe"​,
+    ​"shortDescription"​: ​"Decaf Colombia"​,
+    ​"longDescription"​: ​"Decaf Colombia"​,
+    ​"imageUrl"​:
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/555730c876d94d27bf
+    a73423bedb2e53?quality=95&fake=.png"​,
+    ​"price"​: ​{
+  "​ amount"​: ​1050​,
+  ​"scale"​: ​2​,
+  ​"currencyCode"​: ​"USD"
+  ​} },​
+  {
+    "​ id"​: ​4​,
+    ​"sku"​: ​"4"​,
+    ​"name"​: ​"Kick Frappe"​,
+    ​"shortDescription"​: ​"Decaf Colombia"​,
+    ​"longDescription"​: ​"Decaf Colombia"​,
+    ​"imageUrl"​:
+  "https://marvel-live.freetls.fastly.net/canvas/2020/2/fd10cfe30e124c0f99
+    ff48df95d8a5cc?quality=95&fake=.png"​,
+    ​"price"​: ​{
+  "​ amount"​: ​1275​,
+  ​"scale"​: ​2​,
+  ​"currencyCode"​: ​"USD"
+  ​} }
+]

@@ -1,0 +1,29 @@
+@Library('ZupSharedLibs@marte') _
+node {
+
+  try {
+
+    mvnBuildWithCompose {
+      composeFileName = "docker-compose-ci.yml"
+      composeService = "bff"
+      composeProjectName = "bff"
+      useBuilder = "true"
+    }
+
+    buildDockerContainerAWS {
+      dockerRepositoryName = "bff"
+      dockerFileLocation = "."
+      team = "Marte"
+      dockerRegistryGroup = "Marte"
+    }
+
+  } catch (e) {
+
+      notifyBuildStatus {
+        buildStatus = "FAILED"
+      }
+      throw e
+
+  }
+
+}

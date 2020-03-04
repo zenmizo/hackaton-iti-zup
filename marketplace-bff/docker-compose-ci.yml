@@ -1,0 +1,8 @@
+version: '3.3'
+
+services:
+  bff:
+    image: adoptopenjdk/maven-openjdk11
+    volumes:
+      - .:/home/application
+    command: ["/home/application/run-ci.sh"]
