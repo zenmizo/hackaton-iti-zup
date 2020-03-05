@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.Model;
 using Amazon.SQS;
 using Amazon.SQS.Model;
 using Confluent.Kafka;
@@ -90,19 +92,40 @@ namespace Hackaiti.CheckoutService.Worker
                 _logger.LogError(ex, "An error ocurred while posting data do invoices API");
                 throw;
             }
-            
+
             await SendToKafka(cartMessage, invoiceApiPayload);
 
             await SendToDynamoDb(cartMessage, invoiceApiPayload);
         }
 
-        private Task SendToDynamoDb(CartMessage cartMessage, Invoice invoiceApiPayload)
+        private async Task SendToDynamoDb(CartMessage cartMessage, Invoice invoiceApiPayload)
         {
+            AmazonDynamoDBClient client = new AmazonDynamoDBClient();
+            string tableName = "checkout_transactions";
+
+            _logger.LogInformation("Sendig transaction register do DynamoDB");
             
+            var request = new PutItemRequest
+            {
+                TableName = tableName,
+                Item = new Dictionary<string, AttributeValue>()
+                {
+                    { "cartId", new AttributeValue { S = invoiceApiPayload.Id }},
+                    { "amount", new AttributeValue { N = invoiceApiPayload.Total.Amount.ToString() }},
+                    { "scale", new AttributeValue { N = invoiceApiPayload.Total.Scale.ToString() }},
+                    { "currencyCode", new AttributeValue { S = invoiceApiPayload.Total.CurrencyCode }},
+                    { "x-team-control", new AttributeValue { S = cartMessage.Invoice.XTeamControl }},
+                    { "timestamp", new AttributeValue { S = DateTime.Now.ToString() }},
+                }
+            };
+
+            await client.PutItemAsync(request);
         }
 
         private async Task SendToKafka(CartMessage cartMessage, Invoice invoiceApiPayload)
         {
+            _logger.LogInformation("Sending message to kafka...");
+
             var config = new ProducerConfig()
             {
                 BootstrapServers = "localhost:9092"
@@ -110,7 +133,9 @@ namespace Hackaiti.CheckoutService.Worker
 
             var kafkaPayload = CreateKafkaOrderPayload(cartMessage, invoiceApiPayload);
 
-            // ProducerBuilder<KeySerializer, ValueSerializer>
+            _logger.LogInformation("Kafka payload: {payload}", kafkaPayload);
+
+            // TODO: don't recreate this f** producer every single time
             using (var producer = new ProducerBuilder<Null, string>(config).Build())
             {
                 try
@@ -122,11 +147,12 @@ namespace Hackaiti.CheckoutService.Worker
 
                     var deliveryResult = await producer.ProduceAsync("orders_topic", message);
 
-                    System.Console.WriteLine($"Delivered '{deliveryResult.Value}' to '{deliveryResult.TopicPartitionOffset}'.");
+                    _logger.LogInformation("kafka delivered '{value}' to '{topicPartitionOffset}'.", deliveryResult.Value, deliveryResult.TopicPartitionOffset);
                 }
                 catch (ProduceException<Null, string> ex)
                 {
-                    System.Console.WriteLine($"Delivery failed: {ex.Error.Reason}");
+                    _logger.LogError(ex, "Kafka delivery failed: {reason}", ex.Error.Reason);
+                    throw;
                 }
             }
         }
