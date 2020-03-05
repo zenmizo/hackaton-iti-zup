@@ -4,11 +4,13 @@ import br.com.zup.beagle.core.Appearance
 import br.com.zup.beagle.core.ServerDrivenComponent
 import br.com.zup.beagle.widget.core.*
 import br.com.zup.beagle.widget.layout.Container
+import br.com.zup.beagle.widget.layout.NavigationBar
 import br.com.zup.beagle.widget.layout.SafeArea
 import br.com.zup.beagle.widget.layout.Screen
 import br.com.zup.beagle.widget.ui.Button
 import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.Text
+import itau.iti.marketplace.components.ListProductComponent
 import itau.iti.marketplace.integration.ProductIntegration
 import itau.iti.marketplace.integration.response.PriceDTO
 import itau.iti.marketplace.integration.response.ProductDTO
@@ -21,10 +23,10 @@ class ProductClientImpl : ProductService {
     @Autowired
     lateinit var productIntegration: ProductIntegration;
 
-     override fun getAllProductsScreen(): Screen {
-        return Screen(content = Text("Hello, world!"))
-
-    }
+//     override fun getAllProductsScreen(): Screen {
+//        return Screen(content = Text("Hello, world!"))
+//
+//    }
 
     override fun getAllProducts(): List<Product> {
 //        val product = ProductDTO(
@@ -51,13 +53,44 @@ class ProductClientImpl : ProductService {
 //                        "EUR"
 //                )
 //        )
-//
+
         val productList = mutableListOf<Product>();
 
 //        listOf(product,product1).forEach{p -> productList.add(Product(p))}
 
         productIntegration.getAllProducts().map { productDTO -> productList.add(Product(productDTO)) }
         return productList;
+    }
+
+    override fun getAllProductsScreen(): Screen {
+        var children = mutableListOf<ServerDrivenComponent>()
+
+        var childrenText = mutableListOf<ServerDrivenComponent>()
+        childrenText.add(Text("Lista de Produtos"))
+        childrenText.add(Text("Olhá só"))
+
+        val sizeDescription = Size(width = UnitValue(100.0, UnitType.PERCENT), height = UnitValue(150.0, UnitType.REAL))
+        var flexDescription = Flex(size = sizeDescription, flexDirection = FlexDirection.COLUMN, alignItems = Alignment.CENTER,justifyContent = JustifyContent.CENTER)
+        children.add(Container(children = childrenText).applyFlex(flexDescription))
+
+        var listProductComponent = ListProductComponent()
+        val products =  getAllProducts()
+        if (products.size > 1) {
+            listProductComponent.products = products
+            val productsSize = Size(width = UnitValue(100.0, UnitType.PERCENT), height = UnitValue(80.0, UnitType.PERCENT))
+            var flexProducts = Flex(size = productsSize, flexDirection = FlexDirection.COLUMN, alignItems = Alignment.CENTER,justifyContent = JustifyContent.CENTER)
+            listProductComponent.applyFlex(flexProducts)
+            children.add(listProductComponent)
+        } else {
+            var childrenEmpty = mutableListOf<ServerDrivenComponent>()
+            childrenEmpty.add(Text("Estamos cadastrando nossos produtos"))
+            children.add(Container(children = childrenEmpty).applyFlex(flexDescription))
+        }
+        
+        var Screen = Screen(navigationBar = NavigationBar(title = "Lista de Produtos", showBackButton = true),
+                content = Container(children = children))
+
+        return  Screen
     }
 
     fun buyProducts(): Screen {
@@ -72,8 +105,8 @@ class ProductClientImpl : ProductService {
         childrenContainer.add(Container(chidrenTop).applyFlex(containerFlex))
 
         var chidrenDescription = mutableListOf<ServerDrivenComponent>()
-        chidrenDescription.add(Text("Ooops!").applyAppearance(Appearance(("FE5886"))))
-        chidrenDescription.add(Text("Algo deu errado").applyAppearance(Appearance(("000000"))))
+        chidrenDescription.add(Text("Order successfully!").applyAppearance(Appearance(("FE5886"))))
+        chidrenDescription.add(Text("All right with your order.").applyAppearance(Appearance(("000000"))))
         childrenContainer.add(Container(chidrenDescription).applyFlex(containerFlex))
 
         var chidrenBottom = mutableListOf<ServerDrivenComponent>()
