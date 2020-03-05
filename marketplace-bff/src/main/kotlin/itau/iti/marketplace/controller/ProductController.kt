@@ -2,7 +2,6 @@ package itau.iti.marketplace.controller
 
 import br.com.zup.beagle.widget.layout.Screen
 import itau.iti.marketplace.exception.ProductNotFoundException
-import itau.iti.marketplace.service.ProductClientImpl
 import org.springframework.web.bind.annotation.*
 import itau.iti.marketplace.service.impl.ProductClientImpl
 import itau.iti.marketplace.service.request.ProductPurchase

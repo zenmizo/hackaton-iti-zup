@@ -6,6 +6,7 @@ import itau.iti.marketplace.builder.ListProductBuilder
 import itau.iti.marketplace.builder.ResultMessageBuilder
 import itau.iti.marketplace.integration.ProductIntegration
 import itau.iti.marketplace.service.ProductService
+import itau.iti.marketplace.service.request.CartPurchase
 import itau.iti.marketplace.service.response.Product
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
@@ -28,7 +29,7 @@ class ProductClientImpl : ProductService {
        return ListProductBuilder().with(getAllProducts()).buildScreen()
     }
 
-    fun buyProducts(): Screen {
+    fun buyProducts(cartPurchase: CartPurchase): Screen {
         return ResultMessageBuilder()
                 .withTitle("Order successfully!")
                 .withDescription("All right with your order.")
