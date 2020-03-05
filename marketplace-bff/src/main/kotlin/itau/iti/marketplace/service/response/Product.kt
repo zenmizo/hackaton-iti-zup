@@ -8,12 +8,12 @@ data class Product(
         val shortDescription: String,
         val value: String,
         val imageUrl: String
-)
-object ModelMapper {
-    fun from(productDTO: ProductDTO) =
-            Product(productDTO.sku,
-                    productDTO.name,
-                    productDTO.shortDescription,
-                    "100,00",
-                    productDTO.imageUrl)
+){
+    constructor(productDTO: ProductDTO): this(productDTO.sku,
+            productDTO.name,
+            productDTO.shortDescription,
+            productDTO.price.toString(),
+            productDTO.imageUrl){
+
+    }
 }

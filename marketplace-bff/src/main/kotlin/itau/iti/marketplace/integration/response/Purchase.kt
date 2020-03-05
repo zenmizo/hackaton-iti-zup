@@ -1,6 +1,5 @@
 package itau.iti.marketplace.integration.response
 
-import itau.iti.marketplace.service.response.Product
 
 data class Purchase (
     val id: Int,

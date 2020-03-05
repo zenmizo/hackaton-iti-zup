@@ -1,6 +1,5 @@
 package itau.iti.marketplace.controller
 
-import itau.iti.marketplace.exception.ProductIntegrationExceptionHandler
 import itau.iti.marketplace.exception.ProductNotFoundException
 import itau.iti.marketplace.service.ProductClientImpl
 import org.springframework.web.bind.annotation.ExceptionHandler
