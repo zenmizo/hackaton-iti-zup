@@ -61,7 +61,7 @@ class ProductClientImpl : ProductService {
        return ListProductBuilder().with(getAllProducts()).buildScreen()
     }
 
-    fun buyProducts(cartPurchase: CartPurchase): Screen {
+    override fun buyProducts(cartPurchase: CartPurchase): Screen {
         return ResultMessageBuilder()
                 .withTitle("Order successfully!")
                 .withDescription("All right with your order.")
@@ -69,7 +69,7 @@ class ProductClientImpl : ProductService {
                 .buildScreen()
     }
 
-    fun getProduct(sku: String): Screen {
+    override fun getProduct(sku: String): Screen {
         val product = ProductDTO(
                 "AAA113",
                 "Chá",
