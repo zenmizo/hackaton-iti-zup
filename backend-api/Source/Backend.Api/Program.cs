@@ -1,3 +1,4 @@
+using AWS.Logger;
 using Backend.Domain.Core.Logs;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -13,6 +14,13 @@ namespace Backend.Presentation.Api
     {
         public static void Main(string[] args)
         {
+            AWSLoggerConfig configuration = new AWSLoggerConfig()
+            {
+                Region = "us-east-1",
+                LogGroup = "hackaiti",
+                DisableLogGroupCreation = true
+            };
+
             Log.Logger = new LoggerConfiguration()
 #if DEBUG
                 .MinimumLevel.Verbose()
@@ -30,7 +38,7 @@ namespace Backend.Presentation.Api
 #if DEBUG
                 .WriteTo.Console(new LogsJsonFormatter())
 #else
-                .WriteTo.Console(new LogsJsonFormatter())
+                .WriteTo.AWSSeriLog(configuration)
 #endif
                 .CreateLogger();
 
