@@ -12,20 +12,18 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
-
 @RestController
 class ProductController (private val productServiceImpl: ProductClientImpl) {
 
     @GetMapping("list/product")
     @ResponseBody
-    @ExceptionHandler(ProductNotFoundException::class)
     fun getProductList(): Screen {
         return productServiceImpl.getAllProductsScreen()
+//        return productServiceImpl.getProduct(sku = "21312")
     };
 
     @GetMapping("product")
     @ResponseBody
-    @ExceptionHandler(ProductNotFoundException::class)
     fun getProduct(@RequestParam("sku_product") skuProduct: String): Screen {
         return productServiceImpl.getProduct(sku = skuProduct)
     };

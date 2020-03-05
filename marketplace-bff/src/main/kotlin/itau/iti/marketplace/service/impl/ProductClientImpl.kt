@@ -5,6 +5,8 @@ import itau.iti.marketplace.builder.DeatailProductBuilder
 import itau.iti.marketplace.builder.ListProductBuilder
 import itau.iti.marketplace.builder.ResultMessageBuilder
 import itau.iti.marketplace.integration.ProductIntegration
+import itau.iti.marketplace.integration.response.PriceDTO
+import itau.iti.marketplace.integration.response.ProductDTO
 import itau.iti.marketplace.service.ProductService
 import itau.iti.marketplace.service.request.CartPurchase
 import itau.iti.marketplace.service.response.Product
@@ -38,7 +40,24 @@ class ProductClientImpl : ProductService {
     }
 
     fun getProduct(sku: String): Screen {
+        val product = ProductDTO(
+                "AAA113",
+                "Espresso",
+                "Blue Ridge Blend",
+                "Blue Ridge Blend Long",
+                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
+                PriceDTO(
+                        20000,
+                        2,
+                        "EUR"
+                )
+                ,
+                id = "1231"
+        )
+
+        //val productDTO = productIntegration.getProductBySku(sku);
         return DeatailProductBuilder()
+                .withProduct(Product(product))
                 .buildScreen()
     }
 
