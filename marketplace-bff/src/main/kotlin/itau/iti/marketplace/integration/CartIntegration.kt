@@ -1,9 +1,7 @@
 package itau.iti.marketplace.integration
 
-import feign.Body
 import feign.Param
 import itau.iti.marketplace.integration.request.CartPurchase
-import itau.iti.marketplace.integration.request.PurchaseCart
 import itau.iti.marketplace.integration.request.PurchaseProduct
 import itau.iti.marketplace.integration.response.PurchaseDTO
 import org.springframework.cloud.openfeign.FeignClient
@@ -16,7 +14,7 @@ interface CartIntegration {
     fun checkoutCart(cartPurchase: CartPurchase): PurchaseDTO;
 
     @RequestMapping(method = [RequestMethod.PATCH], value = ["/carts/{id}/items"])
-    fun addOnCart(@Param("id") id: String, product: PurchaseProduct);
+    fun addOnCart(@Param("id") customerId: String, product: PurchaseProduct);
 
     @RequestMapping(method = [RequestMethod.GET], value = ["/carts/{id}"])
     fun consultCart(@Param("id")id: String): PurchaseDTO;
