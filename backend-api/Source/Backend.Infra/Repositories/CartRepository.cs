@@ -165,7 +165,7 @@ namespace Backend.Infra.Repositories
 
                 document["status"] = "CANCEL";
 
-                await table.PutItemAsync(document);
+                await table.UpdateItemAsync(document);
             }
         }
 
@@ -198,7 +198,7 @@ namespace Backend.Infra.Repositories
                 var item = items.FirstOrDefault(x => x.id.ToString() == item_id);
                 items.Remove(item);
 
-                await table.PutItemAsync(document);
+                await table.UpdateItemAsync(document);
             }
         }
 
