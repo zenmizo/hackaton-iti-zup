@@ -14,7 +14,7 @@ namespace Hackaiti.CheckoutService.Worker.Services
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:9000");
+                client.BaseAddress = new Uri(WorkerConfig.HackatonZupBaseAddress);
                 
                 client.Timeout = TimeSpan.FromSeconds(10);
 

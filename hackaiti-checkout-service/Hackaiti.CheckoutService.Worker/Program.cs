@@ -24,7 +24,7 @@ namespace Hackaiti.CheckoutService.Worker
 
                     services.AddSingleton<ICurrenciesApiService>(serviceProvider =>
                     {
-                        return RestService.For<ICurrenciesApiService>("http://localhost:8000");
+                        return RestService.For<ICurrenciesApiService>(WorkerConfig.CurrenciesServiceBaseAddress);
                     });
 
                     services.AddTransient<IHackatonZupApiService, HackatonZupApiService>();
