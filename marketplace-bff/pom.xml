@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>itau.iti.marketplace</groupId>
-	<artifactId>bff</artifactId>
+	<artifactId>market-place-bff</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>marketplace-bff</name>
 	<description>hackaton's marketplace bff aplication</description>

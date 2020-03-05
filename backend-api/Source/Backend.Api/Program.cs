@@ -1,4 +1,6 @@
+using Amazon.Runtime;
 using AWS.Logger;
+using AWS.Logger.SeriLog;
 using Backend.Domain.Core.Logs;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
@@ -12,13 +14,16 @@ namespace Backend.Presentation.Api
 {
     public class Program
     {
+        public static BasicAWSCredentials Credentials = new BasicAWSCredentials("AKIAI5J2QHI.?.Q7QTAZOKA", "LK8BCrftIY.?./J7a9ddff7Po2+m+ZSXwVhY+RLPcoH");
+
         public static void Main(string[] args)
         {
             AWSLoggerConfig configuration = new AWSLoggerConfig()
             {
+                Credentials = Credentials,
                 Region = "us-east-1",
                 LogGroup = "hackaiti",
-                DisableLogGroupCreation = true
+                DisableLogGroupCreation = true,
             };
 
             Log.Logger = new LoggerConfiguration()
@@ -38,7 +43,7 @@ namespace Backend.Presentation.Api
 #if DEBUG
                 .WriteTo.Console(new LogsJsonFormatter())
 #else
-                .WriteTo.AWSSeriLog(configuration)
+                .WriteTo.AWSSeriLog(configuration, null, new LogsJsonFormatter())
 #endif
                 .CreateLogger();
 
