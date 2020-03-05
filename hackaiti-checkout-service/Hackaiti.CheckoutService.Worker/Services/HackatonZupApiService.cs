@@ -14,13 +14,15 @@ namespace Hackaiti.CheckoutService.Worker.Services
         {
             using (var client = new HttpClient())
             {
-                client.BaseAddress = new Uri("http://localhost:9000");
+                client.BaseAddress = new Uri(WorkerConfig.HackatonZupBaseAddress);
                 
                 client.Timeout = TimeSpan.FromSeconds(10);
 
                 client.DefaultRequestHeaders.Add("x-team-control", xTeamControl);
 
-                await client.PostAsync("/invoices", new StringContent(JsonConvert.SerializeObject(invoice), Encoding.UTF8, "application/json"));
+                var response = await client.PostAsync("/invoices", new StringContent(JsonConvert.SerializeObject(invoice), Encoding.UTF8, "application/json"));
+
+                response.EnsureSuccessStatusCode();
             }
         }
     }

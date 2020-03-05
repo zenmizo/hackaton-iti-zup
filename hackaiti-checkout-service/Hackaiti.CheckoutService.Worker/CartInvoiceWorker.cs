@@ -21,7 +21,6 @@ namespace Hackaiti.CheckoutService.Worker
 {
     public class CartInvoiceWorker : BackgroundService
     {
-        private const string QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/105029661252/hackaiti-testing";
         private readonly ILogger<CartInvoiceWorker> _logger;
         private readonly ICurrenciesApiService _currenciesService;
         private readonly IHackatonZupApiService _hackaZupApiService;
@@ -41,15 +40,15 @@ namespace Hackaiti.CheckoutService.Worker
 
             var receiveMessageRequest = new ReceiveMessageRequest()
             {
-                QueueUrl = QUEUE_URL,
+                QueueUrl = WorkerConfig.StartCheckoutQueueURL,
                 MaxNumberOfMessages = 1,
-                VisibilityTimeout = 60,
-                WaitTimeSeconds = 5
+                VisibilityTimeout = 121,
+                WaitTimeSeconds = 15
             };
 
             while (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogInformation("Getting messages from {queueURL}", QUEUE_URL);
+                _logger.LogInformation("Getting messages from {queueURL}", WorkerConfig.StartCheckoutQueueURL);
 
                 var receiveMessageResponse = await client.ReceiveMessageAsync(receiveMessageRequest);
 
@@ -61,7 +60,7 @@ namespace Hackaiti.CheckoutService.Worker
 
                         await client.DeleteMessageAsync(new DeleteMessageRequest()
                         {
-                            QueueUrl = QUEUE_URL,
+                            QueueUrl = WorkerConfig.StartCheckoutQueueURL,
                             ReceiptHandle = message.ReceiptHandle
                         });
                     }
@@ -101,10 +100,10 @@ namespace Hackaiti.CheckoutService.Worker
         private async Task SendToDynamoDb(CartMessage cartMessage, Invoice invoiceApiPayload)
         {
             AmazonDynamoDBClient client = new AmazonDynamoDBClient();
-            string tableName = "checkout_transactions";
+            string tableName = WorkerConfig.DynamoTransactionRegisterTableName;
 
             _logger.LogInformation("Sendig transaction register do DynamoDB");
-            
+
             var request = new PutItemRequest
             {
                 TableName = tableName,
@@ -128,7 +127,7 @@ namespace Hackaiti.CheckoutService.Worker
 
             var config = new ProducerConfig()
             {
-                BootstrapServers = "localhost:9092"
+                BootstrapServers = WorkerConfig.KafkaBootstrapServers
             };
 
             var kafkaPayload = CreateKafkaOrderPayload(cartMessage, invoiceApiPayload);

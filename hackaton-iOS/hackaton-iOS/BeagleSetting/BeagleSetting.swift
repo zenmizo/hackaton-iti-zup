@@ -15,12 +15,11 @@ struct BeagleSetting {
         
         case listProducts = "list/product"
         case productDescription = "product?sku_product="
-        case buy = "buy/products"
         
         var path: String {
             
 //            let address = "http://192.168.0.106:8080"
-            let address = "http://localhost:8081"
+            let address = "http://localhost:8080"
             return "\(address)/\(self.rawValue)"
         }
     }
