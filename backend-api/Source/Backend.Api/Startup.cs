@@ -39,7 +39,7 @@ namespace Backend.Presentation.Api
 
             services.AddSingleton<AmazonDynamoDBClient>(serviceConfiguration =>
             {
-                var credentials = new BasicAWSCredentials("AKIAI5J2QHIQ7QTAZOKA", "LK8BCrftIY/J7a9ddff7Po2+m+ZSXwVhY+RLPcoH");
+                var credentials = new BasicAWSCredentials("AKIAI5J2QHI.?.Q7QTAZOKA", "LK8BCrftIY/J7a9dd.?.ff7Po2+m+ZSXwVhY+RLPcoH");
                 return new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
             });
 
