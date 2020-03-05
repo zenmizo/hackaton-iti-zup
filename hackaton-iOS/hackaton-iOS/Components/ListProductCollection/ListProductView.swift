@@ -22,7 +22,7 @@ class ListProductView: UIView, UICollectionViewDataSource {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .clear
-        
+        collectionView.isUserInteractionEnabled = true
        return collectionView
     }()
     
@@ -32,6 +32,7 @@ class ListProductView: UIView, UICollectionViewDataSource {
         self.beagleDependencies = beagleDependencies
         setupViewLayout()
     }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -45,7 +46,7 @@ class ListProductView: UIView, UICollectionViewDataSource {
          collectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
          collectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ].forEach { $0.isActive = true }
-
+        collectionView.delegate = self
         collectionView.dataSource = self
         registerCells()
     }
@@ -58,6 +59,8 @@ class ListProductView: UIView, UICollectionViewDataSource {
         
         self.products = products
         self.collectionView.reloadData()
+        
+        self.next
     }
   
 }
@@ -80,11 +83,17 @@ extension ListProductView {
                            renderableDependencies: dep)
             return cell
         }
+        
         return UICollectionViewCell()
     }
 
 }
 
 extension ListProductView: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(products[indexPath.row])
+        print(self.findViewController().self)
+    }
     
 }

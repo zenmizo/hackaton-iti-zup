@@ -12,11 +12,16 @@ import Foundation
 struct BeagleSetting {
     
     enum Routes: String {
+        
         case listProducts = "list/product"
+        case productDescription = "list/product/id"
+        case result = "operation/result"
+        case buy = "buy/products"
         
         var path: String {
             
-            let address = "http://192.168.0.106:8080"
+//            let address = "http://192.168.0.106:8080"
+            let address = "http://localhost:8081"
             return "\(address)/\(self.rawValue)"
         }
     }
