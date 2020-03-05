@@ -53,15 +53,16 @@ namespace Backend.Infra.Repositories
 
             var product = _productRepository.GetBySku(command.item.sku).Result;
 
-            var item = new CartItem(product);
-            item.price = command.item.quantity * product.price.amount;
-
-            if (cart.items.Any(x => x.id == item.id))
+            if (!cart.items.Any(x => x.id == product.id))
             {
-                cart.items.Remove(item);
+                var item = new CartItem(product);
+                item.price = command.item.quantity * product.price.amount;
+                cart.items.Add(item);
             }
-
-            cart.items.Add(item);
+            else 
+            {
+                cart.items.Single(x => x.id == product.id).price += command.item.quantity * product.price.amount;
+            }
 
             _cartRepository.Update(cart).Wait();
 

@@ -56,7 +56,7 @@ namespace Backend.Presentation.Api.Controllers
         }
 
         [HttpPost("{id}/checkout")]
-        public IActionResult Checkout([FromRoute]string id, [FromQuery]string currencyCode)
+        public IActionResult Checkout([FromRoute]string id, [FromBody]CartCheckoutBody cartCheckoutBody)
         {
             var xTeamControl = Request.Headers["x-team-control"].FirstOrDefault();
 
@@ -65,7 +65,7 @@ namespace Backend.Presentation.Api.Controllers
                 return new FailureApiResult(HttpStatusCode.BadRequest, "'x-team-control' header is missing");
             }
 
-            return _cartService.Checkout(id, currencyCode, xTeamControl);
+            return _cartService.Checkout(id, cartCheckoutBody.currencyCode, xTeamControl);
         }
     }
 }

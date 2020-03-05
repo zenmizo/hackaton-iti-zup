@@ -4,6 +4,7 @@ using Backend.Domain.Models.CartModel.Validators;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading;
 
 namespace Backend.Domain.Models.CartModelModel.Commands
 {
