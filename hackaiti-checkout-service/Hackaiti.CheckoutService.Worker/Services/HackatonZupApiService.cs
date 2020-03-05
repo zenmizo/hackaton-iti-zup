@@ -20,7 +20,9 @@ namespace Hackaiti.CheckoutService.Worker.Services
 
                 client.DefaultRequestHeaders.Add("x-team-control", xTeamControl);
 
-                await client.PostAsync("/invoices", new StringContent(JsonConvert.SerializeObject(invoice), Encoding.UTF8, "application/json"));
+                var response = await client.PostAsync("/invoices", new StringContent(JsonConvert.SerializeObject(invoice), Encoding.UTF8, "application/json"));
+
+                response.EnsureSuccessStatusCode();
             }
         }
     }

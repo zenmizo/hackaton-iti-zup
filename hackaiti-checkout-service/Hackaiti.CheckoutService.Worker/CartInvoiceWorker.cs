@@ -42,8 +42,8 @@ namespace Hackaiti.CheckoutService.Worker
             {
                 QueueUrl = WorkerConfig.StartCheckoutQueueURL,
                 MaxNumberOfMessages = 1,
-                VisibilityTimeout = 60,
-                WaitTimeSeconds = 1
+                VisibilityTimeout = 121,
+                WaitTimeSeconds = 15
             };
 
             while (!stoppingToken.IsCancellationRequested)
