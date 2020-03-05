@@ -11,12 +11,13 @@ import br.com.zup.beagle.widget.ui.NetworkImage
 import br.com.zup.beagle.widget.ui.Text
 import itau.iti.marketplace.components.ListProductComponent
 import itau.iti.marketplace.service.response.Product
+import itau.iti.marketplace.service.response.ProductDetail
 
 class DeatailProductBuilder {
 
-    var product: Product? = null
+    lateinit var product: ProductDetail
 
-    fun withProduct(product: Product): DeatailProductBuilder {
+    fun withProduct(product: ProductDetail): DeatailProductBuilder {
         this.product = product
         return this
     }
@@ -35,8 +36,8 @@ class DeatailProductBuilder {
         childrenProduct.add(imageContaier)
 
         var childrenInfo = mutableListOf<ServerDrivenComponent>()
-        childrenInfo.add(Text("Café"))
-        childrenInfo.add(Text("R$ 12.00"))
+        childrenInfo.add(Text(product.name))
+        childrenInfo.add(Text(product.value))
 
         var flexDetail = Flex(
                 flexDirection = FlexDirection.ROW,
@@ -47,7 +48,7 @@ class DeatailProductBuilder {
         childrenProduct.add(infoContainer)
 
         var childrenDescription = mutableListOf<ServerDrivenComponent>()
-        childrenDescription.add(Text("A deliciously creamy Coffee Kick Frappé, topped with irresistible whipped cream and indulgent Coffee Drizzle. Perfect combination.\n"))
+        childrenDescription.add(Text(product.longDescription))
         var flexInfo = Flex(flexWrap = FlexWrap.WRAP,
                 flexDirection = FlexDirection.ROW,
                 alignContent = Alignment.CENTER,
@@ -57,8 +58,8 @@ class DeatailProductBuilder {
         childrenProduct.add(descriptionContainer)
 
         return  Screen(
-                navigationBar = NavigationBar(title = "Detalhe Produto", showBackButton = true)
-                ,content = Form(path = "add/$sku",
+                navigationBar = NavigationBar(title =  product.name, showBackButton = true)
+                ,content = Form(path = "add/${product.sku}",
                 method = FormMethodType.POST,
                 child = Container(childrenProduct)))
     }

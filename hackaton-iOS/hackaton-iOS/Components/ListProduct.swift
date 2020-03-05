@@ -40,15 +40,11 @@ struct ListProductEntity: WidgetEntity {
     var products: [Product]
     
     func mapToComponent() throws -> ServerDrivenComponent {
-        do {
-            let flex = try? self.flex?.mapToUIModel()
-            let appearance = try? self.appearance?.mapToUIModel()
-            let accessibility = try? self.accessibility?.mapToUIModel()
+        let flex = try? self.flex?.mapToUIModel()
+        let appearance = try? self.appearance?.mapToUIModel()
+        let accessibility = try? self.accessibility?.mapToUIModel()
             
-            return ListProductComponent(appearance: appearance, flex: flex, accessibility: accessibility, products: products)
-        }
-        
-        return ListProductComponent(products: products)
+        return ListProductComponent(appearance: appearance, flex: flex, accessibility: accessibility, products: products)
     }
     
 }

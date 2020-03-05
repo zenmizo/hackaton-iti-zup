@@ -20,7 +20,7 @@ struct BeagleSetting {
         var path: String {
             
 //            let address = "http://192.168.0.106:8080"
-            let address = "http://localhost:8081"
+            let address = "http://localhost:8080"
             return "\(address)/\(self.rawValue)"
         }
     }
