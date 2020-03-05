@@ -10,6 +10,7 @@ import itau.iti.marketplace.integration.response.ProductDTO
 import itau.iti.marketplace.service.ProductService
 import itau.iti.marketplace.service.request.CartPurchase
 import itau.iti.marketplace.service.response.Product
+import itau.iti.marketplace.service.response.ProductDetail
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
@@ -36,7 +37,7 @@ class ProductClientImpl : ProductService {
         )
         val product2 = ProductDTO(
                 "AAA113",
-                "Espresso",
+                "Chá",
                 "Blue Ridge Blend",
                 "Blue Ridge Blend Long",
                 "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
@@ -71,9 +72,9 @@ class ProductClientImpl : ProductService {
     fun getProduct(sku: String): Screen {
         val product = ProductDTO(
                 "AAA113",
-                "Espresso",
+                "Chá",
                 "Blue Ridge Blend",
-                "Blue Ridge Blend Long",
+                "Blue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Long",
                 "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
                 PriceDTO(
                         20000,
@@ -85,7 +86,7 @@ class ProductClientImpl : ProductService {
         )
 
         return DeatailProductBuilder()
-                .withProduct(Product(product))
+                .withProduct(ProductDetail(product))
                 .buildScreen()
     }
 

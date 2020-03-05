@@ -11,12 +11,13 @@ import br.com.zup.beagle.widget.ui.NetworkImage
 import br.com.zup.beagle.widget.ui.Text
 import itau.iti.marketplace.components.ListProductComponent
 import itau.iti.marketplace.service.response.Product
+import itau.iti.marketplace.service.response.ProductDetail
 
 class DeatailProductBuilder {
 
-    lateinit var product: Product
+    lateinit var product: ProductDetail
 
-    fun withProduct(product: Product): DeatailProductBuilder {
+    fun withProduct(product: ProductDetail): DeatailProductBuilder {
         this.product = product
         return this
     }
@@ -47,7 +48,7 @@ class DeatailProductBuilder {
         childrenProduct.add(infoContainer)
 
         var childrenDescription = mutableListOf<ServerDrivenComponent>()
-        childrenDescription.add(Text(product.shortDescription))
+        childrenDescription.add(Text(product.longDescription))
         var flexInfo = Flex(flexWrap = FlexWrap.WRAP,
                 flexDirection = FlexDirection.ROW,
                 alignContent = Alignment.CENTER,
