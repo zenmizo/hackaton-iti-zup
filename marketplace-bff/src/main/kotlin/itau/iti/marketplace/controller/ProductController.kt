@@ -19,7 +19,6 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
     @ResponseBody
     fun getProductList(): Screen {
         return productServiceImpl.getAllProductsScreen()
-//        return productServiceImpl.getProduct(sku = "21312")
     };
 
     @GetMapping("product")
