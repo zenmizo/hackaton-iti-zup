@@ -5,7 +5,7 @@ using Backend.Domain.Models.CartModel;
 using Backend.Domain.Models.CartModel.Commands;
 using Backend.Domain.Models.CartModel.Repositories;
 using Backend.Domain.Models.ProductModel.Repositories;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace Backend.Infra.Repositories
 {
@@ -29,9 +29,9 @@ namespace Backend.Infra.Repositories
                 return new FailureOperationResult<Cart>("error updating cart");
             }
 
-            if (_cartRepository.ExistsByCustomerId(command.customerId))
+            if (!_cartRepository.ExistsById(command.id.ToString()))
             {
-                return new FailureOperationResult<Cart>("cart already exists for the specified customer");
+                return new FailureOperationResult<Cart>("cart with specified id does not exists");
             }
 
             if (!_productRepository.ExistsBySku(command.item.sku))
@@ -39,26 +39,36 @@ namespace Backend.Infra.Repositories
                 return new FailureOperationResult<Cart>("product with specified sku does not exists");
             }
 
-            var product = _productRepository.GetBySku(command.item.sku).Result;
-            var item = new CartItem(product);
+            var cart = _cartRepository.GetById(command.id.ToString()).Result;
 
-            // TODO: alterar para bater no worker e fazer o calculo correto
+            if ("CANCEL".Equals(cart.status))
+            {
+                return new FailureOperationResult<Cart>("cart is canceled");
+            }
+
+            if ("DONE".Equals(cart.status))
+            {
+                return new FailureOperationResult<Cart>("cart is done");
+            }
+
+            var product = _productRepository.GetBySku(command.item.sku).Result;
+
+            var item = new CartItem(product);
             item.price = command.item.quantity * product.price.amount;
 
-            var entity = new Cart(command.id)
+            if (cart.items.Any(x => x.id == item.id))
             {
-                customerId = command.customerId,
-                status = "PENDING",
-                item = command.item,
-                items = new List<CartItem>() { item }
-            };
+                cart.items.Remove(item);
+            }
 
-            _cartRepository.Add(entity).Wait();
+            cart.items.Add(item);
+
+            _cartRepository.Update(cart).Wait();
 
             var py = _cartRepository.GetAll().Result;
-            var px = _cartRepository.GetByCustomerId(entity.customerId).Result;
+            var px = _cartRepository.GetByCustomerId(cart.customerId).Result;
 
-            return new SuccessOperationResult<Cart>("cart created", entity);
+            return new SuccessOperationResult<Cart>("cart updated", cart);
         }
     }
 }

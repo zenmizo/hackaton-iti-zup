@@ -30,7 +30,7 @@ namespace Backend.Presentation.Api
 #if DEBUG
                 .WriteTo.Console(new LogsJsonFormatter())
 #else
-                .WriteTo.File()
+                .WriteTo.Console(new LogsJsonFormatter())
 #endif
                 .CreateLogger();
 

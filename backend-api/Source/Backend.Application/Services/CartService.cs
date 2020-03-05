@@ -99,5 +99,17 @@ namespace Backend.Application.Services
                 ? (AbstractApiResult)new SuccessApiResult(HttpStatusCode.NoContent, result.Data)
                 : (AbstractApiResult)new FailureApiResult(HttpStatusCode.BadRequest, result.Message);
         }
+
+        public AbstractApiResult Checkout(string id, string currencyCode, string xTeamControl)
+        {
+            var command = new CartCheckoutCommand(id, currencyCode, xTeamControl);
+            var result = Bus.Submit(command);
+
+            if (NotificationHandler.HasNotifications()) return ValidationErrorResult();
+
+            return result.Success
+                ? (AbstractApiResult)new SuccessApiResult(HttpStatusCode.OK, result.Data)
+                : (AbstractApiResult)new FailureApiResult(HttpStatusCode.BadRequest, result.Message);
+        }
     }
 }

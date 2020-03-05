@@ -3,10 +3,24 @@ using Backend.Domain.Core.Validators;
 using Backend.Domain.Models.CartModelModel.Commands;
 using System.Collections.Generic;
 
-namespace Backend.Domain.Models.CartModel
+namespace Backend.Domain.Models.CartModel.Validators
 {
     public sealed class CartValidator : Validator<CartCommand>
     {
+        public void ValidateXTeamControl()
+        {
+            RuleFor(x => x.xTeamControl)
+                .NotNull()
+                .NotEmpty();
+        }
+
+        public void ValidateCurrencyCode()
+        {
+            var acceptedCurrencies = new List<string> { "USD", "EUR", "BRL" };
+            RuleFor(x => x.currencyCode)
+                .Must(x => acceptedCurrencies.Contains(x)).WithMessage("'currencyCode' must be one of ['" + string.Join("', '", acceptedCurrencies) + "']");
+        }
+
         public void ValidateId()
         {
             RuleFor(x => x.id)
