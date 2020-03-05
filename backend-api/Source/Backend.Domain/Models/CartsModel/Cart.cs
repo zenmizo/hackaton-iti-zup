@@ -24,4 +24,9 @@ namespace Backend.Domain.Models.CartModel
         public CartEditItem item { internal get; set; }
         public List<CartItem> items { get; set; }
     }
+
+    public class CartCheckoutBody
+    { 
+        public string currencyCode { get; set; }
+    }
 }

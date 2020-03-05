@@ -15,13 +15,13 @@ namespace Backend.Domain.Models.CartModel
         {
             id = product.id;
             scale = product.price.scale;
-            curencyCode = product.price.currencyCode;
+            currencyCode = product.price.currencyCode;
         }
 
         public long? price { get; set; }
         public long? scale { get; set; }
-        public string curencyCode { get; set; }
-        public virtual Product product { internal get; set; }
+        public string currencyCode { get; set; }
+        public Product product { get; set; }
     }
 
     public class CartEditItem

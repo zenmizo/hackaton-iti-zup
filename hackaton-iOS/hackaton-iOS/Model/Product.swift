@@ -15,4 +15,6 @@ struct Product: Codable {
     var imageUrl: String
     var value: String
     var sku: String
+    var canBeSelected: Bool = true
+    
 }

@@ -7,11 +7,14 @@ using Backend.Domain.Models.CartModel;
 using Backend.Domain.Models.CartModel.Commands;
 using Backend.Domain.Models.CartModel.Repositories;
 using Backend.Domain.Models.InvoiceModel;
+using Backend.Domain.Models.ProductModel;
 using Backend.Domain.Models.ProductModel.Repositories;
 using Newtonsoft.Json;
 using Serilog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace Backend.Infra.Repositories
 {
@@ -42,46 +45,65 @@ namespace Backend.Infra.Repositories
                 return new FailureOperationResult<Cart>("cart with specified id does not exists");
             }
 
+            var cart = _cartRepository.GetById(command.id.ToString()).Result;
+            var items = cart.items.Select(x => new CartItem()
+            {
+                id = x.id,
+                price = x.price.Value,
+                scale = x.scale.Value,
+                currencyCode = x.currencyCode,
+                product = _productRepository.GetById(x.id.ToString()).Result
+            }).ToList();
+
+            cart.items = items;
+
             var invoice = new Invoice()
             {
                 invoice = new InvoiceMetadata()
                 {
                     xTeamControl = command.xTeamControl,
-                    currencyCode = command.currencyCode,
-
+                    currencyCode = command.currencyCode
                 },
-                cart = new Cart()
-                {
-                    customerId = command.customerId,
-                    id = command.id,
-                    status = command.status,
-                    items = command.items.Select(item => new CartItem()
-                    {
-                        curencyCode = item.curencyCode,
-                        price = item.price,
-                        id = item.id,
-                        scale = item.scale,
-                        product = item.product
-                    }).ToList()
-                }
+                cart = cart
             };
 
-            var jsonPayload = JsonConvert.SerializeObject(invoice);
+            Log.Information("Sending data to SQS: {@data}", invoice);
 
-            Log.Information("Sending data to SQS: {payload}", jsonPayload);
-
-            // TODO: send to SQS
-            var request = new SendMessageRequest()
+            var jsonPayload = JsonConvert.SerializeObject(invoice, Formatting.Indented, new JsonSerializerSettings
             {
-                QueueUrl = "https://sqs.us-east-1.amazonaws.com/105029661252/start-checkout",
-                MessageBody = jsonPayload
-            };
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize
+            });
 
-            _sqsClient.SendMessageAsync(request).Wait();
+            SendToSns(jsonPayload);
 
             _cartRepository.Checkout(command.id.ToString()).Wait();
 
             return new SuccessOperationResult<Cart>("checkout complete");
+        }
+
+        public void SendToSns(string jsonPayload)
+        {
+            var tries = 10;
+            while (true)
+            {
+                try
+                {
+                    var request = new SendMessageRequest()
+                    {
+                        QueueUrl = "https://sqs.us-east-1.amazonaws.com/105029661252/start-checkout", // Leandro
+                        //QueueUrl = "https://sqs.us-east-1.amazonaws.com/106868270748/start-checkout", // Carlos
+                        MessageBody = jsonPayload
+                    };
+
+                    _sqsClient.SendMessageAsync(request).Wait();
+                    break;
+                }
+                catch
+                {
+                    if (--tries == 0) throw;
+                    Thread.Sleep(1500);
+                }
+            }
         }
     }
 }

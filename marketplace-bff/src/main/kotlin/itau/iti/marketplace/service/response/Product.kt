@@ -7,7 +7,8 @@ data class Product(
         val name: String,
         val shortDescription: String,
         val value: String,
-        val imageUrl: String
+        val imageUrl: String,
+        var canBeSelected: Boolean = true
 ){
     constructor(productDTO: ProductDTO): this(productDTO.sku,
             productDTO.name,

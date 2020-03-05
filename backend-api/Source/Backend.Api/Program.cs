@@ -14,16 +14,17 @@ namespace Backend.Presentation.Api
 {
     public class Program
     {
-        public static BasicAWSCredentials Credentials = new BasicAWSCredentials("AKIAI5J2QHI.?.Q7QTAZOKA", "LK8BCrftIY.?./J7a9ddff7Po2+m+ZSXwVhY+RLPcoH");
+        public static BasicAWSCredentials CredentialsCarlos = new BasicAWSCredentials("AKIAIWE.?.RZ76TGPZX5XRA", "R4yz9dh.?.4fuCHkRhvBcisBukwiN/nbuvQlYuHPho/");
+        public static BasicAWSCredentials CredentialsLeandro = new BasicAWSCredentials("AKIARQ5.?.CBOJCOW7ILNUA", "rI7NtYN.?.UyH9CBK3pSvVVvksqZUL1zu5xwDFMeWQq");
 
         public static void Main(string[] args)
         {
             AWSLoggerConfig configuration = new AWSLoggerConfig()
             {
-                Credentials = Credentials,
+                Credentials = CredentialsCarlos,
                 Region = "us-east-1",
                 LogGroup = "hackaiti",
-                DisableLogGroupCreation = true,
+                DisableLogGroupCreation = true
             };
 
             Log.Logger = new LoggerConfiguration()
@@ -42,6 +43,7 @@ namespace Backend.Presentation.Api
                     .WithRootName("data"))
 #if DEBUG
                 .WriteTo.Console(new LogsJsonFormatter())
+                .WriteTo.AWSSeriLog(configuration, null, new LogsJsonFormatter())
 #else
                 .WriteTo.AWSSeriLog(configuration, null, new LogsJsonFormatter())
 #endif

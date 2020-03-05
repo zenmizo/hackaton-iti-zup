@@ -14,15 +14,15 @@ class CartController (private val cartClientImpl: CartClientImpl){
     @PostMapping("add")
     @ResponseBody
     fun addToCart(@RequestParam(value = "sku") sku: String, @RequestParam(value = "clientID") clientID: String): Navigate {
-        cartClientImpl.addItem(PurchaseProduct(sku = sku, quantity = 1 ), clientID)
+//        cartClientImpl.addItem(PurchaseProduct(sku = sku, quantity = 1 ), clientID)
         return Navigate(NavigationType.PRESENT_VIEW,
                 path = "http://localhost:8080/list/cart?clientID=$clientID")
     }
 
     @GetMapping("list/cart")
     @ResponseBody
-    fun listCardt(@RequestParam(value = "clientID") clientID: String) {
+    fun listCardt(@RequestParam(value = "clientID") clientID: String): Screen {
 
-        return
+        return cartClientImpl.consultCart(clientID)
     }
 }
