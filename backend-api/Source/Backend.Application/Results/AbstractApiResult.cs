@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Backend.Shared.ContractResolvers;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -25,9 +24,11 @@ namespace Backend.Application.Results
         public bool ShouldSerializeCode() => false;
         public bool ShouldSerializeStatus() => false;
 
-        public string ToJson() => JsonConvert.SerializeObject(this, new JsonSerializerSettings
-        {
-            ContractResolver = new LowercaseContractResolver()
-        });
+        public string ToJson() => JsonConvert.SerializeObject(this);
+
+        //public string ToJson() => JsonConvert.SerializeObject(this, new JsonSerializerSettings
+        //{
+        //    ContractResolver = new LowercaseContractResolver()
+        //});
     }
 }

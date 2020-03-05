@@ -21,6 +21,7 @@ namespace Backend.Domain.Models.CartModel
         public long? price { get; set; }
         public long? scale { get; set; }
         public string curencyCode { get; set; }
+        public virtual Product product { internal get; set; }
     }
 
     public class CartEditItem

@@ -1,4 +1,5 @@
 ﻿using Backend.Domain.Core.Commands;
+using Backend.Domain.Models.ProductModel.Validators;
 using System;
 using System.Linq.Expressions;
 

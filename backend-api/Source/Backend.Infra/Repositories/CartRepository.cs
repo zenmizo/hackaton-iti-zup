@@ -138,6 +138,14 @@ namespace Backend.Infra.Repositories
             await table.PutItemAsync(document);
         }
 
+        public async Task Update(Cart cart)
+        {
+            var table = Table.LoadTable(dbClient, "carts_id_cid");
+            Document document = DocumentFromCart(cart);
+
+            await table.UpdateItemAsync(document);
+        }
+
         public async Task Delete(string id)
         {
             var table = Table.LoadTable(dbClient, "carts_id_cid");
@@ -197,6 +205,37 @@ namespace Backend.Infra.Repositories
                 var items = JsonConvert.DeserializeObject<List<CartItem>>(document["items"].AsString());
                 var item = items.FirstOrDefault(x => x.id.ToString() == item_id);
                 items.Remove(item);
+
+                await table.UpdateItemAsync(document);
+            }
+        }
+
+        public async Task Checkout(string id)
+        {
+            var table = Table.LoadTable(dbClient, "carts_id_cid");
+
+            var filter = new QueryFilter();
+            filter.AddCondition("id", QueryOperator.Equal, id);
+
+            var queryConfig = new QueryOperationConfig
+            {
+                Filter = filter,
+                Limit = 1
+            };
+
+            var result = table.Query(queryConfig);
+
+            if (result.IsDone)
+            {
+                throw new ArgumentException("id");
+            }
+            else
+            {
+                var querySet = await result.GetNextSetAsync();
+
+                var document = querySet.First();
+
+                document["status"] = "DONE";
 
                 await table.UpdateItemAsync(document);
             }

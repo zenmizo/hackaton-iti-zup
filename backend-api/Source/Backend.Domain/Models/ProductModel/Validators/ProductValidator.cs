@@ -3,7 +3,7 @@ using Backend.Domain.Core.Validators;
 using Backend.Domain.Models.ProductModel.Commands;
 using System.Collections.Generic;
 
-namespace Backend.Domain.Models.ProductModel
+namespace Backend.Domain.Models.ProductModel.Validators
 {
     public sealed class ProductValidator : Validator<ProductCommand>
     {

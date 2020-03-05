@@ -39,7 +39,7 @@ namespace Backend.Presentation.Api
 
             services.AddSingleton<AmazonDynamoDBClient>(serviceConfiguration =>
             {
-                var credentials = new BasicAWSCredentials("AKIAI5J2QHI.?.Q7QTAZOKA", "LK8BCrftIY/J7a9ddff7.?.Po2+m+ZSXwVhY+RLPcoH");
+                var credentials = new BasicAWSCredentials("AKIAI5J2QHIQ.?.7QTAZOKA", "LK8BCrft.?.IY/J7a9ddff7Po2+m+ZSXwVhY+RLPcoH");
                 return new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
             });
 
@@ -61,7 +61,9 @@ namespace Backend.Presentation.Api
             services.AddTransient<IQueryHandler<ProductGetBySkuQuery, Product>, ProductGetBySkuQueryHandler>();
 
             // Cart Commands
+            services.AddTransient<ICommandHandler<CartCheckoutCommand, Cart>, CartCheckoutCommandHandler>();
             services.AddTransient<ICommandHandler<CartCreateCommand, Cart>, CartCreateCommandHandler>();
+            services.AddTransient<ICommandHandler<CartUpdateCommand, Cart>, CartUpdateCommandHandler>();
             services.AddTransient<ICommandHandler<CartDeleteCommand, Cart>, CartDeleteCommandHandler>();
             services.AddTransient<ICommandHandler<CartDeleteItemCommand, Cart>, CartDeleteItemCommandHandler>();
 
@@ -69,6 +71,8 @@ namespace Backend.Presentation.Api
             services.AddTransient<IQueryHandler<CartGetAllQuery, List<Cart>>, CartGetAllQueryHandler>();
             services.AddTransient<IQueryHandler<CartGetByIdQuery, Cart>, CartGetByIdQueryHandler>();
             services.AddTransient<IQueryHandler<CartGetByCustomerIdQuery, Cart>, CartGetByCustomerIdQueryHandler>();
+
+            // Invoice Commands
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

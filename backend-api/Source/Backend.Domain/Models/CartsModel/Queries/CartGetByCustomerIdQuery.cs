@@ -1,5 +1,4 @@
 ﻿using Backend.Domain.Core.Queries;
-using System.Collections.Generic;
 
 namespace Backend.Domain.Models.CartModel.Queries
 {

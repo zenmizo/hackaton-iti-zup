@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Amazon.DynamoDBv2;
+using Amazon.DynamoDBv2.Model;
 using Amazon.SQS;
 using Amazon.SQS.Model;
+using Confluent.Kafka;
 using Hackaiti.CheckoutService.Worker.Model;
+using Hackaiti.CheckoutService.Worker.Model.CartMessage;
+using Hackaiti.CheckoutService.Worker.Model.InvoiceApi;
+using Hackaiti.CheckoutService.Worker.Model.KafkaOrder;
 using Hackaiti.CheckoutService.Worker.Services;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
@@ -18,11 +24,11 @@ namespace Hackaiti.CheckoutService.Worker
         private const string QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/105029661252/hackaiti-testing";
         private readonly ILogger<CartInvoiceWorker> _logger;
         private readonly ICurrenciesApiService _currenciesService;
-        private readonly ICartService _cartService;
-        
-        public CartInvoiceWorker(ILogger<CartInvoiceWorker> logger, ICartService cartService, ICurrenciesApiService currenciesService)
+        private readonly IHackatonZupApiService _hackaZupApiService;
+
+        public CartInvoiceWorker(ILogger<CartInvoiceWorker> logger, ICurrenciesApiService currenciesService, IHackatonZupApiService hackaZupApiService)
         {
-            _cartService = cartService;
+            _hackaZupApiService = hackaZupApiService;
             _currenciesService = currenciesService;
             _logger = logger;
         }
@@ -36,9 +42,9 @@ namespace Hackaiti.CheckoutService.Worker
             var receiveMessageRequest = new ReceiveMessageRequest()
             {
                 QueueUrl = QUEUE_URL,
-                MaxNumberOfMessages = 5,
-                VisibilityTimeout = 120,
-                WaitTimeSeconds = 10
+                MaxNumberOfMessages = 1,
+                VisibilityTimeout = 60,
+                WaitTimeSeconds = 5
             };
 
             while (!stoppingToken.IsCancellationRequested)
@@ -49,24 +55,152 @@ namespace Hackaiti.CheckoutService.Worker
 
                 foreach (var message in receiveMessageResponse.Messages)
                 {
-                    _logger.LogInformation("Processing {message}", message.Body);
-
-                    var cart = JsonConvert.DeserializeObject<Cart>(message.Body);
-                    var total = await GetTotal(cart);
-                    cart.Total = total;
-
-                    _logger.LogInformation("Invoice payload: {payload}", cart);
-
-                    await client.DeleteMessageAsync(new DeleteMessageRequest()
+                    try
                     {
-                        QueueUrl = QUEUE_URL,
-                        ReceiptHandle = message.ReceiptHandle
-                    });
+                        await ProccessMessage(message);
+
+                        await client.DeleteMessageAsync(new DeleteMessageRequest()
+                        {
+                            QueueUrl = QUEUE_URL,
+                            ReceiptHandle = message.ReceiptHandle
+                        });
+                    }
+                    catch (System.Exception ex)
+                    {
+                        _logger.LogError(ex, "SQS message with erro");
+                    }
                 }
             }
         }
 
-        private async Task<CartTotal> GetTotal(Cart cart)
+        private async Task ProccessMessage(Message message)
+        {
+            _logger.LogInformation("Processing {message}", message.Body);
+
+            var cartMessage = JsonConvert.DeserializeObject<CartMessage>(message.Body);
+
+            var total = await GetTotal(cartMessage);
+
+            var invoiceApiPayload = CreateInvoiceApiPayload(cartMessage, total);
+
+            try
+            {
+                await _hackaZupApiService.PostInvoice(invoiceApiPayload, cartMessage.Invoice.XTeamControl);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error ocurred while posting data do invoices API");
+                throw;
+            }
+
+            await SendToKafka(cartMessage, invoiceApiPayload);
+
+            await SendToDynamoDb(cartMessage, invoiceApiPayload);
+        }
+
+        private async Task SendToDynamoDb(CartMessage cartMessage, Invoice invoiceApiPayload)
+        {
+            AmazonDynamoDBClient client = new AmazonDynamoDBClient();
+            string tableName = "checkout_transactions";
+
+            _logger.LogInformation("Sendig transaction register do DynamoDB");
+            
+            var request = new PutItemRequest
+            {
+                TableName = tableName,
+                Item = new Dictionary<string, AttributeValue>()
+                {
+                    { "cartId", new AttributeValue { S = invoiceApiPayload.Id }},
+                    { "amount", new AttributeValue { N = invoiceApiPayload.Total.Amount.ToString() }},
+                    { "scale", new AttributeValue { N = invoiceApiPayload.Total.Scale.ToString() }},
+                    { "currencyCode", new AttributeValue { S = invoiceApiPayload.Total.CurrencyCode }},
+                    { "x-team-control", new AttributeValue { S = cartMessage.Invoice.XTeamControl }},
+                    { "timestamp", new AttributeValue { S = DateTime.Now.ToString() }},
+                }
+            };
+
+            await client.PutItemAsync(request);
+        }
+
+        private async Task SendToKafka(CartMessage cartMessage, Invoice invoiceApiPayload)
+        {
+            _logger.LogInformation("Sending message to kafka...");
+
+            var config = new ProducerConfig()
+            {
+                BootstrapServers = "localhost:9092"
+            };
+
+            var kafkaPayload = CreateKafkaOrderPayload(cartMessage, invoiceApiPayload);
+
+            _logger.LogInformation("Kafka payload: {payload}", kafkaPayload);
+
+            // TODO: don't recreate this f** producer every single time
+            using (var producer = new ProducerBuilder<Null, string>(config).Build())
+            {
+                try
+                {
+                    var message = new Message<Null, string>()
+                    {
+                        Value = kafkaPayload
+                    };
+
+                    var deliveryResult = await producer.ProduceAsync("orders_topic", message);
+
+                    _logger.LogInformation("kafka delivered '{value}' to '{topicPartitionOffset}'.", deliveryResult.Value, deliveryResult.TopicPartitionOffset);
+                }
+                catch (ProduceException<Null, string> ex)
+                {
+                    _logger.LogError(ex, "Kafka delivery failed: {reason}", ex.Error.Reason);
+                    throw;
+                }
+            }
+        }
+
+        private string CreateKafkaOrderPayload(CartMessage cartMessage, Invoice invoiceApiPayload)
+        {
+            var order = new KafkaOrder()
+            {
+                Headers = new KafkaOrderHeader()
+                {
+                    XTeamControl = cartMessage.Invoice.XTeamControl
+                },
+                Payload = new KafkaOrderPayload()
+                {
+                    CartId = cartMessage.Cart.Id,
+                    Price = new KafkaOrderPayloadPrice()
+                    {
+                        Amount = invoiceApiPayload.Total.Amount,
+                        CurrencyCode = invoiceApiPayload.Total.CurrencyCode,
+                        Scale = invoiceApiPayload.Total.Scale
+                    }
+                }
+            };
+
+            return JsonConvert.SerializeObject(order);
+        }
+
+        private Invoice CreateInvoiceApiPayload(CartMessage cartMessage, InvoiceTotal total)
+        {
+            return new Invoice()
+            {
+                Id = cartMessage.Cart.Id,
+                CustomerId = cartMessage.Cart.CustomerId,
+                Status = cartMessage.Cart.Status,
+                Total = total,
+                Items = cartMessage.Cart.Items.Select(t => new InvoiceItem()
+                {
+                    Id = t.Product.Id,
+                    CurrencyCode = t.CurrencyCode,
+                    ImageURL = t.Product.ImageURL,
+                    Name = t.Product.Name,
+                    Price = t.Price,
+                    Scale = t.Scale
+                })
+            };
+        }
+
+        private async Task<InvoiceTotal> GetTotal(CartMessage cartMessage)
         {
             var currencies = await _currenciesService.GetCurrencies();
 
@@ -93,17 +227,17 @@ namespace Hackaiti.CheckoutService.Worker
                 { "BRL-USD", brl2usd_factor }
             };
 
-            var total = new CartTotal()
+            var total = new InvoiceTotal()
             {
                 Amount = 0,
                 Scale = 2,
-                CurrencyCode = cart.DesiredCurrencyCode
+                CurrencyCode = cartMessage.Invoice.CurrencyCode
             };
 
-            foreach (var item in cart.Items)
+            foreach (var item in cartMessage.Cart.Items)
             {
                 var itemPrice = item.Price / Math.Pow(10, item.Scale);
-                var conversionKey = $"{item.CurrencyCode}-{cart.DesiredCurrencyCode}".ToUpper();
+                var conversionKey = $"{item.CurrencyCode}-{cartMessage.Invoice.CurrencyCode}".ToUpper();
                 var conversionFactor = currencyConversionTable[conversionKey];
                 var itemAmount = Convert.ToInt64(itemPrice * conversionFactor * 100);
 
@@ -116,6 +250,11 @@ namespace Hackaiti.CheckoutService.Worker
         private double GetFactor(long currencyValue, long scale)
         {
             return currencyValue / Math.Pow(10, scale);
+        }
+
+        public override void Dispose()
+        {
+            // TODO: liberar recursos do Kafka            
         }
     }
 }

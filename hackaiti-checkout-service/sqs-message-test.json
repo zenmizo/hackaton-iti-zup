@@ -1,0 +1,46 @@
+{
+    "Invoice": {
+        "CurrencyCode": "BRL",
+        "XTeamControl": "sdasd3h23h42h3423i4h23hu34h42"
+    },
+    "Cart": {
+        "Id": "42-42-42",
+        "CustomerId": "1234",
+        "Status": "PEDING",
+        "Items": [
+            {
+                "Id": "1",
+                "Price": 1000,
+                "Scale": 2,
+                "CurrencyCode": "EUR",
+                "Product": {
+                    "Id": "1",
+                    "Name": "abc",
+                    "ImageURL": "https://abc.123"
+                }
+            },
+            {
+                "Id": null,
+                "Price": 2000,
+                "Scale": 2,
+                "CurrencyCode": "BRL",
+                "Product": {
+                    "Id": "1",
+                    "Name": "iti",
+                    "ImageURL": "https://iti.123"
+                }
+            },
+            {
+                "Id": null,
+                "Price": 30000,
+                "Scale": 3,
+                "CurrencyCode": "USD",
+                "Product": {
+                    "Id": "1",
+                    "Name": "xyz",
+                    "ImageURL": "https://xyz.123"
+                }
+            }
+        ]
+    }
+}

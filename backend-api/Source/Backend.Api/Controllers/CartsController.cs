@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Backend.Application.Services;
 using Backend.Domain.Models.CartModel;
+using System.Linq;
+using Backend.Application.Results;
+using System.Net;
 
 namespace Backend.Presentation.Api.Controllers
 {
@@ -52,22 +55,17 @@ namespace Backend.Presentation.Api.Controllers
             return _cartService.DeleteItem(id, item_id);
         }
 
-        //[HttpPost]
-        //[Route("{id}/checkout")]
-        //public IActionResult Checkout([FromRoute]string id, [FromBody]CheckoutCommand checkoutCommand)
-        //{
-        //    var teamControlId = Request.Headers["x-team-control"].FirstOrDefault();            
+        [HttpPost("{id}/checkout")]
+        public IActionResult Checkout([FromRoute]string id, [FromQuery]string currencyCode)
+        {
+            var xTeamControl = Request.Headers["x-team-control"].FirstOrDefault();
 
-        //    if (string.IsNullOrWhiteSpace(teamControlId)) return BadRequest();
+            if (string.IsNullOrWhiteSpace(xTeamControl))
+            {
+                return new FailureApiResult(HttpStatusCode.BadRequest, "'x-team-control' header is missing");
+            }
 
-        //    if (string.IsNullOrWhiteSpace(id)) return BadRequest();
-
-        //    if (checkoutCommand == null) return BadRequest();
-
-        //    checkoutCommand.CartId = id;
-        //    checkoutCommand.TeamControlId = teamControlId;
-
-        //    return Ok();
-        //}
+            return _cartService.Checkout(id, currencyCode, xTeamControl);
+        }
     }
 }
