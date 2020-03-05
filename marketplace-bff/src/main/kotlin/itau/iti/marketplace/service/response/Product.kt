@@ -14,7 +14,6 @@ data class Product(
             productDTO.shortDescription,
             productDTO.price.toString(),
             productDTO.imageUrl){
-
     }
 
 }

@@ -1,6 +1,6 @@
 package itau.iti.marketplace.integration.response
 
-data class PurchasedProduct (
+data class PurchasedProductDTO (
         val id: Int,
         val price: Double,
         val scale: Int,
