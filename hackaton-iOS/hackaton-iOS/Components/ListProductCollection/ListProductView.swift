@@ -59,8 +59,6 @@ class ListProductView: UIView, UICollectionViewDataSource {
         
         self.products = products
         self.collectionView.reloadData()
-        
-        self.next
     }
   
 }

@@ -39,7 +39,7 @@ class DeatailProductBuilder {
         return  Screen(
                 navigationBar = NavigationBar(title =  product.name, showBackButton = true)
                 ,content =
-        Form(path = "http://172.20.10.8:8080/add?sku=${product.sku}&clientID=$clientID",
+        Form(path = "http://localhost:8080/add?sku=${product.sku}&clientID=$clientID",
                 method = FormMethodType.POST,
                 child = Container(childrenProduct).applyFlex(Flex(justifyContent = JustifyContent.SPACE_BETWEEN, grow = 1.0)))
         )
