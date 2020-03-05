@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Backend.Domain.Core\Backend.Domain.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.3.102.71" />
+  </ItemGroup>
+
 </Project>

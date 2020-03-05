@@ -21,6 +21,7 @@ using Amazon.Runtime;
 using Backend.Domain.Models.ProductModel.Repositories;
 using Backend.Domain.Models.CartModel.Repositories;
 using Backend.Domain.Models.CartModel.Queries;
+using Amazon.SQS;
 
 namespace Backend.Presentation.Api
 {
@@ -39,8 +40,14 @@ namespace Backend.Presentation.Api
 
             services.AddSingleton<AmazonDynamoDBClient>(serviceConfiguration =>
             {
-                var credentials = new BasicAWSCredentials("AKIAI5J2QHIQ.?.7QTAZOKA", "LK8BCrft.?.IY/J7a9ddff7Po2+m+ZSXwVhY+RLPcoH");
+                var credentials = new BasicAWSCredentials("AKIAI5J2Q.?.HIQ7QTAZOKA", "LK8BCrftIY/J7a9d.?.dff7Po2+m+ZSXwVhY+RLPcoH");
                 return new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
+            });
+
+            services.AddSingleton<AmazonSQSClient>(serviceProvider =>
+            {
+                var credentials = new BasicAWSCredentials("AKIARQ5CB.?.OJCOW7ILNUA", "rI7NtYNUyH9CBK3p.?.SvVVvksqZUL1zu5xwDFMeWQq");
+                return new AmazonSQSClient(credentials, RegionEndpoint.USEast1);
             });
 
             services.AddScoped<IBus, Bus>();
