@@ -14,6 +14,7 @@ class ListProductBuilder {
     private lateinit var products: List<Product>
 
     fun with(products: List<Product>): ListProductBuilder {
+        this.products = products
         return this
     }
 

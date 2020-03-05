@@ -14,6 +14,7 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
     @ExceptionHandler(ProductNotFoundException::class)
     fun getProductList(): Screen {
         return productServiceImpl.getAllProductsScreen()
+//        return productServiceImpl.getProduct(sku = "21312")
     };
 
     @GetMapping("product")
