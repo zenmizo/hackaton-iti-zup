@@ -11,12 +11,13 @@ import br.com.zup.beagle.widget.ui.NetworkImage
 import br.com.zup.beagle.widget.ui.Text
 import itau.iti.marketplace.components.ListProductComponent
 import itau.iti.marketplace.service.response.Product
+import itau.iti.marketplace.service.response.ProductDetail
 
 class DeatailProductBuilder {
 
-    var product: Product? = null
+    var product: ProductDetail? = null
 
-    fun withProduct(product: Product): DeatailProductBuilder {
+    fun withProduct(product: ProductDetail): DeatailProductBuilder {
         this.product = product
         return this
     }
