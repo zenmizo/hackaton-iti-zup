@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod
 interface ProductIntegration {
     @RequestMapping(method = arrayOf(RequestMethod.GET), value = ["/products"])
     fun getAllProducts() : List<ProductDTO>
-    @RequestMapping(method = arrayOf(RequestMethod.GET), value = ["/product/{sku}"])
+    @RequestMapping(method = arrayOf(RequestMethod.GET), value = ["/products?sku={sku}"])
     fun getProductBySku(sku: String) : ProductDTO
 }
