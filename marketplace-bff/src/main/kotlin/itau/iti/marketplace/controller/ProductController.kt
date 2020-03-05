@@ -17,7 +17,6 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
 
     @GetMapping("list/product")
     @ResponseBody
-    @ExceptionHandler(ProductNotFoundException::class)
     fun getProductList(): Screen {
         return productServiceImpl.getAllProductsScreen()
 //        return productServiceImpl.getProduct(sku = "21312")
@@ -25,7 +24,6 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
 
     @GetMapping("product")
     @ResponseBody
-    @ExceptionHandler(ProductNotFoundException::class)
     fun getProduct(@RequestParam("sku_product") skuProduct: String): Screen {
         return productServiceImpl.getProduct(sku = skuProduct)
     };

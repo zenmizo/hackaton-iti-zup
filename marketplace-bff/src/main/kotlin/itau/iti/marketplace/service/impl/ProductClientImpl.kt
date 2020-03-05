@@ -55,7 +55,9 @@ class ProductClientImpl : ProductService {
                 id = "1231"
         )
 
+        //val productDTO = productIntegration.getProductBySku(sku);
         return DeatailProductBuilder()
+                .withProduct(Product(product))
                 .buildScreen()
     }
 
