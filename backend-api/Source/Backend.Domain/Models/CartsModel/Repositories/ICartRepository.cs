@@ -11,7 +11,9 @@ namespace Backend.Domain.Models.CartModel.Repositories
         Task<Cart> GetByCustomerId(string customerId);
         Task<IEnumerable<Cart>> GetAll();
         Task Add(Cart cart);
+        Task Update(Cart cart);
         Task Delete(string id);
         Task DeleteItem(string id, string item_id);
+        Task Checkout(string id);
     }
 }

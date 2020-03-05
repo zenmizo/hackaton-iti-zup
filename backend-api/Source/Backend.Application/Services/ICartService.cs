@@ -12,5 +12,6 @@ namespace Backend.Application.Services
         AbstractApiResult Update(string id, CartEditItem item);
         AbstractApiResult Delete(string id);
         AbstractApiResult DeleteItem(string id, string item_id);
+        AbstractApiResult Checkout(string id, string currencyCode, string xTeamControl);
     }
 }
