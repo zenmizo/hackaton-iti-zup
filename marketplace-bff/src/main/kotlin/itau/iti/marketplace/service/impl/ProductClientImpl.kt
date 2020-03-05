@@ -19,7 +19,6 @@ class ProductClientImpl : ProductService {
     @Autowired
     lateinit var productIntegration: ProductIntegration;
 
-
     override fun getAllProducts(): List<Product> {
         val product1 = ProductDTO(
                 "AAA113",
@@ -51,9 +50,9 @@ class ProductClientImpl : ProductService {
         )
         val productList = mutableListOf<Product>();
 
-        listOf(product1,product2).forEach{p -> productList.add(Product(p))}
+//        listOf(product1,product2).forEach{p -> productList.add(Product(p))}
 //
-//        productIntegration.getAllProducts().map { productDTO -> productList.add(Product(productDTO)) }
+        productIntegration.getAllProducts().map { productDTO -> productList.add(Product(productDTO)) }
         return productList;
     }
 
@@ -61,7 +60,7 @@ class ProductClientImpl : ProductService {
        return ListProductBuilder().with(getAllProducts()).buildScreen()
     }
 
-    fun buyProducts(cartPurchase: CartPurchase): Screen {
+    override fun buyProducts(cartPurchase: CartPurchase): Screen {
         return ResultMessageBuilder()
                 .withTitle("Order successfully!")
                 .withDescription("All right with your order.")
@@ -69,24 +68,27 @@ class ProductClientImpl : ProductService {
                 .buildScreen()
     }
 
-    fun getProduct(sku: String): Screen {
-        val product = ProductDTO(
-                "AAA113",
-                "Chá",
-                "Blue Ridge Blend",
-                "Blue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Long",
-                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
-                PriceDTO(
-                        20000,
-                        2,
-                        "EUR"
-                )
-                ,
-                id = "1231"
-        )
+    override fun getProduct(sku: String, clientID: String): Screen {
+//        val product = ProductDTO(
+//                "AAA113",
+//                "Chá",
+//                "Blue Ridge Blend",
+//                "Blue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Lonlue Ridge Blend Long",
+//                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
+//                PriceDTO(
+//                        20000,
+//                        2,
+//                        "EUR"
+//                )
+//                ,
+//                id = "1231"
+//        )
+        val product = productIntegration.getProductBySku(sku)
 
         return DeatailProductBuilder()
+
                 .withProduct(ProductDetail(product))
+                .withClientID(clientID)
                 .buildScreen()
     }
 

@@ -15,7 +15,6 @@ struct BeagleSetting {
         
         case listProducts = "list/product"
         case productDescription = "product?sku_product="
-        case buy = "buy/products"
         
         var path: String {
             

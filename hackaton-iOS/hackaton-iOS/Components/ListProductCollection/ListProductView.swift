@@ -59,8 +59,6 @@ class ListProductView: UIView, UICollectionViewDataSource {
         
         self.products = products
         self.collectionView.reloadData()
-        
-        self.next
     }
   
 }
@@ -93,8 +91,13 @@ extension ListProductView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let currentViewController = self.findViewController()?.navigationController {
-            var detailProductViewCotroller = BeagleScreenViewController(
-                viewModel: .init(screenType: .remote("\(BeagleSetting.Routes.productDescription.path)\(products[indexPath.row].sku)", fallback: nil)))
+            
+            let clientID = UIDevice.current.identifierForVendor
+            let detailProductViewCotroller = BeagleScreenViewController(
+                viewModel:
+                .init(screenType: .remote("\(BeagleSetting.Routes.productDescription.path)\(products[indexPath.row].sku)&clientID=\(clientID!)",
+                    fallback: nil)))
+            
             currentViewController.pushViewController(detailProductViewCotroller, animated: true)
         }
     }
