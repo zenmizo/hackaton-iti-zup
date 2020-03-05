@@ -8,5 +8,5 @@ interface ProductService {
     fun getAllProducts() : List<Product>
     fun getAllProductsScreen() : Screen
     fun buyProducts(cartPurchase: CartPurchase): Screen
-    fun getProduct(sku: String): Screen
+    fun getProduct(sku: String, clientID: String): Screen
 }

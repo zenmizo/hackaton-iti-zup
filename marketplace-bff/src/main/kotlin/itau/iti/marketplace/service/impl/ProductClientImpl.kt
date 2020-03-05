@@ -19,7 +19,6 @@ class ProductClientImpl : ProductService {
     @Autowired
     lateinit var productIntegration: ProductIntegration;
 
-
     override fun getAllProducts(): List<Product> {
         val product1 = ProductDTO(
                 "AAA113",
@@ -69,7 +68,7 @@ class ProductClientImpl : ProductService {
                 .buildScreen()
     }
 
-    override fun getProduct(sku: String): Screen {
+    override fun getProduct(sku: String, clientID: String): Screen {
         val product = ProductDTO(
                 "AAA113",
                 "Chá",
@@ -87,6 +86,7 @@ class ProductClientImpl : ProductService {
 
         return DeatailProductBuilder()
                 .withProduct(ProductDetail(product))
+                .withClientID(clientID)
                 .buildScreen()
     }
 

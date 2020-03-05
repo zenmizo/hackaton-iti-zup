@@ -2,15 +2,9 @@ package itau.iti.marketplace.controller
 
 import br.com.zup.beagle.widget.layout.Screen
 import itau.iti.marketplace.exception.ProductNotFoundException
-import org.springframework.web.bind.annotation.*
 import itau.iti.marketplace.service.impl.ProductClientImpl
-import itau.iti.marketplace.service.request.ProductPurchase
 import itau.iti.marketplace.service.request.CartPurchase
-import org.springframework.web.bind.annotation.ExceptionHandler
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.ResponseBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 class ProductController (private val productServiceImpl: ProductClientImpl) {
@@ -23,8 +17,8 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
 
     @GetMapping("product")
     @ResponseBody
-    fun getProduct(@RequestParam("sku_product") skuProduct: String): Screen {
-        return productServiceImpl.getProduct(sku = skuProduct)
+    fun getProduct(@RequestParam("sku_product") skuProduct: String, @RequestParam("clientID") clientID: String): Screen {
+        return productServiceImpl.getProduct(sku = skuProduct, clientID = clientID)
     };
 
     @GetMapping("list/product/components")

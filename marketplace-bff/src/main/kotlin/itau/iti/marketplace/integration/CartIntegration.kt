@@ -8,7 +8,8 @@ import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
-@FeignClient("cart", url = "192.168.0.123:6000")
+@FeignClient("cart", url = "192.168.0.123:8080")
+
 interface CartIntegration {
     @RequestMapping(method = [RequestMethod.POST], value = ["/carts"])
     fun checkoutCart(cartPurchase: CartPurchase): PurchaseDTO;

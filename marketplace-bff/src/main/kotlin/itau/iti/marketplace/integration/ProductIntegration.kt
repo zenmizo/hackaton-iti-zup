@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 
 
-@FeignClient(name="products", url = "192.168.0.123:6000")
+@FeignClient(name="products", url = "192.168.0.123:8080")
 interface ProductIntegration {
     @RequestMapping(method = arrayOf(RequestMethod.GET), value = ["/products"])
     fun getAllProducts() : List<ProductDTO>

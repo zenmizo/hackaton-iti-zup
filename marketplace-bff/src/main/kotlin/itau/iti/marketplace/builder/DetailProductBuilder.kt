@@ -10,6 +10,7 @@ import br.com.zup.beagle.widget.layout.Container
 import br.com.zup.beagle.widget.layout.NavigationBar
 import br.com.zup.beagle.widget.layout.Screen
 import br.com.zup.beagle.widget.ui.Button
+import br.com.zup.beagle.widget.ui.Image
 import br.com.zup.beagle.widget.ui.NetworkImage
 import br.com.zup.beagle.widget.ui.Text
 import itau.iti.marketplace.components.ListProductComponent
@@ -19,9 +20,14 @@ import itau.iti.marketplace.service.response.ProductDetail
 class DeatailProductBuilder {
 
     lateinit var product: ProductDetail
-
+    lateinit var clientID: String
     fun withProduct(product: ProductDetail): DeatailProductBuilder {
         this.product = product
+        return this
+    }
+
+    fun withClientID(clientID: String): DeatailProductBuilder {
+        this.clientID = clientID
         return this
     }
 
@@ -33,7 +39,7 @@ class DeatailProductBuilder {
         return  Screen(
                 navigationBar = NavigationBar(title =  product.name, showBackButton = true)
                 ,content =
-        Form(path = "add/${product.sku}",
+        Form(path = "http://172.20.10.8:8080/add?sku=${product.sku}&clientID=$clientID",
                 method = FormMethodType.POST,
                 child = Container(childrenProduct).applyFlex(Flex(justifyContent = JustifyContent.SPACE_BETWEEN, grow = 1.0)))
         )
@@ -50,7 +56,8 @@ class DeatailProductBuilder {
 
     fun getImageContainer(): Container {
         var childrenImage = mutableListOf<ServerDrivenComponent>()
-        childrenImage.add(NetworkImage(path = this.product.imageUrl))
+//        childrenImage.add(NetworkImage(path = this.product.imageUrl))
+        childrenImage.add(Image(name = "empty"))
 
         val sizeImage = Size(width = UnitValue(100.0, UnitType.PERCENT), height = UnitValue(250.0, UnitType.REAL))
         var flexImage = Flex(size = sizeImage, flexDirection = FlexDirection.COLUMN, alignItems = Alignment.CENTER,justifyContent = JustifyContent.CENTER)
