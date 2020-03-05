@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class CartClientImpl: CartService {
-    lateinit var cartIntegration: CartIntegration
+class CartClientImpl(private var cartIntegration: CartIntegration): CartService {
 
     override fun addItem(item: PurchaseProduct, clientID: String) {
         cartIntegration.addOnCart(clientID, item)

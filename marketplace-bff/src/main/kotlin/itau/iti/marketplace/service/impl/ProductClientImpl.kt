@@ -20,39 +20,39 @@ class ProductClientImpl : ProductService {
     lateinit var productIntegration: ProductIntegration;
 
     override fun getAllProducts(): List<Product> {
-        val product1 = ProductDTO(
-                "AAA113",
-                "Espresso",
-                "Blue Ridge Blend",
-                "Blue Ridge Blend Long",
-                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
-                PriceDTO(
-                        20000,
-                        2,
-                        "EUR"
-                )
-                ,
-                id = "1231"
-        )
-        val product2 = ProductDTO(
-                "AAA113",
-                "Chá",
-                "Blue Ridge Blend",
-                "Blue Ridge Blend Long",
-                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
-                PriceDTO(
-                        20000,
-                        2,
-                        "EUR"
-                )
-                ,
-                id = "1231"
-        )
+//        val product1 = ProductDTO(
+//                "AAA113",
+//                "Espresso",
+//                "Blue Ridge Blend",
+//                "Blue Ridge Blend Long",
+//                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
+//                PriceDTO(
+//                        20000,
+//                        2,
+//                        "EUR"
+//                )
+//                ,
+//                id = "1231"
+//        )
+//        val product2 = ProductDTO(
+//                "AAA113",
+//                "Chá",
+//                "Blue Ridge Blend",
+//                "Blue Ridge Blend Long",
+//                "https://marvel-live.freetls.fastly.net/canvas/2020/2/1974477c97a54aeca692c1df411d8771?quality=95&fake=.png",
+//                PriceDTO(
+//                        20000,
+//                        2,
+//                        "EUR"
+//                )
+//                ,
+//                id = "1231"
+//        )
         val productList = mutableListOf<Product>();
 
-        listOf(product1,product2).forEach{p -> productList.add(Product(p))}
+//        listOf(product1,product2).forEach{p -> productList.add(Product(p))}
 //
-//        productIntegration.getAllProducts().map { productDTO -> productList.add(Product(productDTO)) }
+        productIntegration.getAllProducts().map { productDTO -> productList.add(Product(productDTO)) }
         return productList;
     }
 
@@ -85,6 +85,7 @@ class ProductClientImpl : ProductService {
         )
 
         return DeatailProductBuilder()
+
                 .withProduct(ProductDetail(product))
                 .withClientID(clientID)
                 .buildScreen()

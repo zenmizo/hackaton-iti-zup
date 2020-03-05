@@ -1,6 +1,5 @@
 package itau.iti.marketplace.service
 
-import br.com.zup.beagle.widget.layout.Screen
 import itau.iti.marketplace.integration.request.CartPurchase
 import itau.iti.marketplace.integration.request.PurchaseProduct
 
