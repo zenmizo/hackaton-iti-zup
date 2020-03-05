@@ -14,8 +14,7 @@ struct BeagleSetting {
     enum Routes: String {
         
         case listProducts = "list/product"
-        case productDescription = "list/product/id"
-        case result = "operation/result"
+        case productDescription = "product?sku_product="
         case buy = "buy/products"
         
         var path: String {

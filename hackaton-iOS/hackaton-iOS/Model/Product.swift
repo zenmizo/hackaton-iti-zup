@@ -13,6 +13,6 @@ struct Product: Codable {
     var name: String
     var shortDescription: String
     var imageUrl: String
-    var value: String = "R$ 123.00"
-    var sku: String = "1"
+    var value: String
+    var sku: String
 }

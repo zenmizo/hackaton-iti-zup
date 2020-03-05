@@ -23,8 +23,6 @@
 		9ACBE2642411295E00AE99F6 /* ResultOperationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE2632411295E00AE99F6 /* ResultOperationComponent.swift */; };
 		9ACBE266241129C600AE99F6 /* ResultOperationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */; };
 		9AF3F73D240FF9B8005B0C82 /* ListProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F73C240FF9B8005B0C82 /* ListProductScreen.swift */; };
-		9AF3F74124100B5B005B0C82 /* ListProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F73F24100B5B005B0C82 /* ListProductViewController.swift */; };
-		9AF3F74224100B5B005B0C82 /* ListProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF3F74024100B5B005B0C82 /* ListProductViewController.xib */; };
 		9AF3F74424100C93005B0C82 /* ListProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F74324100C93005B0C82 /* ListProduct.swift */; };
 		9AF3F74724100E4F005B0C82 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F74624100E4F005B0C82 /* Product.swift */; };
 		9AF3F74F24101880005B0C82 /* ProductCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF3F74E24101880005B0C82 /* ProductCollectionCell.xib */; };
@@ -79,8 +77,6 @@
 		9ACBE2632411295E00AE99F6 /* ResultOperationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperationComponent.swift; sourceTree = "<group>"; };
 		9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperationScreen.swift; sourceTree = "<group>"; };
 		9AF3F73C240FF9B8005B0C82 /* ListProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductScreen.swift; sourceTree = "<group>"; };
-		9AF3F73F24100B5B005B0C82 /* ListProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductViewController.swift; sourceTree = "<group>"; };
-		9AF3F74024100B5B005B0C82 /* ListProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListProductViewController.xib; sourceTree = "<group>"; };
 		9AF3F74324100C93005B0C82 /* ListProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProduct.swift; sourceTree = "<group>"; };
 		9AF3F74624100E4F005B0C82 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9AF3F74E24101880005B0C82 /* ProductCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionCell.xib; sourceTree = "<group>"; };
@@ -166,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				9AF3F74524100E44005B0C82 /* Model */,
-				9AF3F73E24100B48005B0C82 /* Scenes */,
 				9AF97D45240FF56300C94738 /* BeagleSetting */,
 				9AF97D44240FF55100C94738 /* Components */,
 				9AF97D43240FF54700C94738 /* Infrastructure */,
@@ -209,15 +204,6 @@
 				9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */,
 			);
 			path = "result-operation";
-			sourceTree = "<group>";
-		};
-		9AF3F73E24100B48005B0C82 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				9AF3F73F24100B5B005B0C82 /* ListProductViewController.swift */,
-				9AF3F74024100B5B005B0C82 /* ListProductViewController.xib */,
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		9AF3F74524100E44005B0C82 /* Model */ = {
@@ -390,7 +376,6 @@
 			files = (
 				9A836E60240FF49F0067B4A1 /* LaunchScreen.storyboard in Resources */,
 				9A836E5D240FF49F0067B4A1 /* Assets.xcassets in Resources */,
-				9AF3F74224100B5B005B0C82 /* ListProductViewController.xib in Resources */,
 				9AF3F74F24101880005B0C82 /* ProductCollectionCell.xib in Resources */,
 				9A836E5B240FF49F0067B4A1 /* Main.storyboard in Resources */,
 			);
@@ -521,7 +506,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ACBE25C24102C3100AE99F6 /* ListProductView.swift in Sources */,
-				9AF3F74124100B5B005B0C82 /* ListProductViewController.swift in Sources */,
 				9AF3F74724100E4F005B0C82 /* Product.swift in Sources */,
 				9AF97D47240FF56F00C94738 /* BeagleSetting.swift in Sources */,
 				9AF3F73D240FF9B8005B0C82 /* ListProductScreen.swift in Sources */,

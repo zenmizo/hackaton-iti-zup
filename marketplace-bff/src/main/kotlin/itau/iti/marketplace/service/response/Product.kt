@@ -16,4 +16,5 @@ data class Product(
             productDTO.imageUrl){
 
     }
+
 }

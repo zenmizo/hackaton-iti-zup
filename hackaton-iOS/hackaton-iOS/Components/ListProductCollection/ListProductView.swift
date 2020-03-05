@@ -92,8 +92,11 @@ extension ListProductView {
 extension ListProductView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(products[indexPath.row])
-        print(self.findViewController().self)
+        if let currentViewController = self.findViewController()?.navigationController {
+            var detailProductViewCotroller = BeagleScreenViewController(
+                viewModel: .init(screenType: .remote("\(BeagleSetting.Routes.productDescription.path)\(products[indexPath.row].sku)", fallback: nil)))
+            currentViewController.pushViewController(detailProductViewCotroller, animated: true)
+        }
     }
     
 }
