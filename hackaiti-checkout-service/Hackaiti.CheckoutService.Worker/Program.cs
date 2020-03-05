@@ -22,12 +22,21 @@ namespace Hackaiti.CheckoutService.Worker
                 {
                     services.AddHostedService<CartInvoiceWorker>();
 
-                    services.AddTransient<ICartService, CartService>();
-
                     services.AddSingleton<ICurrenciesApiService>(serviceProvider =>
                     {
                         return RestService.For<ICurrenciesApiService>("http://localhost:8000");
                     });
+
+                    services.AddTransient<IHackatonZupApiService, HackatonZupApiService>();
+
+                    // services.AddSingleton<IHackatonZupApiService>(serviceProvider =>
+                    // {
+                    //     return RestService.For<IHackatonZupApiService>(new System.Net.Http.HttpClient()
+                    //     {
+                    //         BaseAddress = new Uri("http://localhost:9000"),
+                    //         Timeout = TimeSpan.FromSeconds(5)
+                    //     });
+                    // });
                 });
     }
 }

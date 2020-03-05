@@ -1,4 +1,4 @@
-namespace Hackaiti.CheckoutService.Worker.Model
+namespace Hackaiti.CheckoutService.Worker.Model.CartMessage
 {
     public class CartTotal
     {
