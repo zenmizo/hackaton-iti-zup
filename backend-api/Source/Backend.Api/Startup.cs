@@ -40,13 +40,13 @@ namespace Backend.Presentation.Api
 
             services.AddSingleton<AmazonDynamoDBClient>(serviceConfiguration =>
             {
-                var credentials = Program.Credentials;
+                var credentials = Program.CredentialsCarlos;
                 return new AmazonDynamoDBClient(credentials, RegionEndpoint.USEast1);
             });
 
             services.AddSingleton<AmazonSQSClient>(serviceProvider =>
             {
-                var credentials = new BasicAWSCredentials("AKIARQ5CB.?.OJCOW7ILNUA", "rI7NtYNUyH9CBK3p.?.SvVVvksqZUL1zu5xwDFMeWQq");
+                var credentials = Program.CredentialsLeandro;
                 return new AmazonSQSClient(credentials, RegionEndpoint.USEast1);
             });
 
