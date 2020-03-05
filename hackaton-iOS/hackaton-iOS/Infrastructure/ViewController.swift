@@ -23,15 +23,14 @@ class ViewController: UIViewController {
     
     private func openListProducts() {
         
-//        let listProductViewController = BeagleScreenViewController(
-//            viewModel: .init(screenType: .remote(BeagleSetting.Routes.listProducts.path,
-//                                                 fallback: nil))
-//        )
-        
         let listProductViewController = BeagleScreenViewController(
-            viewModel: .init(screenType: .declarative(ListProductScreen().createScreen()))
+            viewModel: .init(screenType: .remote(BeagleSetting.Routes.buy.path,
+                                                 fallback: nil))
         )
         
+//        let listProductViewController = BeagleScreenViewController(
+//            viewModel: .init(screenType: .declarative(ResultOperationScreen().createScreen()))
+//        )
         
         self.navigationController?.pushViewController(listProductViewController, animated: true)
     }

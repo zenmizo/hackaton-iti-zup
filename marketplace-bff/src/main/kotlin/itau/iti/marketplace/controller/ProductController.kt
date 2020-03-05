@@ -1,5 +1,6 @@
 package itau.iti.marketplace.controller
 
+import br.com.zup.beagle.widget.layout.Screen
 import itau.iti.marketplace.exception.ProductNotFoundException
 import itau.iti.marketplace.service.ProductClientImpl
 import org.springframework.web.bind.annotation.ExceptionHandler
@@ -20,5 +21,11 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
     @ResponseBody
     fun getProductListComponents(){
         throw ProductNotFoundException()
+    };
+
+    @GetMapping("buy/products")
+    @ResponseBody
+    fun buyProducts(): Screen{
+        return productServiceImpl.buyProducts()
     };
 }

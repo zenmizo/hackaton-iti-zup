@@ -19,6 +19,9 @@
 		9A836E76240FF4A00067B4A1 /* hackaton_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A836E75240FF4A00067B4A1 /* hackaton_iOSUITests.swift */; };
 		9ACBE25C24102C3100AE99F6 /* ListProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE25B24102C3100AE99F6 /* ListProductView.swift */; };
 		9ACBE25F241040C900AE99F6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE25E241040C900AE99F6 /* UIImage+Extension.swift */; };
+		9ACBE2612411230100AE99F6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE2602411230100AE99F6 /* UIView+Extension.swift */; };
+		9ACBE2642411295E00AE99F6 /* ResultOperationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE2632411295E00AE99F6 /* ResultOperationComponent.swift */; };
+		9ACBE266241129C600AE99F6 /* ResultOperationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */; };
 		9AF3F73D240FF9B8005B0C82 /* ListProductScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F73C240FF9B8005B0C82 /* ListProductScreen.swift */; };
 		9AF3F74124100B5B005B0C82 /* ListProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF3F73F24100B5B005B0C82 /* ListProductViewController.swift */; };
 		9AF3F74224100B5B005B0C82 /* ListProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF3F74024100B5B005B0C82 /* ListProductViewController.xib */; };
@@ -72,6 +75,9 @@
 		9A836E77240FF4A00067B4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9ACBE25B24102C3100AE99F6 /* ListProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductView.swift; sourceTree = "<group>"; };
 		9ACBE25E241040C900AE99F6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9ACBE2602411230100AE99F6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9ACBE2632411295E00AE99F6 /* ResultOperationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperationComponent.swift; sourceTree = "<group>"; };
+		9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperationScreen.swift; sourceTree = "<group>"; };
 		9AF3F73C240FF9B8005B0C82 /* ListProductScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductScreen.swift; sourceTree = "<group>"; };
 		9AF3F73F24100B5B005B0C82 /* ListProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductViewController.swift; sourceTree = "<group>"; };
 		9AF3F74024100B5B005B0C82 /* ListProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListProductViewController.xib; sourceTree = "<group>"; };
@@ -191,8 +197,18 @@
 			isa = PBXGroup;
 			children = (
 				9ACBE25E241040C900AE99F6 /* UIImage+Extension.swift */,
+				9ACBE2602411230100AE99F6 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9ACBE2622411295100AE99F6 /* result-operation */ = {
+			isa = PBXGroup;
+			children = (
+				9ACBE2632411295E00AE99F6 /* ResultOperationComponent.swift */,
+				9ACBE265241129C600AE99F6 /* ResultOperationScreen.swift */,
+			);
+			path = "result-operation";
 			sourceTree = "<group>";
 		};
 		9AF3F73E24100B48005B0C82 /* Scenes */ = {
@@ -247,6 +263,7 @@
 		9AF97D44240FF55100C94738 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9ACBE2622411295100AE99F6 /* result-operation */,
 				9AF3F7482410111F005B0C82 /* ListProductCollection */,
 				9AF3F73C240FF9B8005B0C82 /* ListProductScreen.swift */,
 				9AF3F74324100C93005B0C82 /* ListProduct.swift */,
@@ -508,7 +525,10 @@
 				9AF3F74724100E4F005B0C82 /* Product.swift in Sources */,
 				9AF97D47240FF56F00C94738 /* BeagleSetting.swift in Sources */,
 				9AF3F73D240FF9B8005B0C82 /* ListProductScreen.swift in Sources */,
+				9ACBE2642411295E00AE99F6 /* ResultOperationComponent.swift in Sources */,
 				9A836E58240FF49F0067B4A1 /* ViewController.swift in Sources */,
+				9ACBE2612411230100AE99F6 /* UIView+Extension.swift in Sources */,
+				9ACBE266241129C600AE99F6 /* ResultOperationScreen.swift in Sources */,
 				9A836E54240FF49F0067B4A1 /* AppDelegate.swift in Sources */,
 				9AF3F74424100C93005B0C82 /* ListProduct.swift in Sources */,
 				9AF3F75124101896005B0C82 /* ProductCollectionCell.swift in Sources */,
