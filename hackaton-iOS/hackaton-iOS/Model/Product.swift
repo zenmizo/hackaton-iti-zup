@@ -11,6 +11,8 @@ import Foundation
 struct Product: Codable {
     
     var name: String
-    var description: String
-    var imagePath: String
+    var shortDescription: String
+    var imageUrl: String
+    var value: String = "R$ 123.00"
+    var sku: String = "1"
 }

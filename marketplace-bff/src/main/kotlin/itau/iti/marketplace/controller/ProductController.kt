@@ -15,7 +15,9 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
     @GetMapping("list/product")
     @ResponseBody
     @ExceptionHandler(ProductNotFoundException::class)
-    fun getProductList() = productServiceImpl.getAllProducts();
+    fun getProductList(): Screen {
+        return productServiceImpl.getAllProductsScreen()
+    };
 
     @GetMapping("list/product/components")
     @ResponseBody
@@ -25,7 +27,7 @@ class ProductController (private val productServiceImpl: ProductClientImpl) {
 
     @GetMapping("buy/products")
     @ResponseBody
-    fun buyProducts(): Screen{
+    fun buyProducts(): Screen {
         return productServiceImpl.buyProducts()
     };
 }

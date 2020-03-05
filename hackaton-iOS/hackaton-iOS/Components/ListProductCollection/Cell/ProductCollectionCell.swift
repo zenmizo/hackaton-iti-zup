@@ -28,9 +28,9 @@ class ProductCollectionCell: UICollectionViewCell {
         
         self.contentView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         self.labelName.text = product.name
-        self.labelDescription.text = product.description
-        self.image.pathImage(product.imagePath)
-        self.labelPrice.text = product.name
+        self.labelDescription.text = product.shortDescription
+        self.image.pathImage(product.imageUrl)
+        self.labelPrice.text = product.value
     }
     
 }

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     private func openListProducts() {
         
         let listProductViewController = BeagleScreenViewController(
-            viewModel: .init(screenType: .remote(BeagleSetting.Routes.buy.path,
+            viewModel: .init(screenType: .remote(BeagleSetting.Routes.listProducts.path,
                                                  fallback: nil))
         )
         
