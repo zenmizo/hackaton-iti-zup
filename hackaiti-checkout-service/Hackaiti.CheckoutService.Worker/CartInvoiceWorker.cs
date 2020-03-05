@@ -21,7 +21,7 @@ namespace Hackaiti.CheckoutService.Worker
 {
     public class CartInvoiceWorker : BackgroundService
     {
-        private const string QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/105029661252/hackaiti-testing";
+        private const string QUEUE_URL = "https://sqs.us-east-1.amazonaws.com/105029661252/start-checkout";
         private readonly ILogger<CartInvoiceWorker> _logger;
         private readonly ICurrenciesApiService _currenciesService;
         private readonly IHackatonZupApiService _hackaZupApiService;
@@ -104,7 +104,7 @@ namespace Hackaiti.CheckoutService.Worker
             string tableName = "checkout_transactions";
 
             _logger.LogInformation("Sendig transaction register do DynamoDB");
-            
+
             var request = new PutItemRequest
             {
                 TableName = tableName,

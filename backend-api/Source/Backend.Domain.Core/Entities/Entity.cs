@@ -27,7 +27,7 @@ namespace Backend.Domain.Core.Entities
         public static bool operator ==(Entity<TIdentity> a, Entity<TIdentity> b) => a?.Equals(b) ?? b is null;
         public static bool operator !=(Entity<TIdentity> a, Entity<TIdentity> b) => !(a == b);
         public override int GetHashCode() => GetType().GetHashCode() * 907 + id.GetHashCode();
-        public override string ToString() => $"{GetType().Name} [id={id}]";
+        public override string ToString() => $"{GetType().Name.ToLowerInvariant()} [id={id}]";
         public string ToJson() => JsonConvert.SerializeObject(this);
     }
 }

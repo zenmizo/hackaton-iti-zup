@@ -29,7 +29,9 @@ namespace Backend.Domain.Core.Bus
             try
             {
                 var handlerType = typeof(IQueryHandler<,>).MakeGenericType(queryType, typeof(TResult));
-                return ExecuteHandler<TResult>(handlerType, query, queryType);
+                var result = ExecuteHandler<TResult>(handlerType, query, queryType);
+                Log.Information(queryType.Name + " {@data}", result.Data);
+                return result;
             }
             catch (Exception ex)
             {
@@ -43,7 +45,9 @@ namespace Backend.Domain.Core.Bus
             try
             {
                 var handlerType = typeof(ICommandHandler<,>).MakeGenericType(commandType, typeof(TResult));
-                return ExecuteHandler<TResult>(handlerType, command, commandType);
+                var result = ExecuteHandler<TResult>(handlerType, command, commandType);
+                Log.Information(commandType.Name + " {@data}", result.Data);
+                return result;
             }
             catch (Exception ex)
             {
