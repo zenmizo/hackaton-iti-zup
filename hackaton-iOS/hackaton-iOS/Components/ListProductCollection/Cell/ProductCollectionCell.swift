@@ -30,7 +30,7 @@ class ProductCollectionCell: UICollectionViewCell {
         self.labelName.text = product.name
         self.labelDescription.text = product.shortDescription
         self.image.image = UIImage(named: "empty")
-        self.image.pathImage(product.imageUrl)
+//        self.image.pathImage(product.imageUrl)
         self.labelPrice.text = product.value
     }
     
