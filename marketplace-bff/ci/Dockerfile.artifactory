@@ -4,16 +4,4 @@ ENV LANG C.UTF-8
 WORKDIR /src
 COPY ./ /src
 
-RUN mkdir -p /usr/local/share/ca-certificates/itau
-COPY /src/caitau.cer /usr/local/share/ca-certificates/itau/caitau.crt
-COPY /src/itau-r0650.cer /usr/local/share/ca-certificates/itau/itau-r0650.crt
-COPY /src/cloud-s0653.cer /usr/local/share/ca-certificates/itau/cloud-s0653.crt
-COPY /src/settings.xml /src/settings.xml
-
-RUN update-ca-certificates
-
-RUN keytool -import -noprompt -alias caitau -v -file /usr/local/share/ca-certificates/itau/caitau.crt -cacerts -storepass changeit
-RUN keytool -import -noprompt -alias r0650 -v -file /usr/local/share/ca-certificates/itau/itau-r0650.crt -cacerts -storepass changeit
-RUN keytool -import -noprompt -alias s0653 -v -file /usr/local/share/ca-certificates/itau/cloud-s0653.crt -cacerts -storepass changeit
-
 RUN mvn -f /src/pom.xml -s /src/settings.xml -Piti -Drevision=0.0.1-SNAPSHOT deploy
